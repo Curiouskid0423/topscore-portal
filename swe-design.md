@@ -10,11 +10,12 @@
 <hr>
 
 ### A. &nbsp;&nbsp;&nbsp; Functionalities
-<br>
 
 #### Front-end
 Sketch the components on a piece of paper for each webpage / UI.
 - Pages & File hierarchy
+- Search Engine: 
+Pay **extra attention** to this page since your database structure largely affects the functionality of the search result.
 - Functionality of each webpage (page-flow of user experience)
 - Components 
     - Reusable components are marked with `R` tags.
@@ -28,7 +29,7 @@ Sketch the components on a piece of paper for each webpage / UI.
 
 <hr>
 
-### A. &nbsp;&nbsp;&nbsp; Implementations
+### B. &nbsp;&nbsp;&nbsp; Implementations
 
 #### Components by Webpage
 
@@ -57,7 +58,9 @@ Sketch the components on a piece of paper for each webpage / UI.
 
 #### Actions
 
-#### :rocket: Database Structure
+<hr>
+
+### C.&nbsp;&nbsp;&nbsp; Database Structure :rocket:
 
 **Current plan is to store in Firebase, and move to MongoDB is necessary in the future.**
 
@@ -71,6 +74,9 @@ Consultant should be able to edit and monitor individual students' activities at
     - **Student ID**: an identifier defined by the rules of TopScore
     - **Name**
     - **Email**
+    - :rocket:`Supervisor` :rocket: 
+        - Only the student's consultant (Kate or Angel) may see one's info. Such restriction should be fulfilled accross the site including the search engine. 
+        - Supervisor restriction may be circumvented by the root_user.
     - **Package Type**: multiple checklists (代辦、規劃、or 課程生)
     - **High School**
     - **Person of Recommendation**
@@ -113,6 +119,9 @@ Consultant should be able to edit and monitor individual students' activities at
 
 #### :star:  `User DB`
 
+Description:
+Users (email address) should only be manually added by root_user (Kate). No registration allowed for the sake of security. Users will log in using their gmail account (only the ones with @topscore-edu.com are allowed; this restriction should also enable edit from the CMS backend of root_user)
+
 - **Settings**
 
 #### :star: `Course DB`
@@ -122,10 +131,10 @@ A one-layer DB that consists of all courses. No need for hierarchical arrangemen
 -  **`Course List`** an array
     - **Course** entry
         - ID
-        - Type: 1-on-1, or Group
+        - Type: 1-on-1, Group, or Engagment
         - Course Name
         - Instructor
         - End Date
-        - Current: Boolean value -- True for currently running classes.
+        - Ongoing: Boolean value -- True for currently running classes.
         - Next Period: N/A for past courses
         - Notes: A text editor for consultants to make not.
