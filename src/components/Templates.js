@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export const Dashboard = (props) => {
+const Dashboard = (props) => {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const handleDrawerOpen = () => {
@@ -168,10 +168,19 @@ export const Dashboard = (props) => {
                     <Grid container className={"content-container"} spacing={2}>
                         <Grid item sm={1}>&nbsp;</Grid>
                         <Grid item sm={10}>
-                            While MongoDB emerged as part of the wave of so-called “NoSQL” databases, MongoDB and Firebase are both more similar to their relational forebearers than most of the more single-purpose NoSQL solutions.
-                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and is intended to handle similar workloads to those that were traditionally the domain of relational databases like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies NoSQL solutions.
-                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and is intended to handle similar workloads to those that were traditionally the domain of relational databases like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies NoSQL solutions.
-                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and is intended to handle similar workloads to those that were traditionally the domain of relational databases like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies NoSQL solutions.
+                            While MongoDB emerged as part of the wave of so-called “NoSQL” databases, MongoDB and Firebase are both
+                            more similar to their relational forebearers than most of the more single-purpose NoSQL solutions.
+                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and
+                            is intended to handle similar workloads to those that were traditionally the domain of relational databases
+                            like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies
+                            NoSQL solutions. MongoDB, for instance, supports ACID transactions, schema validation, and even
+                            cross-collection joins, and is intended to handle similar workloads to those that were traditionally the
+                            domain of relational databases like Oracle or MySQL, while bringing the scale-first architecture and
+                            structural flexibility that typifies NoSQL solutions.
+                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and
+                            is intended to handle similar workloads to those that were traditionally the domain of relational databases
+                            like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies
+                            NoSQL solutions.
                         </Grid>
                         <Grid item sm={1}>&nbsp;</Grid>
                     </Grid>
@@ -180,13 +189,5 @@ export const Dashboard = (props) => {
         </div>
     );
 }
-// Remember: The dispatch object "value" has to be a function.
-const mapDispatchToProps = (dispatch) => ({
-    dispatchLogOut: () => dispatch(startLogout())
-})
 
-const mapStateToProps = (state) => ({
-    nameInitial: state.auth.nameInitial
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+export default Dashboard;
