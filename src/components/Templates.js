@@ -1,25 +1,26 @@
 import React from 'react';
 import clsx from 'clsx';
+import { connect } from "react-redux";
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
 import { ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
+import Avatar from "@material-ui/core/Avatar";
+import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
+import { mainListItems } from './listItems';
 import theme from "../themes";
+import {startLogout} from "../actions/auth";
 
 const drawerWidth = 240;
 
@@ -103,9 +104,13 @@ const useStyles = makeStyles((theme) => ({
     fixedHeight: {
         height: 240,
     },
+    logOutButton: {
+        color: "white",
+        marginRight: "1rem",
+    }
 }));
 
-export default function Dashboard() {
+export const Dashboard = (props) => {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const handleDrawerOpen = () => {
@@ -130,11 +135,15 @@ export default function Dashboard() {
                         <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
                             TopScore
                         </Typography>
-                        <IconButton color="inherit">
-                            <Badge badgeContent={4} color="secondary">
-                                <NotificationsIcon />
-                            </Badge>
-                        </IconButton>
+                        <div className={classes.root}>
+                            <Button
+                                className={classes.logOutButton}
+                                onClick={props.dispatchLogOut}
+                            >
+                                Log Out
+                            </Button>
+                            <Avatar className = {"header__avatar"}> {props.nameInitial} </Avatar>
+                        </div>
                     </Toolbar>
                 </AppBar>
             </ThemeProvider>
@@ -156,12 +165,28 @@ export default function Dashboard() {
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
                 <Container maxWidth="lg" className={classes.container}>
-                    <Grid container spacing={3}>
-                        {/*<img className={classes.horizontalLogo} src={"/images/horizontal-logo.png"} />*/}
-                        <Typography component="h2" variant="h5">Placeholder</Typography>
+                    <Grid container className={"content-container"} spacing={2}>
+                        <Grid item sm={1}>&nbsp;</Grid>
+                        <Grid item sm={10}>
+                            While MongoDB emerged as part of the wave of so-called “NoSQL” databases, MongoDB and Firebase are both more similar to their relational forebearers than most of the more single-purpose NoSQL solutions.
+                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and is intended to handle similar workloads to those that were traditionally the domain of relational databases like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies NoSQL solutions.
+                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and is intended to handle similar workloads to those that were traditionally the domain of relational databases like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies NoSQL solutions.
+                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and is intended to handle similar workloads to those that were traditionally the domain of relational databases like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies NoSQL solutions.
+                        </Grid>
+                        <Grid item sm={1}>&nbsp;</Grid>
                     </Grid>
                 </Container>
             </main>
         </div>
     );
 }
+// Remember: The dispatch object "value" has to be a function.
+const mapDispatchToProps = (dispatch) => ({
+    dispatchLogOut: () => dispatch(startLogout())
+})
+
+const mapStateToProps = (state) => ({
+    nameInitial: state.auth.nameInitial
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

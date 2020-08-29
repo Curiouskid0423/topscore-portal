@@ -28,21 +28,22 @@ ReactDOM.render(<LoadingPage />, document.getElementById("app"));
 let hasRendered = false;
 const renderApp = () => {
     if (!hasRendered) {
-        ReactDOM.render(<Templates />, document.getElementById("app"));
+        ReactDOM.render(storage, document.getElementById("app"));
         hasRendered = true;
     }
 }
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
+        console.log("logged in");
         const nameInitial = user.displayName[0].toUpperCase();
         store.dispatch(login(user.uid, nameInitial));
         renderApp();
         if (history.location.pathname === "/") {
             history.push("/dashboard");
         }
-
     } else {
+        console.log("logged out");
         store.dispatch(logout());
         renderApp();
         history.push("/");

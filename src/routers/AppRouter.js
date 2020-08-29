@@ -6,10 +6,10 @@ import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import createBrowserHistory from "history/createBrowserHistory";
 import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 import Dashboard from "../components/Home";
 import NotFound from "../components/404Page";
 import SignInPage from "../components/SignInPage";
-import PublicRoute from "./PublicRoute";
 
 
 export const history = createBrowserHistory();
