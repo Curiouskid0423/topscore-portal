@@ -9,7 +9,7 @@ const getGreetings = (momentObj) => {
     const splitEvening = 17;
     const current = parseFloat(momentObj.format("HH"));
     if (current <= splitAfternoon){
-        return "Good Morning"
+        return "Good Morning";
     } else if (current > splitEvening) {
         return "Good Evening";
     } else {
@@ -18,7 +18,7 @@ const getGreetings = (momentObj) => {
 }
 
 const SignInDateBlock = () => {
-    const date = moment().format("MMM Qo");
+    const date = moment().format("MMM Do");
     const time = moment().format("HH:mm");
     const weekday = moment().format("ddd");
     return (

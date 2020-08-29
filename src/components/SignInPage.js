@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from "react-redux";
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -11,15 +12,14 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import SignInDateBlock from "./SignInDateBlock";
+import {startLogin} from "../actions/auth";
 
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href={"#"}> TopScore Education Inc</Link>
-            {' '}
-            {new Date().getFullYear()}
-            {'.'}
+            {' '} {new Date().getFullYear()} {'.'}
         </Typography>
     );
 }
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SignInSide() {
+export const SignInSide = (props) => {
     const classes = useStyles();
 
     return (
@@ -70,27 +70,23 @@ export default function SignInSide() {
                     <Typography component="h2" variant="h5">
                         Welcome to TopScore
                     </Typography>
-                    <form className={classes.form} noValidate>
-                        <TextField
-                            variant="outlined" margin="normal" required
-                            fullWidth id="email" label="Email Address"
-                            name="email" autoComplete="email" autoFocus
-                        />
-                        <TextField
-                            variant="outlined" margin="normal" required
-                            fullWidth name="password" label="Password"
-                            type="password" id="password" autoComplete="current-password"
-                        />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            color="primary"
-                            className={classes.submit}
+                    <div className={classes.form} noValidate>
+                        {/*<TextField*/}
+                        {/*    variant="outlined" margin="normal" required*/}
+                        {/*    fullWidth id="email" label="Email Address"*/}
+                        {/*    name="email" autoComplete="email" autoFocus*/}
+                        {/*/>*/}
+                        {/*<TextField*/}
+                        {/*    variant="outlined" margin="normal" required*/}
+                        {/*    fullWidth name="password" label="Password"*/}
+                        {/*    type="password" id="password" autoComplete="current-password"*/}
+                        {/*/>*/}
+                        {/*<FormControlLabel*/}
+                        {/*    control={<Checkbox value="remember" color="primary" />}*/}
+                        {/*    label="Remember me"*/}
+                        {/*/>*/}
+                        <Button type="submit" fullWidth variant="contained"
+                            color="primary" className={classes.submit} onClick={props.dispatchLogin}
                         >
                             Sign In
                         </Button>
@@ -106,12 +102,16 @@ export default function SignInSide() {
                                 </Link>
                             </Grid>
                         </Grid>
-                        <Box mt={5}>
-                            <Copyright />
-                        </Box>
-                    </form>
+                        <Box mt={5}> <Copyright /> </Box>
+                    </div>
                 </div>
             </Grid>
         </Grid>
     );
 }
+
+const mapDispatchToProps = (dispatch) => ({
+    dispatchLogin: () => dispatch(startLogin())
+});
+
+export default connect(undefined, mapDispatchToProps)(SignInSide);

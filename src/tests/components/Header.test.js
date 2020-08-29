@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { Header } from "../../components/Header";
+import { Templates } from "../../components/Templates";
 import toJson from "enzyme-to-json";
 
 
@@ -9,7 +9,7 @@ describe("the behavior of Header Component", () => {
    let wrapper;
    let spyLogout = jest.fn();
    beforeEach(() => {
-      wrapper = shallow(<Header dispatchLogOut = {spyLogout} />);
+      wrapper = shallow(<Templates dispatchLogOut = {spyLogout} />);
    });
 
    // Test 1. Test Header with snapshots. Shallow rendering.

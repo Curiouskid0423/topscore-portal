@@ -8,7 +8,7 @@ import createBrowserHistory from "history/createBrowserHistory";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../components/Home";
 import NotFound from "../components/404Page";
-import LogIn from "../components/LogIn";
+import SignInPage from "../components/SignInPage";
 import PublicRoute from "./PublicRoute";
 
 
@@ -19,7 +19,7 @@ const AppRouter = () => (
     <Router history = {history}>
         <div>
             <Switch>
-                <PublicRoute path = "/" component = {LogIn} exact = {true} />
+                <PublicRoute path = "/" component = {SignInPage} exact = {true} />
                 <PrivateRoute path = "/dashboard" component = {Dashboard}/>
                 <Route component = {NotFound} />
             </Switch>
