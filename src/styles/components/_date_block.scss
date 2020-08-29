@@ -1,0 +1,40 @@
+.signin-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30vh;
+  color: #fff;
+}
+.signin-box_img {
+  max-width: 5rem;
+  margin-bottom: $s-size;
+}
+.signin-box__info{
+  display: flex;
+}
+
+.signin-box__right {
+  font-size: 9rem;
+  padding: 0 $m-size;
+}
+
+.signin-box__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signin-box__date {
+  font-size: 3rem;
+}
+
+.signin-box__week {
+  font-size: $xxl-size;
+  margin: -1.5rem 0;
+}
+
+.signin-box__greetings {
+  font-size: 6rem;
+  margin: -1.5rem 0;
+}
+

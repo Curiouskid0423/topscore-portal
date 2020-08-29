@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the behaviors of LogIn page. should successfully render a snapshot. 1`] = `
+<div
+  className="box-layout"
+>
+  <div
+    className="box-layout__box"
+  >
+    <div
+      className="box-layout__textarea"
+    >
+      <h1
+        className="box-layout__title"
+      >
+        react-template
+      </h1>
+      <h3>
+        Subtitle in the log-in page
+      </h3>
+    </div>
+    <WithStyles(ForwardRef(Button))
+      color="primary"
+      onClick={[MockFunction]}
+      variant="contained"
+    >
+      Login
+    </WithStyles(ForwardRef(Button))>
+  </div>
+</div>
+`;
