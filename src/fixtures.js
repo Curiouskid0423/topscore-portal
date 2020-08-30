@@ -38,17 +38,15 @@ export const studentInstance1 = {
         email: "yutengli@berkeley.edu",
         highSchool: "Mingdao High School",
         graduationYear: 2019,
-        attendedCollege: "University of California, Berkeley"
+        attendedCollege: "University of California, Berkeley",
+        packageType: {
+            course: false,
+            planning: true,
+            apply: true
+        },
+        personOfRecommendation: "Albert Wang",
     },
     content: {
-        advancedInfo: {
-            packageType: {
-                course: false,
-                planning: true,
-                apply: true
-            },
-            personOfRecommendation: "Albert Wang",
-        },
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",
@@ -97,17 +95,15 @@ export const studentInstance2 = {
         email: "ricky@mca.edu",
         highSchool: "Morrison Academy",
         graduationYear: 2017,
-        attendedCollege: "Stanford University"
+        attendedCollege: "Stanford University",
+        packageType: {
+            course: true,
+            planning: false,
+            apply: true
+        },
+        personOfRecommendation: null,
     },
     content: {
-        advancedInfo: {
-            packageType: {
-                course: true,
-                planning: false,
-                apply: true
-            },
-            personOfRecommendation: null,
-        },
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",

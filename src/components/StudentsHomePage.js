@@ -26,7 +26,6 @@ const StudentHome = (props) => {
 
 const mapStatesToProps = (states) => ({
     students: states.students,
-    loggedIn: states.auth.nameInitial
 });
 
 const WrappedStudentHome = () => {

@@ -17,4 +17,9 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
+// TODO: Just some testing fixture data.
+// db.ref("students_db").set(null);
+// db.ref("students_db").push(studentInstance1);
+// db.ref("students_db").push(studentInstance2);
+
 export {firebase, googleAuthProvider, db as default };
