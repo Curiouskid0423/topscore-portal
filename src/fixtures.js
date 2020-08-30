@@ -65,7 +65,7 @@ export const studentInstance1 = {
         },
         partCompass: {
             summary: "will be a string",
-            improvemnt: "will be a string",
+            improvement: "will be a string",
             goalSetting: "will be a string",
             engagement: "will be a string",
             gradesAndTests: "will be a string",
@@ -122,7 +122,119 @@ export const studentInstance2 = {
         },
         partCompass: {
             summary: "will be a string",
-            improvemnt: "will be a string",
+            improvement: "will be a string",
+            goalSetting: "will be a string",
+            engagement: "will be a string",
+            gradesAndTests: "will be a string",
+            activities: "will be a string",
+            toDoList: "will be a string"
+        },
+        partMentor: {
+            testInfo: "Google Drive Link",
+            collegeList: "Google Drive Link",
+            optionals: null
+        },
+        partReport: {
+            SATreport: ["A list of Google Drive links"],
+            TOEFLreport: ["A list of Google Drive links"]
+        }
+    }
+}
+
+
+export const studentInstance3 = {
+    supervisor: "Kate",
+    contact: {
+        studentID: "2017MDHS05",
+        firstName: "Benjamin",
+        lastName: "Chou",
+        phone: "0987654273",
+        email: "benjaminchou@berkeley.edu",
+        highSchool: "Mingdao High School",
+        graduationYear: 2017,
+        attendedCollege: "Harvard University",
+        packageType: {
+            course: true,
+            planning: true,
+            apply: true
+        },
+        personOfRecommendation: null,
+    },
+    content: {
+        partOverview: {
+            atAGlance: {
+                notice: "Notice will be a string.",
+                familyInfo: "Benjamin has a brother currently in 9th grade."
+            },
+            firstAppointment: "Google Drive Link",
+            preTestResult: "Google Drive Link"
+        },
+        partCore: {
+            currentCourseList: [
+                courseObject[2],
+            ],
+            pastCourseList: [
+                courseObject[1], courseObject[3]
+            ]
+        },
+        partCompass: {
+            summary: "will be a string",
+            improvement: "will be a string",
+            goalSetting: "will be a string",
+            engagement: "will be a string",
+            gradesAndTests: "will be a string",
+            activities: "will be a string",
+            toDoList: "will be a string"
+        },
+        partMentor: {
+            testInfo: "Google Drive Link",
+            collegeList: "Google Drive Link",
+            optionals: null
+        },
+        partReport: {
+            SATreport: ["A list of Google Drive links"],
+            TOEFLreport: ["A list of Google Drive links"]
+        }
+    }
+}
+
+
+export const studentInstance4 = {
+    supervisor: "Angel",
+    contact: {
+        studentID: "2019AST02",
+        firstName: "Lavinia",
+        lastName: "Lin",
+        phone: "0982734553",
+        email: "lavinia@bu.edu",
+        highSchool: "American School in Taichung",
+        graduationYear: 2019,
+        attendedCollege: "Boston University",
+        packageType: {
+            course: true,
+            planning: false,
+            apply: true
+        },
+        personOfRecommendation: null,
+    },
+    content: {
+        partOverview: {
+            atAGlance: {
+                notice: "Notice will be a string.",
+                familyInfo: "Lavinia has two sisters."
+            },
+            firstAppointment: "Google Drive Link",
+            preTestResult: "Google Drive Link"
+        },
+        partCore: {
+            currentCourseList: null,
+            pastCourseList: [
+                courseObject[1], courseObject[3]
+            ]
+        },
+        partCompass: {
+            summary: "will be a string",
+            improvement: "will be a string",
             goalSetting: "will be a string",
             engagement: "will be a string",
             gradesAndTests: "will be a string",
