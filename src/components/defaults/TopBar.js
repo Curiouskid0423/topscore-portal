@@ -1,12 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import clsx from "clsx";
-import Toolbar from "@material-ui/core/Toolbar";
+import AppBar from "@material-ui/core/AppBar";
+import Avatar from "@material-ui/core/Avatar";
+import Button from "@material-ui/core/Button";
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Avatar from "@material-ui/core/Avatar";
-import AppBar from "@material-ui/core/AppBar";
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import { connect } from "react-redux";
 import templateStyles from "../../styles/makeStyles/makeTemplateStyles";
@@ -19,7 +24,9 @@ const useStyles = makeStyles(templateStyles);
 const TopBar = (props) => {
 
     const classes = useStyles();
+    const [dialogOpen, setDialogChange] = useState(false);
     const handleDrawerOpen = () => props.dispatchDrawer();
+    const handleDialogChange = () => setDialogChange(!dialogOpen);
 
     return (
         <ThemeProvider theme={theme}>
@@ -37,9 +44,27 @@ const TopBar = (props) => {
                         TopScore
                     </Typography>
                     <div className={classes.root}>
-                        <Button className={classes.logOutButton} onClick={props.dispatchLogOut}>
+                        <Button className={classes.logOutButton} onClick={handleDialogChange}>
                             Log Out
                         </Button>
+                        {/* Alert Dialog */}
+                        <Dialog open={dialogOpen} onClose={handleDialogChange}>
+                            <DialogTitle id="alert-dialog-title">Sure about Logging Out ?</DialogTitle>
+                            <DialogContent>
+                                <DialogContentText id="alert-dialog-description">
+                                    Let Google help apps determine location. This means sending anonymous location data to
+                                    Google, even when no apps are running.
+                                </DialogContentText>
+                            </DialogContent>
+                            <DialogActions>
+                                <Button onClick={handleDialogChange} color="primary">
+                                    Cancel
+                                </Button>
+                                <Button onClick={props.dispatchLogOut} color="primary" autoFocus>
+                                    Agree
+                                </Button>
+                            </DialogActions>
+                        </Dialog>
                         <Avatar className = {"header__avatar"}> {props.nameInitial} </Avatar>
                     </div>
                 </Toolbar>

@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     searchButton: {
         display: "block",
         margin: ".5rem auto",
-        padding: ".5rem 4rem"
+        padding: ".5rem 2.5rem"
     }
 })
 
@@ -69,6 +69,10 @@ const Query = (props) => {
                     </form>
                 </Grid>
                 <Grid item sm={3}>
+                    <Button variant={"contained"} color={"primary"}
+                            className={classes.searchButton}>
+                        Add Student
+                    </Button>
                 </Grid>
             </Grid>
         </ThemeProvider>

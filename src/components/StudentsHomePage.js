@@ -1,5 +1,4 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import { connect } from "react-redux";
 import Dashboard from "./defaults/Templates";
 import Grid from "@material-ui/core/Grid";

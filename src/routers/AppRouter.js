@@ -12,7 +12,7 @@ import NotFound from "../components/404Page";
 import SignInPage from "../components/SignInPage";
 import StudentHome from "../components/StudentsHomePage";
 import Settings from "../components/Settings";
-import Users from "../components/Users";
+import Users from "../components/Users/Users";
 
 
 export const history = createBrowserHistory();
