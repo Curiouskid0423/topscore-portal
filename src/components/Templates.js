@@ -22,50 +22,53 @@ import theme from "../themes";
 import {paragraphFiller} from "../fixtures";
 import {startLogout} from "../actions/auth";
 import templateStyles from "../styles/makeStyles/makeTemplateStyles";
+import TopBar from "./defaults/TopBar";
+import {templateDrawerChange} from "../actions/utility";
 
 const useStyles = makeStyles(templateStyles);
 
 const Dashboard = (props) => {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
-    const handleDrawerOpen = () => setOpen(true);
-    const handleDrawerClose = () => setOpen(false);
+    // const [open, setOpen] = React.useState(false);
+    // const handleDrawerOpen = () => setOpen(true);
+    const handleDrawerClose = () => props.dispatchDrawer();
 
 
     return (
         <div className={classes.root}>
             <CssBaseline />
             {/* Top Nav Bar */}
-            <ThemeProvider theme={theme}>
-                <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
-                    <Toolbar className={classes.toolbar}>
-                        <IconButton
-                            edge="start" color="inherit" aria-label="open drawer" onClick={handleDrawerOpen}
-                            className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                            TopScore
-                        </Typography>
-                        <div className={classes.root}>
-                            <Button className={classes.logOutButton}
-                                    onClick={props.dispatchLogOut}
-                            >
-                                Log Out
-                            </Button>
-                            <Avatar className = {"header__avatar"}> {props.nameInitial} </Avatar>
-                        </div>
-                    </Toolbar>
-                </AppBar>
-            </ThemeProvider>
+            <TopBar />
+            {/*<ThemeProvider theme={theme}>*/}
+            {/*    <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>*/}
+            {/*        <Toolbar className={classes.toolbar}>*/}
+            {/*            <IconButton*/}
+            {/*                edge="start" color="inherit" aria-label="open drawer" onClick={handleDrawerOpen}*/}
+            {/*                className={clsx(classes.menuButton, open && classes.menuButtonHidden)}*/}
+            {/*            >*/}
+            {/*                <MenuIcon />*/}
+            {/*            </IconButton>*/}
+            {/*            <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>*/}
+            {/*                TopScore*/}
+            {/*            </Typography>*/}
+            {/*            <div className={classes.root}>*/}
+            {/*                <Button className={classes.logOutButton}*/}
+            {/*                        onClick={props.dispatchLogOut}*/}
+            {/*                >*/}
+            {/*                    Log Out*/}
+            {/*                </Button>*/}
+            {/*                <Avatar className = {"header__avatar"}> {props.nameInitial} </Avatar>*/}
+            {/*            </div>*/}
+            {/*        </Toolbar>*/}
+            {/*    </AppBar>*/}
+            {/*</ThemeProvider>*/}
             {/* Left Side Drawer */}
             <Drawer
                 variant="permanent"
                 classes={{
-                    paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
+                    paper: clsx(classes.drawerPaper, !props.drawerOpen && classes.drawerPaperClose),
                 }}
-                open={open}
+                open={props.drawerOpen}
             >
                 <div className={classes.toolbarIcon}>
                     <IconButton onClick={handleDrawerClose}>
@@ -95,10 +98,11 @@ const Dashboard = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    nameInitial: state.auth.nameInitial
+    drawerOpen: state.util.templateDrawerOpen
 })
 const mapDispatchToProps = (dispatch) => ({
-    dispatchLogOut: () => dispatch(startLogout())
+    dispatchLogOut: () => dispatch(startLogout()),
+    dispatchDrawer: () => dispatch(templateDrawerChange())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

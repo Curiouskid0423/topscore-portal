@@ -10,16 +10,18 @@ const studentInstance = {
         phone: "0912933348",
         email: "yutengli@berkeley.edu",
         highSchool: "Mingdao High School",  // Should be a option select (otherwise consultants can be prone to typos)
-        packageType: {
-            course: false,
-            planning: true, 
-            apply: true
-        },
-        personOfRecommendation: "Albert Wang",
         graduationYear: 2019,
         attendedCollege: "University of California, Berkeley"
     },
     content: {
+        advancedInfo: {
+            packageType: {
+                course: false,
+                planning: true, 
+                apply: true
+            },
+            personOfRecommendation: "Albert Wang",
+        },
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",
