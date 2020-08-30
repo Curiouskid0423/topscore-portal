@@ -13,7 +13,7 @@ import { firebase } from "./firebase/firebase";
 import configStore from "./store/configStore";
 import LoadingPage from "./components/LoadingPage";
 import {login, logout} from "./actions/auth";
-import Templates from "./components/Templates";
+import Templates from "./components/defaults/Templates";
 
 /* Redux store object. */
 const store = configStore();

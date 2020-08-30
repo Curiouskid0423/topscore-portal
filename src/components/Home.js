@@ -1,11 +1,15 @@
 import React from "react";
+import Dashboard from "./defaults/Templates";
 
 const Home = () => {
     return (
         <div>
-            <p>This is a dashboard page.</p>
+            This message is from Home Page.
         </div>
     )
 };
 
-export default Home;
+const WrappedHome = () => <Dashboard content={Home} />;
+
+
+export default WrappedHome;

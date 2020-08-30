@@ -7,9 +7,10 @@ import { Router, Route, Switch } from "react-router-dom";
 import createBrowserHistory from "history/createBrowserHistory";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
-import Dashboard from "../components/Templates";
+import Home from "../components/Home";
 import NotFound from "../components/404Page";
 import SignInPage from "../components/SignInPage";
+// import templateWrapper from "../components/defaults/templateWrapper";
 
 
 export const history = createBrowserHistory();
@@ -20,7 +21,7 @@ const AppRouter = () => (
         <div>
             <Switch>
                 <PublicRoute path = "/" component = {SignInPage} exact = {true} />
-                <PrivateRoute path = "/dashboard" component = {Dashboard}/>
+                <PrivateRoute path = "/dashboard" component = {Home}/>
                 <Route component = {NotFound} />
             </Switch>
         </div>
