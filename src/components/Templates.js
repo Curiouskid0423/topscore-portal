@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
-import Box from '@material-ui/core/Box';
 import { ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Avatar from "@material-ui/core/Avatar";
@@ -20,109 +19,23 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { mainListItems } from './listItems';
 import theme from "../themes";
+import {paragraphFiller} from "../fixtures";
 import {startLogout} from "../actions/auth";
+import templateStyles from "../styles/makeStyles/makeTemplateStyles";
 
-const drawerWidth = 240;
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-    },
-    toolbar: {
-        paddingRight: 24, // keep right padding when drawer closed
-    },
-    toolbarIcon: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: '0 8px',
-        ...theme.mixins.toolbar,
-    },
-    appBar: {
-        zIndex: theme.zIndex.drawer + 1,
-        transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-    },
-    appBarShift: {
-        marginLeft: drawerWidth,
-        width: `calc(100% - ${drawerWidth}px)`,
-        transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    menuButton: {
-        marginRight: 36,
-    },
-    menuButtonHidden: {
-        display: 'none',
-    },
-    title: {
-        flexGrow: 1,
-    },
-    drawerPaper: {
-        position: 'relative',
-        whiteSpace: 'nowrap',
-        width: drawerWidth,
-        transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    drawerPaperClose: {
-        overflowX: 'hidden',
-        transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        width: theme.spacing(7),
-        [theme.breakpoints.up('sm')]: {
-            width: theme.spacing(9),
-        },
-    },
-    appBarSpacer: theme.mixins.toolbar,
-    content: {
-        flexGrow: 1,
-        height: '100vh',
-        overflow: 'auto',
-    },
-    container: {
-        paddingTop: theme.spacing(4),
-        paddingBottom: theme.spacing(4),
-    },
-    horizontalLogo: {
-        maxWidth: "10rem"
-    },
-    paper: {
-        padding: theme.spacing(2),
-        display: 'flex',
-        overflow: 'auto',
-        flexDirection: 'column',
-    },
-    fixedHeight: {
-        height: 240,
-    },
-    logOutButton: {
-        color: "white",
-        marginRight: "1rem",
-    }
-}));
+const useStyles = makeStyles(templateStyles);
 
 const Dashboard = (props) => {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-    const handleDrawerClose = () => {
-        setOpen(false);
-    };
+    const handleDrawerOpen = () => setOpen(true);
+    const handleDrawerClose = () => setOpen(false);
+
 
     return (
         <div className={classes.root}>
             <CssBaseline />
+            {/* Top Nav Bar */}
             <ThemeProvider theme={theme}>
                 <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
                     <Toolbar className={classes.toolbar}>
@@ -136,9 +49,8 @@ const Dashboard = (props) => {
                             TopScore
                         </Typography>
                         <div className={classes.root}>
-                            <Button
-                                className={classes.logOutButton}
-                                onClick={props.dispatchLogOut}
+                            <Button className={classes.logOutButton}
+                                    onClick={props.dispatchLogOut}
                             >
                                 Log Out
                             </Button>
@@ -147,6 +59,7 @@ const Dashboard = (props) => {
                     </Toolbar>
                 </AppBar>
             </ThemeProvider>
+            {/* Left Side Drawer */}
             <Drawer
                 variant="permanent"
                 classes={{
@@ -162,25 +75,16 @@ const Dashboard = (props) => {
                 <Divider />
                 <List>{mainListItems}</List>
             </Drawer>
+            {/* Main Content */}
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container className={"content-container"} spacing={2}>
                         <Grid item sm={1}>&nbsp;</Grid>
                         <Grid item sm={10}>
-                            While MongoDB emerged as part of the wave of so-called “NoSQL” databases, MongoDB and Firebase are both
-                            more similar to their relational forebearers than most of the more single-purpose NoSQL solutions.
-                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and
-                            is intended to handle similar workloads to those that were traditionally the domain of relational databases
-                            like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies
-                            NoSQL solutions. MongoDB, for instance, supports ACID transactions, schema validation, and even
-                            cross-collection joins, and is intended to handle similar workloads to those that were traditionally the
-                            domain of relational databases like Oracle or MySQL, while bringing the scale-first architecture and
-                            structural flexibility that typifies NoSQL solutions.
-                            MongoDB, for instance, supports ACID transactions, schema validation, and even cross-collection joins, and
-                            is intended to handle similar workloads to those that were traditionally the domain of relational databases
-                            like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility that typifies
-                            NoSQL solutions.
+                           <Typography component={"p"}>
+                               { paragraphFiller }
+                           </Typography>
                         </Grid>
                         <Grid item sm={1}>&nbsp;</Grid>
                     </Grid>
@@ -190,4 +94,11 @@ const Dashboard = (props) => {
     );
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => ({
+    nameInitial: state.auth.nameInitial
+})
+const mapDispatchToProps = (dispatch) => ({
+    dispatchLogOut: () => dispatch(startLogout())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
