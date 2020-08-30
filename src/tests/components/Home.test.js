@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "../../components/Home";
+import Dashboard from "../../components/Home/Home";
 import { shallow } from "enzyme";
 
 describe("Dashboard Component", () => {

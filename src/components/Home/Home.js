@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "./defaults/Templates";
+import Dashboard from "../defaults/Templates";
 
 const Home = () => {
     return (

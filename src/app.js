@@ -13,7 +13,7 @@ import { firebase } from "./firebase/firebase";
 import configStore from "./store/configStore";
 import LoadingPage from "./components/LoadingPage";
 import {login, logout} from "./actions/auth";
-import Templates from "./components/defaults/Templates";
+import {startSetStudents} from "./actions/students";
 
 /* Redux store object. */
 const store = configStore();
@@ -38,10 +38,12 @@ firebase.auth().onAuthStateChanged((user) => {
         console.log("logged in");
         const nameInitial = user.displayName[0].toUpperCase();
         store.dispatch(login(user.uid, nameInitial));
-        renderApp();
-        if (history.location.pathname === "/") {
-            history.push("/dashboard");
-        }
+        store.dispatch(startSetStudents()).then(() => {
+            renderApp();
+            if (history.location.pathname === "/") {
+                history.push("/dashboard");
+            }
+        }).catch((e) => console.log("Error message:", e));
     } else {
         console.log("logged out");
         store.dispatch(logout());

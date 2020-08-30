@@ -1,8 +1,6 @@
 import * as firebase from "firebase";
 import "firebase/analytics";
-
-//TODO: The official setup as developer to include a Js script tag in index.html,
-// but it's better to use npm installation, which is what we are doing now.
+import {studentInstance1,studentInstance2} from "../fixtures";
 
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
