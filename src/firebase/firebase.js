@@ -5,7 +5,16 @@ import {studentInstance1,
     studentInstance3,
     studentInstance4,
     studentInstance5,
-    studentInstance6} from "../fixtures";
+    studentInstance6,
+    courseInstance1,
+    courseInstance2,
+    courseInstance3,
+    courseInstance4,
+    courseInstance5,
+    courseInstance6,
+    courseInstance7,
+    courseInstance8} from "../fixtures";
+
 
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -30,5 +39,15 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 // db.ref("students_db").push(studentInstance4);
 // db.ref("students_db").push(studentInstance5);
 // db.ref("students_db").push(studentInstance6);
+
+db.ref("courses_db").set(null);
+db.ref("courses_db").push(courseInstance1);
+db.ref("courses_db").push(courseInstance2);
+db.ref("courses_db").push(courseInstance3);
+db.ref("courses_db").push(courseInstance4);
+db.ref("courses_db").push(courseInstance5);
+db.ref("courses_db").push(courseInstance6);
+db.ref("courses_db").push(courseInstance7);
+db.ref("courses_db").push(courseInstance8);
 
 export {firebase, googleAuthProvider, db as default };

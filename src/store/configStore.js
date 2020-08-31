@@ -1,6 +1,7 @@
 import {combineReducers, createStore, applyMiddleware, compose} from "redux";
 import thunk from "redux-thunk";
 import authReducer from "../reducers/auth";
+import coursesReducer from "../reducers/courses";
 import utilReducer from "../reducers/utility";
 import studentsReducer from "../reducers/studentsReducer";
 
@@ -16,6 +17,7 @@ const launchStore = () => {
     return createStore(
         combineReducers({
             auth: authReducer,
+            courses: coursesReducer,
             students: studentsReducer,
             util: utilReducer,
         }),

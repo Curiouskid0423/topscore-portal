@@ -18,6 +18,7 @@ import templateStyles from "../../styles/makeStyles/makeTemplateStyles";
 import theme from "../../themes";
 import {templateDrawerChange} from "../../actions/utility";
 import {startLogout} from "../../actions/auth";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(templateStyles);
 
@@ -41,7 +42,9 @@ const TopBar = (props) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+                        <Link to={"/"} className={classes.logoStyles}>
                         TopScore Education
+                        </Link>
                     </Typography>
                     <div className={classes.root}>
                         <Button className={classes.logOutButton} onClick={handleDialogChange}>

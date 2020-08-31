@@ -14,6 +14,7 @@ import configStore from "./store/configStore";
 import LoadingPage from "./components/LoadingPage";
 import {login, logout} from "./actions/auth";
 import {startSetStudents} from "./actions/students";
+import {startSetCourses} from "./actions/courses";
 
 /* Redux store object. */
 const store = configStore();
@@ -38,6 +39,8 @@ firebase.auth().onAuthStateChanged((user) => {
         console.log("logged in");
         const nameInitial = user.displayName[0].toUpperCase();
         store.dispatch(login(user.uid, nameInitial));
+        // For the first setCourse call, leave the error catch code to the action itself.
+        store.dispatch(startSetCourses());
         store.dispatch(startSetStudents()).then(() => {
             renderApp();
             if (history.location.pathname === "/") {

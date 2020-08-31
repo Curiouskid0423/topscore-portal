@@ -1,3 +1,4 @@
+import moment from "moment";
 /**
  * @desc A file that contains dummy data for the sake of testing.
  */
@@ -31,6 +32,86 @@ export const userInstance1 = {
     email: "kate@topscore-edu.com",
     password: "123abc"
 }
+
+
+// CourseInstance should have a moment() startDate
+export const courseInstance1 = {
+    id: "SATGROUP001",
+    type: "GROUP",
+    courseName: "SAT Beginner Class",
+    instructor: "Johnny Hope",
+    startDate: moment().valueOf(),
+    repeatBy: "WEEK",
+    repeatTimes: 12
+}
+export const courseInstance2 = {
+    id: "ACTONE002",
+    type: "1_ON_1",
+    courseName: "ACT Advanced Class",
+    instructor: "Johnny Hope",
+    startDate: moment().valueOf(),
+    repeatBy: "MONTH",
+    repeatTimes: 10
+}
+export const courseInstance3 = {
+    id: "ACTONE003",
+    type: "1_ON_1",
+    courseName: "ACT Advanced Technique",
+    instructor: "Johnny Hope",
+    startDate: moment().valueOf(),
+    repeatBy: "WEEK",
+    repeatTimes: 4
+}
+export const courseInstance4 = {
+    id: "ACTGROUP002",
+    type: "GROUP",
+    courseName: "ACT Beginner Class",
+    instructor: "Johnny Hope",
+    startDate: moment().valueOf(),
+    repeatBy: "WEEK",
+    repeatTimes: 10
+}
+export const courseInstance5 = {
+    id: "TECHWRKSHOP001",
+    type: "GROUP",
+    courseName: "Web Dev Workshop",
+    instructor: "Kevin Li",
+    startDate: moment().valueOf(),
+    repeatBy: null,
+    repeatTimes: 0
+}
+export const courseInstance6 = {
+    id: "TECHWRKSHOP005",
+    type: "GROUP",
+    courseName: "Machine Learning Camp",
+    instructor: "Kevin Li",
+    startDate: moment().valueOf(),
+    repeatBy: "WEEK",
+    repeatTimes: 5
+}
+
+export const courseInstance7 = {
+    id: "CALIGRAPHY001",
+    type: "GROUP",
+    courseName: "Calligraphy Workshop",
+    instructor: "Ricky Huang",
+    startDate: moment().valueOf(),
+    repeatBy: "WEEK",
+    repeatTimes: 8
+}
+
+export const courseInstance8 = {
+    id: "BARISTA001",
+    type: "GROUP",
+    courseName: "Barista Internship",
+    instructor: "Lousia Coffee Inc.",
+    startDate: moment().valueOf(),
+    repeatBy: "DAY",
+    repeatTimes: 2
+}
+
+
+
 /**
  * @desc A student instance for testing purpose.
  */
@@ -91,7 +172,6 @@ export const studentInstance1 = {
     }
 }
 
-
 export const studentInstance2 = {
     supervisor: "Angel",
     contact: {
@@ -147,7 +227,6 @@ export const studentInstance2 = {
         }
     }
 }
-
 
 export const studentInstance3 = {
     supervisor: "Kate",
@@ -205,7 +284,6 @@ export const studentInstance3 = {
     }
 }
 
-
 export const studentInstance4 = {
     supervisor: "Angel",
     contact: {
@@ -237,6 +315,60 @@ export const studentInstance4 = {
             currentCourseList: null,
             pastCourseList: [
                 courseObject[1], courseObject[3]
+            ]
+        },
+        partCompass: {
+            summary: "will be a string",
+            improvement: "will be a string",
+            goalSetting: "will be a string",
+            engagement: "will be a string",
+            gradesAndTests: "will be a string",
+            activities: "will be a string",
+            toDoList: "will be a string"
+        },
+        partMentor: {
+            testInfo: "Google Drive Link",
+            collegeList: "Google Drive Link",
+            optionals: null
+        },
+        partReport: {
+            SATreport: ["A list of Google Drive links"],
+            TOEFLreport: ["A list of Google Drive links"]
+        }
+    }
+}
+
+export const studentInstance5 = {
+    supervisor: "Kate",
+    contact: {
+        studentID: "2020MORI11",
+        firstName: "Darren",
+        lastName: "Shiu",
+        phone: "0916472765",
+        email: "darren@mca.edu",
+        highSchool: "Morrison Academy",
+        graduationYear: 2020,
+        attendedCollege: null,
+        packageType: {
+            course: true,
+            planning: true,
+            apply: true
+        },
+        personOfRecommendation: null,
+    },
+    content: {
+        partOverview: {
+            atAGlance: {
+                notice: "Notice will be a string.",
+                familyInfo: "Darren is the only child in his family."
+            },
+            firstAppointment: "Google Drive Link",
+            preTestResult: "Google Drive Link"
+        },
+        partCore: {
+            currentCourseList: null,
+            pastCourseList: [
+                courseObject[3], courseObject[4]
             ]
         },
         partCompass: {
@@ -314,56 +446,3 @@ export const studentInstance6 = {
     }
 }
 
-export const studentInstance5 = {
-    supervisor: "Kate",
-    contact: {
-        studentID: "2020MORI11",
-        firstName: "Darren",
-        lastName: "Shiu",
-        phone: "0916472765",
-        email: "darren@mca.edu",
-        highSchool: "Morrison Academy",
-        graduationYear: 2020,
-        attendedCollege: null,
-        packageType: {
-            course: true,
-            planning: true,
-            apply: true
-        },
-        personOfRecommendation: null,
-    },
-    content: {
-        partOverview: {
-            atAGlance: {
-                notice: "Notice will be a string.",
-                familyInfo: "Darren is the only child in his family."
-            },
-            firstAppointment: "Google Drive Link",
-            preTestResult: "Google Drive Link"
-        },
-        partCore: {
-            currentCourseList: null,
-            pastCourseList: [
-                courseObject[3], courseObject[4]
-            ]
-        },
-        partCompass: {
-            summary: "will be a string",
-            improvement: "will be a string",
-            goalSetting: "will be a string",
-            engagement: "will be a string",
-            gradesAndTests: "will be a string",
-            activities: "will be a string",
-            toDoList: "will be a string"
-        },
-        partMentor: {
-            testInfo: "Google Drive Link",
-            collegeList: "Google Drive Link",
-            optionals: null
-        },
-        partReport: {
-            SATreport: ["A list of Google Drive links"],
-            TOEFLreport: ["A list of Google Drive links"]
-        }
-    }
-}

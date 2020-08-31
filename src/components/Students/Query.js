@@ -10,13 +10,11 @@ import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import theme from "../../themes";
 import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
+import Header from "../defaults/Header";
 
 const useStyles = makeStyles({
     formStyles: {
         width: "100%"
-    },
-    queryContainer: {
-        margin: ".5rem 0",
     },
     formControl: {
         margin: theme.spacing(1),
@@ -48,13 +46,9 @@ const Query = (props) => {
     return (
         <ThemeProvider theme={theme}>
             {/* Directory Header and BreadCrumb. */}
-            <Grid item sm={12}>
-                <Typography component="h2" variant="h6" gutterBottom>
-                    STUDENT DIRECTORY
-                </Typography>
-            </Grid>
+            <Grid item sm={12}> <Header title={"STUDENT DIRECTORY"} /> </Grid>
             {/* Directory content */}
-            <Grid container item sm={12} className={classes.queryContainer}>
+            <Grid container item sm={12}>
                 <Grid item sm={9}>
                     <form noValidate autoComplete="off" className={classes.formStyles}>
                         <TextField id="standard-basic" fullWidth label="Search student" />

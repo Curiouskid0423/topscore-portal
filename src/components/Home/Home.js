@@ -1,10 +1,11 @@
 import React from "react";
 import Dashboard from "../defaults/Templates";
+import Header from "../defaults/Header";
 
 const Home = () => {
     return (
         <div>
-            This message is from Home Page.
+            <Header title={"DASHBOARD"} />
         </div>
     )
 };
