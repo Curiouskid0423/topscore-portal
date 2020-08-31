@@ -10,9 +10,9 @@ import PublicRoute from "./PublicRoute";
 import Home from "../components/Home/Home";
 import NotFound from "../components/404Page";
 import SignInPage from "../components/SignInPage";
-import StudentHome from "../components/StudentsHomePage";
-import Settings from "../components/Settings";
-import Users from "../components/Users/Users";
+import StudentHome from "../components/Students/StudentsHomePage";
+import Settings from "../components/Settings/Settings";
+import Courses from "../components/Courses/Courses";
 
 
 export const history = createBrowserHistory();
@@ -24,7 +24,7 @@ const AppRouter = () => (
             <Switch>
                 <PublicRoute path = "/" component = {SignInPage} exact = {true} />
                 <PrivateRoute path = "/dashboard" component = {Home}/>
-                <PrivateRoute path = "/users" component = {Users}/>
+                <PrivateRoute path = "/courses" component = {Courses}/>
                 <PrivateRoute path = "/settings" component = {Settings}/>
                 <PrivateRoute path = "/students" component = {StudentHome}/>
                 <Route component = {NotFound} />

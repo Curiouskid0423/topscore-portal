@@ -41,7 +41,7 @@ const TopBar = (props) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                        TopScore
+                        TopScore Education
                     </Typography>
                     <div className={classes.root}>
                         <Button className={classes.logOutButton} onClick={handleDialogChange}>
@@ -52,8 +52,7 @@ const TopBar = (props) => {
                             <DialogTitle id="alert-dialog-title">Sure about Logging Out ?</DialogTitle>
                             <DialogContent>
                                 <DialogContentText id="alert-dialog-description">
-                                    Let Google help apps determine location. This means sending anonymous location data to
-                                    Google, even when no apps are running.
+                                    Logging out with any unsaved changes may be not recoverable.
                                 </DialogContentText>
                             </DialogContent>
                             <DialogActions>
@@ -61,7 +60,7 @@ const TopBar = (props) => {
                                     Cancel
                                 </Button>
                                 <Button onClick={props.dispatchLogOut} color="primary" autoFocus>
-                                    Agree
+                                    Confirm
                                 </Button>
                             </DialogActions>
                         </Dialog>

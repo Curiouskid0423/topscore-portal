@@ -24,6 +24,13 @@ export const courseObject = [
     { name: "Barista internship", instructor: "Johnny"},
     { name: "AP Calculus", instructor: "Ken"}];
 
+// FIXME: Password should be stored in hash.
+export const userInstance1 = {
+    userType: "ADMIN",
+    userName: "Kate",
+    email: "kate@topscore-edu.com",
+    password: "123abc"
+}
 /**
  * @desc A student instance for testing purpose.
  */
@@ -230,6 +237,114 @@ export const studentInstance4 = {
             currentCourseList: null,
             pastCourseList: [
                 courseObject[1], courseObject[3]
+            ]
+        },
+        partCompass: {
+            summary: "will be a string",
+            improvement: "will be a string",
+            goalSetting: "will be a string",
+            engagement: "will be a string",
+            gradesAndTests: "will be a string",
+            activities: "will be a string",
+            toDoList: "will be a string"
+        },
+        partMentor: {
+            testInfo: "Google Drive Link",
+            collegeList: "Google Drive Link",
+            optionals: null
+        },
+        partReport: {
+            SATreport: ["A list of Google Drive links"],
+            TOEFLreport: ["A list of Google Drive links"]
+        }
+    }
+}
+
+export const studentInstance6 = {
+    supervisor: "Kate",
+    contact: {
+        studentID: "2019MDHS23",
+        firstName: "Timothy",
+        lastName: "Tsui",
+        phone: "0912456827",
+        email: "tim.tsui@hkust.edu",
+        highSchool: "Mingdao High School",
+        graduationYear: 2019,
+        attendedCollege: "TsingHua University",
+        packageType: {
+            course: false,
+            planning: false,
+            apply: true
+        },
+        personOfRecommendation: "Kevin Li (Yu-Teng)",
+    },
+    content: {
+        partOverview: {
+            atAGlance: {
+                notice: "Notice will be a string.",
+                familyInfo: "Timothy is the only child in his family."
+            },
+            firstAppointment: "Google Drive Link",
+            preTestResult: "Google Drive Link"
+        },
+        partCore: {
+            currentCourseList: null,
+            pastCourseList: [
+                courseObject[3], courseObject[4]
+            ]
+        },
+        partCompass: {
+            summary: "will be a string",
+            improvement: "will be a string",
+            goalSetting: "will be a string",
+            engagement: "will be a string",
+            gradesAndTests: "will be a string",
+            activities: "will be a string",
+            toDoList: "will be a string"
+        },
+        partMentor: {
+            testInfo: "Google Drive Link",
+            collegeList: "Google Drive Link",
+            optionals: null
+        },
+        partReport: {
+            SATreport: ["A list of Google Drive links"],
+            TOEFLreport: ["A list of Google Drive links"]
+        }
+    }
+}
+
+export const studentInstance5 = {
+    supervisor: "Kate",
+    contact: {
+        studentID: "2020MORI11",
+        firstName: "Darren",
+        lastName: "Shiu",
+        phone: "0916472765",
+        email: "darren@mca.edu",
+        highSchool: "Morrison Academy",
+        graduationYear: 2020,
+        attendedCollege: null,
+        packageType: {
+            course: true,
+            planning: true,
+            apply: true
+        },
+        personOfRecommendation: null,
+    },
+    content: {
+        partOverview: {
+            atAGlance: {
+                notice: "Notice will be a string.",
+                familyInfo: "Darren is the only child in his family."
+            },
+            firstAppointment: "Google Drive Link",
+            preTestResult: "Google Drive Link"
+        },
+        partCore: {
+            currentCourseList: null,
+            pastCourseList: [
+                courseObject[3], courseObject[4]
             ]
         },
         partCompass: {

@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-import Dashboard from "./defaults/Templates";
+import Dashboard from "../defaults/Templates";
 import Grid from "@material-ui/core/Grid";
-import StudentItem from "./Students/StudentItem";
-import Query from "./Students/Query";
+import StudentItem from "./StudentItem";
+import Query from "./Query";
 import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     queryStyles: {
-        paddingLeft: "1.2rem"
+        paddingLeft: "1.2rem",
     }
 }));
 

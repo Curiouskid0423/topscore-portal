@@ -9,13 +9,14 @@ import TextField from "@material-ui/core/TextField";
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import theme from "../../themes";
 import clsx from "clsx";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
     formStyles: {
         width: "100%"
     },
     queryContainer: {
-        margin: "1.5rem 0",
+        margin: ".5rem 0",
     },
     formControl: {
         margin: theme.spacing(1),
@@ -41,9 +42,18 @@ const Query = (props) => {
     const [showFilters, setFiltersOpen] = useState(false);
     const [pkgFilter, setpkgFilter] = useState(undefined);
     const handleFilters = () => setFiltersOpen(!showFilters);
-    const handlePkg = (value) => setpkgFilter(value);
+    const handlePkg = (e) => {
+        setpkgFilter(e.target.value);
+    }
     return (
         <ThemeProvider theme={theme}>
+            {/* Directory Header and BreadCrumb. */}
+            <Grid item sm={12}>
+                <Typography component="h2" variant="h6" gutterBottom>
+                    STUDENT DIRECTORY
+                </Typography>
+            </Grid>
+            {/* Directory content */}
             <Grid container item sm={12} className={classes.queryContainer}>
                 <Grid item sm={9}>
                     <form noValidate autoComplete="off" className={classes.formStyles}>
@@ -58,10 +68,10 @@ const Query = (props) => {
                                     labelId="package-type-label" id="package-select"
                                     value={pkgFilter} onChange={handlePkg}
                                 >
-                                    <MenuItem value={1}>Course</MenuItem>
-                                    <MenuItem value={2}>Planning</MenuItem>
-                                    <MenuItem value={3}>Application</MenuItem>
                                     <MenuItem value={undefined}>--</MenuItem>
+                                    <MenuItem value={"Course"}>Course</MenuItem>
+                                    <MenuItem value={"Planning"}>Planning</MenuItem>
+                                    <MenuItem value={"Application"}>Application</MenuItem>
                                 </Select>
                             </FormControl>
                         </div>
@@ -71,7 +81,7 @@ const Query = (props) => {
                 <Grid item sm={3}>
                     <Button variant={"contained"} color={"primary"}
                             className={classes.searchButton}>
-                        Add Student
+                        Get List
                     </Button>
                 </Grid>
             </Grid>

@@ -1,6 +1,11 @@
 import * as firebase from "firebase";
 import "firebase/analytics";
-import {studentInstance1,studentInstance2,studentInstance3,studentInstance4} from "../fixtures";
+import {studentInstance1,
+    studentInstance2,
+    studentInstance3,
+    studentInstance4,
+    studentInstance5,
+    studentInstance6} from "../fixtures";
 
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -23,5 +28,7 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 // db.ref("students_db").push(studentInstance2);
 // db.ref("students_db").push(studentInstance3);
 // db.ref("students_db").push(studentInstance4);
+// db.ref("students_db").push(studentInstance5);
+// db.ref("students_db").push(studentInstance6);
 
 export {firebase, googleAuthProvider, db as default };
