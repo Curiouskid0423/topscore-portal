@@ -89,7 +89,7 @@ const CourseList = (props) => {
                     <TableBody>
                         {props.courseList.map((entry) => (
                             <StyledTableRow key={entry.uid}>
-                                <StyledTitleCell component={"th"} scope={"row"}>{entry.id}</StyledTitleCell>
+                                <StyledTitleCell component={"th"} scope={"row"}>{entry.uid}</StyledTitleCell>
                                 <StyledTitleCell align="center">{entry.type}</StyledTitleCell>
                                 <StyledTitleCell align="center">{entry.courseName}</StyledTitleCell>
                                 <StyledTitleCell align="center">{entry.instructor}</StyledTitleCell>

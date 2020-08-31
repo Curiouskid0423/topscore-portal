@@ -40,14 +40,14 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 // db.ref("students_db").push(studentInstance5);
 // db.ref("students_db").push(studentInstance6);
 
-db.ref("courses_db").set(null);
-db.ref("courses_db").push(courseInstance1);
-db.ref("courses_db").push(courseInstance2);
-db.ref("courses_db").push(courseInstance3);
-db.ref("courses_db").push(courseInstance4);
-db.ref("courses_db").push(courseInstance5);
-db.ref("courses_db").push(courseInstance6);
-db.ref("courses_db").push(courseInstance7);
-db.ref("courses_db").push(courseInstance8);
+// db.ref("courses_db").set(null);
+// db.ref("courses_db").push(courseInstance1);
+// db.ref("courses_db").push(courseInstance2);
+// db.ref("courses_db").push(courseInstance3);
+// db.ref("courses_db").push(courseInstance4);
+// db.ref("courses_db").push(courseInstance5);
+// db.ref("courses_db").push(courseInstance6);
+// db.ref("courses_db").push(courseInstance7);
+// db.ref("courses_db").push(courseInstance8);
 
 export {firebase, googleAuthProvider, db as default };

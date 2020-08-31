@@ -36,7 +36,6 @@ export const userInstance1 = {
 
 // CourseInstance should have a moment() startDate
 export const courseInstance1 = {
-    id: "SATGROUP001",
     type: "GROUP",
     courseName: "SAT Beginner Class",
     instructor: "Johnny Hope",
@@ -45,7 +44,6 @@ export const courseInstance1 = {
     repeatTimes: 12
 }
 export const courseInstance2 = {
-    id: "ACTONE002",
     type: "1_ON_1",
     courseName: "ACT Advanced Class",
     instructor: "Johnny Hope",
@@ -54,7 +52,6 @@ export const courseInstance2 = {
     repeatTimes: 10
 }
 export const courseInstance3 = {
-    id: "ACTONE003",
     type: "1_ON_1",
     courseName: "ACT Advanced Technique",
     instructor: "Johnny Hope",
@@ -63,7 +60,6 @@ export const courseInstance3 = {
     repeatTimes: 4
 }
 export const courseInstance4 = {
-    id: "ACTGROUP002",
     type: "GROUP",
     courseName: "ACT Beginner Class",
     instructor: "Johnny Hope",
@@ -72,7 +68,6 @@ export const courseInstance4 = {
     repeatTimes: 10
 }
 export const courseInstance5 = {
-    id: "TECHWRKSHOP001",
     type: "GROUP",
     courseName: "Web Dev Workshop",
     instructor: "Kevin Li",
@@ -81,7 +76,6 @@ export const courseInstance5 = {
     repeatTimes: 0
 }
 export const courseInstance6 = {
-    id: "TECHWRKSHOP005",
     type: "GROUP",
     courseName: "Machine Learning Camp",
     instructor: "Kevin Li",
@@ -91,7 +85,6 @@ export const courseInstance6 = {
 }
 
 export const courseInstance7 = {
-    id: "CALIGRAPHY001",
     type: "GROUP",
     courseName: "Calligraphy Workshop",
     instructor: "Ricky Huang",
@@ -101,7 +94,6 @@ export const courseInstance7 = {
 }
 
 export const courseInstance8 = {
-    id: "BARISTA001",
     type: "GROUP",
     courseName: "Barista Internship",
     instructor: "Lousia Coffee Inc.",

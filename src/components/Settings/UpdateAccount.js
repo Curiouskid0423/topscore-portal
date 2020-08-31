@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     submit: {
         margin: "1rem .5rem",
     }
-}))
+}));
 
 /**
  * Update Account Page Component
