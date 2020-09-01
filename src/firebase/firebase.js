@@ -40,6 +40,7 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 // db.ref("students_db").push(studentInstance5);
 // db.ref("students_db").push(studentInstance6);
 
+// TODO: Fixture data to Firebase "courses_db"
 // db.ref("courses_db").set(null);
 // db.ref("courses_db").push(courseInstance1);
 // db.ref("courses_db").push(courseInstance2);

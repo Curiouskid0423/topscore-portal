@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import moment from "moment";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import FormControl from "@material-ui/core/FormControl";
@@ -25,10 +26,10 @@ const CourseForm = (props) => {
     const [courseType, setType] = useState("");
     const handleType = (e) => setType(e.target.value);
     // Handle Date Change (prop 2)
-    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [selectedDate, setSelectedDate] = useState(moment());
     const handleDateChange = (date) => setSelectedDate(date);
     // Handle RepeatBy Change (prop 3)
-    const [repeatBy, setRepeatBy] = useState("DONT_REPEAT");
+    const [repeatBy, setRepeatBy] = useState("");
     const handleRepeatBy = (e) => setRepeatBy(e.target.value);
     // Handle Set Name. (prop 4)
     const [name, setName] = useState("");
@@ -92,7 +93,7 @@ const CourseForm = (props) => {
                                 value={repeatBy} onChange={handleRepeatBy}>
                             <MenuItem value={"WEEK"}>Week</MenuItem>
                             <MenuItem value={"MONTH"}>Month</MenuItem>
-                            <MenuItem value={"DONT_REPEAT"}>Do not repeat</MenuItem>
+                            <MenuItem value={""}>Do not repeat</MenuItem>
                         </Select>
                     </FormControl>
                     <TextField className={classes.textFieldStyles} id="outlined-basic"

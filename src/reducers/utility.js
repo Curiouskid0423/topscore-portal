@@ -12,8 +12,12 @@ const utilReducer = (prevState = utilDefaults, action) => {
             return {
                 templateDrawerOpen: !prevState.templateDrawerOpen
             };
+        case "SUBMIT_MSG":
+            return {
+                submitStatus: action.submitStatus
+            };
         default:
-            return prevState
+            return prevState;
     }
 }
 

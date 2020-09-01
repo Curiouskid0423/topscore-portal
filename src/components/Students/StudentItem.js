@@ -6,6 +6,7 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Divider from '@material-ui/core/Divider';
+import SchoolIcon from '@material-ui/icons/School';
 import Typography from "@material-ui/core/Typography";
 import themehelper from "../../themes";
 
@@ -80,6 +81,11 @@ const StudentItem = (props) => {
                             {props.highSchool} <br/>
                             Class of {props.graduationYear}
                         </Typography>
+                        {
+                            props.attendedCollege !== "" && (<Typography variant="body1" color="textSecondary" component="p">
+                                <b>{props.attendedCollege}</b>
+                            </Typography>)
+                        }
                     </CardContent>
                     <CardActions>
                         <Button size="small" color="primary">

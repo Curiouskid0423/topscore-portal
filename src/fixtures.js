@@ -124,6 +124,12 @@ export const studentInstance1 = {
             planning: true,
             apply: true
         },
+        family: {
+            parent: "Parent Name",
+            relationship: "Mother",
+            phone: "0911283744",
+            email: "parents0123@gmail.com"
+        },
         personOfRecommendation: "Albert Wang",
     },
     content: {
@@ -179,6 +185,12 @@ export const studentInstance2 = {
             course: true,
             planning: false,
             apply: true
+        },
+        family: {
+            parent: "Parent Name",
+            relationship: "Mother",
+            phone: "0911283744",
+            email: "parents0123@gmail.com"
         },
         personOfRecommendation: null,
     },
@@ -236,6 +248,12 @@ export const studentInstance3 = {
             planning: true,
             apply: true
         },
+        family: {
+            parent: "Parent Name",
+            relationship: "Mother",
+            phone: "0911283744",
+            email: "parents0123@gmail.com"
+        },
         personOfRecommendation: null,
     },
     content: {
@@ -292,6 +310,12 @@ export const studentInstance4 = {
             planning: false,
             apply: true
         },
+        family: {
+            parent: "Parent Name",
+            relationship: "Mother",
+            phone: "0911283744",
+            email: "parents0123@gmail.com"
+        },
         personOfRecommendation: null,
     },
     content: {
@@ -346,6 +370,12 @@ export const studentInstance5 = {
             planning: true,
             apply: true
         },
+        family: {
+            parent: "Parent Name",
+            relationship: "Mother",
+            phone: "0911283744",
+            email: "parents0123@gmail.com"
+        },
         personOfRecommendation: null,
     },
     content: {
@@ -399,6 +429,12 @@ export const studentInstance6 = {
             course: false,
             planning: false,
             apply: true
+        },
+        family: {
+            parent: "Parent Name",
+            relationship: "Mother",
+            phone: "0911283744",
+            email: "parents0123@gmail.com"
         },
         personOfRecommendation: "Kevin Li (Yu-Teng)",
     },

@@ -16,7 +16,7 @@ const Header = (props) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Typography component="h2" variant="h5" gutterBottom>
+            <Typography component="h2" variant="h4" gutterBottom>
                 {props.title}
             </Typography>
         </div>

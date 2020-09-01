@@ -5,24 +5,18 @@ import { connect } from "react-redux";
 import CourseForm from "./CourseForm";
 import {startAddCourse} from "../../actions/courses";
 
-export class AddCourse extends React.Component {
-    constructor(props) {
-        super(props);
+const AddCourse = (props) => {
+    // handleSubmit
+    const handleSubmit = (courseObj) => {
+        props.dispatchAddCourse(courseObj);
+        props.history.push("/courses");
     }
 
-    // handleSubmit
-    handleSubmit = (courseObj) => {
-        this.props.dispatchAddCourse(courseObj);
-        this.props.history.push("/courses");
-    }
-    
-    render() {
-        return (
-            <Grid item sm={12}>
-                <CourseForm title={"Add New Course"} onSubmit={this.handleSubmit}/>
-            </Grid>
-        )
-    }
+    return (
+        <Grid item sm={12}>
+            <CourseForm title={"Add New Course"} onSubmit={handleSubmit}/>
+        </Grid>
+    );
 };
 
 const mapDispatchToProps = (dispatch) => ({

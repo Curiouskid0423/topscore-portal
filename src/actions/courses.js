@@ -3,6 +3,7 @@
  */
 
 import database from "../firebase/firebase";
+import {submitMessage} from "./utility";
 
 /**
  * Synchronous action call.
@@ -55,6 +56,9 @@ export const startAddCourse = (courseObj) => {
                     uid: ref.key,
                     ...courseObj
                 }));
-            }).catch((e) => console.log("Failed to submit the course object due to network issues."));
+                dispatch(submitMessage("success"));
+            }).catch((e) => {
+                dispatch(submitMessage("error"));
+            });
     }
 }

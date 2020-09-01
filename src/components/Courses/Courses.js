@@ -23,9 +23,8 @@ const Courses = () => {
 
     return (
         <Grid container className={classes.root}>
-            <Grid item md={1}>&nbsp;</Grid>
             {/* Subpage Routing */}
-            <Grid item container md={10} sm={12}>
+            <Grid item container sm={12}>
                 <Switch>
                     <PrivateRoute path={`${path}`} exact component={CourseList}/>
                     <PrivateRoute path={`${path}/addCourse`} component={AddCourse}/>
@@ -33,7 +32,6 @@ const Courses = () => {
                     <PrivateRoute component={NotFound}/>
                 </Switch>
             </Grid>
-            <Grid item md={1}>&nbsp;</Grid>
         </Grid>
     )
 };
