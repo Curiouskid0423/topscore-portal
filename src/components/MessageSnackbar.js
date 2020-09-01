@@ -20,7 +20,7 @@ const MessageSnackbar = (props) => {
         <div>
             <Snackbar
                 anchorOrigin={{ vertical: "top", horizontal: "center" }}
-                autoHideDuration={6000}
+                autoHideDuration={4000}
                 open={props.submitStatus !== ""}
                 key={message}
             >

@@ -5,6 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import StudentItem from "./StudentItem";
 import Query from "./Query";
 import {makeStyles} from "@material-ui/core/styles";
+import MessageSnackbar from "../MessageSnackbar";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
     queryStyles: {
@@ -31,6 +33,8 @@ const StudentHome = (props) => {
 
     return (
         <Grid container>
+            {/* Snackbar */}
+            { (props.submitStatus !== "") && <MessageSnackbar submitStatus={props.submitStatus} />}
             {/*Query Section*/}
             <Grid item container sm={12} spacing={1} className={classes.queryStyles}>
                 <Query/>
@@ -45,6 +49,7 @@ const StudentHome = (props) => {
 
 const mapStatesToProps = (states) => ({
     students: states.students,
+    submitStatus: states.util.submitStatus || ""
 });
 
 const WrappedStudentHome = () => {

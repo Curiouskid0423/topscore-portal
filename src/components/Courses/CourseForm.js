@@ -75,9 +75,9 @@ const CourseForm = (props) => {
                             <MenuItem value={"ENGAGEMENT"}>Engagement</MenuItem>
                         </Select>
                     </FormControl>
-                    <TextField className={classes.textFieldStyles} id="outlined-basic" label="Course Name"
+                    <TextField required className={classes.textFieldStyles} id="outlined-basic" label="Course Name"
                                size="small" variant="outlined" fullWidth onChange={handleName}/>
-                    <TextField className={classes.textFieldStyles} id="outlined-basic" label="Instructor"
+                    <TextField required className={classes.textFieldStyles} id="outlined-basic" label="Instructor"
                                size="small" variant="outlined" fullWidth onChange={handleInstructor}/>
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <KeyboardDatePicker className={classes.textFieldStyles}

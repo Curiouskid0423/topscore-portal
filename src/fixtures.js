@@ -131,6 +131,9 @@ export const studentInstance1 = {
             email: "parents0123@gmail.com"
         },
         personOfRecommendation: "Albert Wang",
+        recordOfFirstAppt: "A Google Drive link",
+        transcript: "A Google Drive link",
+        collegeList: "A Google Drive Link"
     },
     content: {
         partOverview: {
@@ -193,6 +196,9 @@ export const studentInstance2 = {
             email: "parents0123@gmail.com"
         },
         personOfRecommendation: null,
+        recordOfFirstAppt: "A Google Drive link",
+        transcript: "A Google Drive link",
+        collegeList: "A Google Drive Link"
     },
     content: {
         partOverview: {
@@ -255,6 +261,9 @@ export const studentInstance3 = {
             email: "parents0123@gmail.com"
         },
         personOfRecommendation: null,
+        recordOfFirstAppt: "A Google Drive link",
+        transcript: "A Google Drive link",
+        collegeList: "A Google Drive Link"
     },
     content: {
         partOverview: {
@@ -317,6 +326,9 @@ export const studentInstance4 = {
             email: "parents0123@gmail.com"
         },
         personOfRecommendation: null,
+        recordOfFirstAppt: "A Google Drive link",
+        transcript: "A Google Drive link",
+        collegeList: "A Google Drive Link"
     },
     content: {
         partOverview: {
@@ -377,6 +389,9 @@ export const studentInstance5 = {
             email: "parents0123@gmail.com"
         },
         personOfRecommendation: null,
+        recordOfFirstAppt: "A Google Drive link",
+        transcript: "A Google Drive link",
+        collegeList: "A Google Drive Link"
     },
     content: {
         partOverview: {
@@ -437,6 +452,9 @@ export const studentInstance6 = {
             email: "parents0123@gmail.com"
         },
         personOfRecommendation: "Kevin Li (Yu-Teng)",
+        recordOfFirstAppt: "A Google Drive link",
+        transcript: "A Google Drive link",
+        collegeList: "A Google Drive Link"
     },
     content: {
         partOverview: {

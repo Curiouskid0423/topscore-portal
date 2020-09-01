@@ -3,7 +3,7 @@ import thunk from "redux-thunk";
 import authReducer from "../reducers/auth";
 import coursesReducer from "../reducers/courses";
 import utilReducer from "../reducers/utility";
-import studentsReducer from "../reducers/studentsReducer";
+import studentsReducer from "../reducers/students";
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
