@@ -33,3 +33,28 @@ export const startSetCourses = () => {
         });
     }
 }
+
+/**
+ * AddCourse Object.
+ * @param course
+ * @return an Add Course Action Object.
+ */
+export const addCourse = (course) => {
+    return {
+        type: "ADD_COURSE",
+        course
+    }
+}
+
+export const startAddCourse = (courseObj) => {
+    return (dispatch, getState) => {
+        return database.ref("courses_db")
+            .push(courseObj)
+            .then((ref) => {
+                dispatch(addCourse({
+                    uid: ref.key,
+                    ...courseObj
+                }));
+            }).catch((e) => console.log("Failed to submit the course object due to network issues."));
+    }
+}

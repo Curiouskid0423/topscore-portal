@@ -7,6 +7,11 @@ const coursesDefault = []
 
 const coursesReducer = (prevState = coursesDefault, action) => {
     switch (action.type) {
+        case "ADD_COURSE":
+            return [
+                ...prevState,
+                action.course
+            ];
         case "SET_COURSES":
             return action.courses;
         default:

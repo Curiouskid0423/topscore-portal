@@ -1,5 +1,4 @@
 export const courseInstance1 = {
-    id: "someId randomly generated",
     type: "1-on-1",
     courseName: "SAT Intensive Bootcamp",
     instructor: "Johnny Hope",
