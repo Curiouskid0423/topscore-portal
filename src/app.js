@@ -13,6 +13,7 @@ import { firebase } from "./firebase/firebase";
 import configStore from "./store/configStore";
 import LoadingPage from "./components/LoadingPage";
 import {login, logout} from "./actions/auth";
+// Two firebase call that are necessary at the beginning.
 import {startSetStudents} from "./actions/students";
 import {startSetCourses} from "./actions/courses";
 

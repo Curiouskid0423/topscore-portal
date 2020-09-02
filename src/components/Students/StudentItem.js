@@ -1,12 +1,12 @@
 import React from "react"
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Divider from '@material-ui/core/Divider';
-import SchoolIcon from '@material-ui/icons/School';
 import Typography from "@material-ui/core/Typography";
 import themehelper from "../../themes";
 
@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
         alignItems: "center"
     },
+    linkStyles: {
+        color: "inherit",
+        textDecoration: "none",
+    },
     pkgIdentifier: {
         display: "flex",
         justifyContent: "space-between"
@@ -45,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     },
     pkgApply: {
         backgroundColor: theme.palette.info.main,
-    }
+    },
 }))
 
 const StudentItem = (props) => {
@@ -89,7 +93,10 @@ const StudentItem = (props) => {
                     </CardContent>
                     <CardActions>
                         <Button size="small" color="primary">
-                            Check out
+                            <Link to={`/students/content/${props.id.substring(1,)}`}
+                                  className={classes.linkStyles}>
+                                Check out
+                            </Link>
                         </Button>
                     </CardActions>
                 </ThemeProvider>

@@ -15,7 +15,6 @@ import Settings from "../components/Settings/Settings";
 import Courses from "../components/Courses/Courses";
 import StudentPersonalPage from "../components/Students/StudentPersonalPage";
 
-
 export const history = createBrowserHistory();
 
 // Browser routers takes only one component child (e.g. one div, or one Switch)
@@ -24,10 +23,11 @@ const AppRouter = () => (
         <div>
             <Switch>
                 <PublicRoute path = "/" component = {SignInPage} exact = {true} />
-                <PrivateRoute path = "/dashboard" component = {StudentPersonalPage}/>
+                <PrivateRoute path = "/dashboard" component = {Home}/>
                 <PrivateRoute path = "/courses" component = {Courses}/>
                 <PrivateRoute path = "/settings" component = {Settings}/>
-                <PrivateRoute path = "/students" component = {StudentHome}/>
+                <PrivateRoute path = "/students" exact component = {StudentHome}/>
+                <PrivateRoute path = "/students/content/:id" component = {StudentPersonalPage}/>
                 <Route component = {NotFound} />
             </Switch>
         </div>

@@ -31,7 +31,7 @@ const SignInDateBlock = () => {
                 <div className={"signin-box__right"}> {time} </div>
             </div>
             <div className={"signin-box__greetings"}>
-                {getGreetings(moment())}
+                {getGreetings(moment())}&nbsp;
             </div>
         </div>
     )

@@ -14,14 +14,12 @@ import Dashboard from "../defaults/Templates";
 import ContentTabs from "./ContentTabs";
 
 const useStyles = makeStyles((theme) => ({
-    rootContainer: {
-        maxHeight: "15vh"
-    },
-    basicInfoColumn:{
+    infoColumn:{
         margin: theme.spacing(2),
     },
     cardContainer: {
-        minWidth: "80vw"
+        minWidth: "80vw",
+        paddingLeft: "1rem"
     },
     docLink: {
         marginBottom: ".5rem",
@@ -60,8 +58,8 @@ const StudentPersonalPage = () => {
     return (
         <Container>
             {/* Student Basic Info */}
-            <Grid container item sm={12} className={classes.rootContainer}>
-                <Paper elevation={3} className={classes.basicInfoColumn}>
+            <Grid container item sm={12}>
+                <Paper elevation={3} className={classes.infoColumn}>
                     <Card className={classes.cardContainer}>
                         <CardContent>
                             {/* Title */}
@@ -118,16 +116,15 @@ const StudentPersonalPage = () => {
                                     </Typography>
                                 </Grid>
                                 <Grid item sm={2}>
-                                    <Chip className={classes.docLink} color="primary" icon={<BeenhereIcon />} label={"初談紀錄"}/>
-                                    <Chip className={classes.docLink} color="primary" icon={<BeenhereIcon />} label={"申請大學名單"}/>
-                                    <Chip className={classes.docLink} color="primary" icon={<BeenhereIcon />} label={"高中成績單"}/>
+                                    <Chip className={classes.docLink} clickable icon={<BeenhereIcon />} label={"初談紀錄"}/>
+                                    <Chip className={classes.docLink} clickable icon={<BeenhereIcon />} label={"申請大學名單"}/>
+                                    <Chip className={classes.docLink} clickable icon={<BeenhereIcon />} label={"高中成績單"}/>
                                 </Grid>
                             </Grid>
                         </CardContent>
                     </Card>
                 </Paper>
             </Grid>
-            {/* Dashboard */}
             <Grid container item sm={12}>
                 <ContentTabs />
             </Grid>

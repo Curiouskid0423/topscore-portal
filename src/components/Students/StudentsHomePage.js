@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 const StudentLoader = ({ students } = {}) => {
     return students.map(
         (item) => (<Grid item lg={4} md={6} sm={12} key = {item.id} >
-            <StudentItem {...item.contact}/>
+            <StudentItem {...item.contact} id={item.id}/>
         </Grid>)
     );
 }
