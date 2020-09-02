@@ -13,6 +13,7 @@ import SignInPage from "../components/SignInPage";
 import StudentHome from "../components/Students/StudentsHomePage";
 import Settings from "../components/Settings/Settings";
 import Courses from "../components/Courses/Courses";
+import StudentPersonalPage from "../components/Students/StudentPersonalPage";
 
 
 export const history = createBrowserHistory();
@@ -23,7 +24,7 @@ const AppRouter = () => (
         <div>
             <Switch>
                 <PublicRoute path = "/" component = {SignInPage} exact = {true} />
-                <PrivateRoute path = "/dashboard" component = {Home}/>
+                <PrivateRoute path = "/dashboard" component = {StudentPersonalPage}/>
                 <PrivateRoute path = "/courses" component = {Courses}/>
                 <PrivateRoute path = "/settings" component = {Settings}/>
                 <PrivateRoute path = "/students" component = {StudentHome}/>
