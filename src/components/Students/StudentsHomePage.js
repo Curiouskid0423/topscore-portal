@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { connect } from "react-redux";
 import Dashboard from "../defaults/Templates";
 import Grid from "@material-ui/core/Grid";
@@ -6,7 +6,6 @@ import StudentItem from "./StudentItem";
 import Query from "./Query";
 import {makeStyles} from "@material-ui/core/styles";
 import MessageSnackbar from "../MessageSnackbar";
-import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
     queryStyles: {
@@ -19,16 +18,15 @@ const useStyles = makeStyles((theme) => ({
  * @param students
  * @return a Loader Helper React Component.
  */
-const StudentLoader = ({ students, ...rest } = {}) => {
-    return students.map(
+const StudentLoader = (props) => {
+    return props.students.map(
         (item) => (<Grid item lg={4} md={6} sm={12} key = {item.id} >
-            <StudentItem {...rest} {...item.contact} id={item.id}/>
+            <StudentItem {...item.contact} id={item.id}/>
         </Grid>)
     );
 }
 
 const StudentHome = (props) => {
-
     const classes = useStyles();
 
     return (
@@ -41,7 +39,7 @@ const StudentHome = (props) => {
             </Grid>
             {/*Student results*/}
             <Grid item container sm={12}>
-                <StudentLoader students = {props.students}/>
+                <StudentLoader {...props} students = {props.students}/>
             </Grid>
         </Grid>
     )

@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     },
 });
 
-const TabPanel = ({ children, value, index, ...rest } = {}) => {
+export const TabPanel = ({ children, value, index, ...rest } = {}) => {
     return (
         <div role={"tabpanel"} hidden={value !== index}
              id={`student-tab-${index}`} {...rest}>

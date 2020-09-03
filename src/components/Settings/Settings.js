@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Dashboard from "../defaults/Templates";
@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     }
 });
 
-const Settings = () => {
+const Settings = (props) => {
 
     const classes = useStyles();
     const { path } = useRouteMatch();

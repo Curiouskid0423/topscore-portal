@@ -112,4 +112,4 @@ const mapDispatchToProps = (dispatch) => ({
     dispatchGetContent: (id) => dispatch(startSetContent(id))
 })
 
-export default connect(undefined, mapDispatchToProps)(StudentItem);
+export default connect(undefined, mapDispatchToProps)(withRouter(StudentItem));

@@ -113,7 +113,7 @@ export const studentInstance1 = {
     contact: {
         studentID: "2018MDHS18",
         firstName: "Kevin",
-        lastName: "Gatsby",
+        lastName: "Li",
         phone: "0912933348",
         email: "yutengli@berkeley.edu",
         highSchool: "Mingdao High School",
@@ -127,13 +127,13 @@ export const studentInstance1 = {
         family: {
             parent: "Parent Name",
             relationship: "Mother",
-            phone: "0911283744",
-            email: "parents0123@gmail.com"
+            phone: "0931480950",
+            email: "evny2305@gmail.com"
         },
         personOfRecommendation: "Albert Wang",
-        recordOfFirstAppt: "A Google Drive link",
-        transcript: "A Google Drive link",
-        collegeList: "A Google Drive Link"
+        recordOfFirstAppt: "https://curiouskid0423.github.io/",
+        transcript: "https://curiouskid0423.github.io/",
+        collegeList: "https://curiouskid0423.github.io/"
     },
     content: {
         partOverview: {
@@ -141,7 +141,6 @@ export const studentInstance1 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Kevin has no siblings."
             },
-            firstAppointment: "Google Drive Link",
             preTestResult: "Google Drive Link"
         },
         partCore: {
@@ -152,15 +151,16 @@ export const studentInstance1 = {
                 courseObject[3], courseObject[4], courseObject[5]
             ]
         },
-        partCompass: {
-            summary: "will be a string",
-            improvement: "will be a string",
-            goalSetting: "will be a string",
-            engagement: "will be a string",
-            gradesAndTests: "will be a string",
-            activities: "will be a string",
-            toDoList: "will be a string"
-        },
+        partCompass: [{
+                summary: "Compass, Spring 20, Part 1: Summary",
+                improvement: "Compass, Spring 20, Part 2: Improve",
+                goalSetting: "Compass, Spring 20, Part 3: Goals",
+                engagement: "Compass, Spring 20, Part 4: Engagement",
+                gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
+                activities: "Compass, Spring 20, Part 6: Activities",
+                toDoList: "Compass, Spring 20, Part 7: To Do List"
+            }
+        ],
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -195,10 +195,10 @@ export const studentInstance2 = {
             phone: "0911283744",
             email: "parents0123@gmail.com"
         },
-        personOfRecommendation: null,
-        recordOfFirstAppt: "A Google Drive link",
-        transcript: "A Google Drive link",
-        collegeList: "A Google Drive Link"
+        personOfrecommendation: "",
+        recordOfFirstAppt: "https://curiouskid0423.github.io/",
+        transcript: "https://curiouskid0423.github.io/",
+        collegeList: "https://curiouskid0423.github.io/"
     },
     content: {
         partOverview: {
@@ -206,7 +206,6 @@ export const studentInstance2 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Ricky has a sister currently at tenth grade."
             },
-            firstAppointment: "Google Drive Link",
             preTestResult: "Google Drive Link"
         },
         partCore: {
@@ -217,15 +216,16 @@ export const studentInstance2 = {
                 courseObject[1], courseObject[3], courseObject[5]
             ]
         },
-        partCompass: {
-            summary: "will be a string",
-            improvement: "will be a string",
-            goalSetting: "will be a string",
-            engagement: "will be a string",
-            gradesAndTests: "will be a string",
-            activities: "will be a string",
-            toDoList: "will be a string"
-        },
+        partCompass: [{
+                summary: "Compass, Spring 20, Part 1: Summary",
+                improvement: "Compass, Spring 20, Part 2: Improve",
+                goalSetting: "Compass, Spring 20, Part 3: Goals",
+                engagement: "Compass, Spring 20, Part 4: Engagement",
+                gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
+                activities: "Compass, Spring 20, Part 6: Activities",
+                toDoList: "Compass, Spring 20, Part 7: To Do List"
+            }
+        ],
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -260,10 +260,10 @@ export const studentInstance3 = {
             phone: "0911283744",
             email: "parents0123@gmail.com"
         },
-        personOfRecommendation: null,
-        recordOfFirstAppt: "A Google Drive link",
-        transcript: "A Google Drive link",
-        collegeList: "A Google Drive Link"
+        personOfrecommendation: "",
+        recordOfFirstAppt: "https://curiouskid0423.github.io/",
+        transcript: "https://curiouskid0423.github.io/",
+        collegeList: "https://curiouskid0423.github.io/"
     },
     content: {
         partOverview: {
@@ -271,7 +271,6 @@ export const studentInstance3 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Benjamin has a brother currently in 9th grade."
             },
-            firstAppointment: "Google Drive Link",
             preTestResult: "Google Drive Link"
         },
         partCore: {
@@ -282,15 +281,16 @@ export const studentInstance3 = {
                 courseObject[1], courseObject[3]
             ]
         },
-        partCompass: {
-            summary: "will be a string",
-            improvement: "will be a string",
-            goalSetting: "will be a string",
-            engagement: "will be a string",
-            gradesAndTests: "will be a string",
-            activities: "will be a string",
-            toDoList: "will be a string"
-        },
+        partCompass: [{
+                summary: "Compass, Spring 20, Part 1: Summary",
+                improvement: "Compass, Spring 20, Part 2: Improve",
+                goalSetting: "Compass, Spring 20, Part 3: Goals",
+                engagement: "Compass, Spring 20, Part 4: Engagement",
+                gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
+                activities: "Compass, Spring 20, Part 6: Activities",
+                toDoList: "Compass, Spring 20, Part 7: To Do List"
+            }
+        ],
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -320,15 +320,15 @@ export const studentInstance4 = {
             apply: true
         },
         family: {
-            parent: "Parent Name",
+            parent: "Jasmin Huang",
             relationship: "Mother",
             phone: "0911283744",
-            email: "parents0123@gmail.com"
+            email: "lavMom@gmail.com"
         },
-        personOfRecommendation: null,
-        recordOfFirstAppt: "A Google Drive link",
-        transcript: "A Google Drive link",
-        collegeList: "A Google Drive Link"
+        personOfRecommendation: "",
+        recordOfFirstAppt: "https://curiouskid0423.github.io/",
+        transcript: "https://curiouskid0423.github.io/",
+        collegeList: "https://curiouskid0423.github.io/"
     },
     content: {
         partOverview: {
@@ -336,7 +336,6 @@ export const studentInstance4 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Lavinia has two sisters."
             },
-            firstAppointment: "Google Drive Link",
             preTestResult: "Google Drive Link"
         },
         partCore: {
@@ -345,15 +344,16 @@ export const studentInstance4 = {
                 courseObject[1], courseObject[3]
             ]
         },
-        partCompass: {
-            summary: "will be a string",
-            improvement: "will be a string",
-            goalSetting: "will be a string",
-            engagement: "will be a string",
-            gradesAndTests: "will be a string",
-            activities: "will be a string",
-            toDoList: "will be a string"
-        },
+        partCompass: [{
+            summary: "Compass, Spring 20, Part 1: Summary",
+            improvement: "Compass, Spring 20, Part 2: Improve",
+            goalSetting: "Compass, Spring 20, Part 3: Goals",
+            engagement: "Compass, Spring 20, Part 4: Engagement",
+            gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
+            activities: "Compass, Spring 20, Part 6: Activities",
+            toDoList: "Compass, Spring 20, Part 7: To Do List"
+        }
+        ],
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -388,10 +388,10 @@ export const studentInstance5 = {
             phone: "0911283744",
             email: "parents0123@gmail.com"
         },
-        personOfRecommendation: null,
-        recordOfFirstAppt: "A Google Drive link",
-        transcript: "A Google Drive link",
-        collegeList: "A Google Drive Link"
+        personOfrecommendation: "",
+        recordOfFirstAppt: "https://curiouskid0423.github.io/",
+        transcript: "https://curiouskid0423.github.io/",
+        collegeList: "https://curiouskid0423.github.io/"
     },
     content: {
         partOverview: {
@@ -399,7 +399,6 @@ export const studentInstance5 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Darren is the only child in his family."
             },
-            firstAppointment: "Google Drive Link",
             preTestResult: "Google Drive Link"
         },
         partCore: {
@@ -408,15 +407,15 @@ export const studentInstance5 = {
                 courseObject[3], courseObject[4]
             ]
         },
-        partCompass: {
-            summary: "will be a string",
-            improvement: "will be a string",
-            goalSetting: "will be a string",
-            engagement: "will be a string",
-            gradesAndTests: "will be a string",
-            activities: "will be a string",
-            toDoList: "will be a string"
-        },
+        partCompass: [{
+            summary: "Compass, Spring 20, Part 1: Summary",
+            improvement: "Compass, Spring 20, Part 2: Improve",
+            goalSetting: "Compass, Spring 20, Part 3: Goals",
+            engagement: "Compass, Spring 20, Part 4: Engagement",
+            gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
+            activities: "Compass, Spring 20, Part 6: Activities",
+            toDoList: "Compass, Spring 20, Part 7: To Do List"
+        }],
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -446,15 +445,15 @@ export const studentInstance6 = {
             apply: true
         },
         family: {
-            parent: "Parent Name",
+            parent: "Molly Huang",
             relationship: "Mother",
             phone: "0911283744",
-            email: "parents0123@gmail.com"
+            email: "timothymom@gmail.com"
         },
         personOfRecommendation: "Kevin Li (Yu-Teng)",
-        recordOfFirstAppt: "A Google Drive link",
-        transcript: "A Google Drive link",
-        collegeList: "A Google Drive Link"
+        recordOfFirstAppt: "https://curiouskid0423.github.io/",
+        transcript: "https://curiouskid0423.github.io/",
+        collegeList: "https://curiouskid0423.github.io/"
     },
     content: {
         partOverview: {
@@ -462,7 +461,6 @@ export const studentInstance6 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Timothy is the only child in his family."
             },
-            firstAppointment: "Google Drive Link",
             preTestResult: "Google Drive Link"
         },
         partCore: {
@@ -471,15 +469,15 @@ export const studentInstance6 = {
                 courseObject[3], courseObject[4]
             ]
         },
-        partCompass: {
-            summary: "will be a string",
-            improvement: "will be a string",
-            goalSetting: "will be a string",
-            engagement: "will be a string",
-            gradesAndTests: "will be a string",
-            activities: "will be a string",
-            toDoList: "will be a string"
-        },
+        partCompass: [{
+            summary: "Compass, Spring 20, Part 1: Summary",
+            improvement: "Compass, Spring 20, Part 2: Improve",
+            goalSetting: "Compass, Spring 20, Part 3: Goals",
+            engagement: "Compass, Spring 20, Part 4: Engagement",
+            gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
+            activities: "Compass, Spring 20, Part 6: Activities",
+            toDoList: "Compass, Spring 20, Part 7: To Do List"
+        }],
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",

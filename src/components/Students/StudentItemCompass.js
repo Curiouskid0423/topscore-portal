@@ -1,11 +1,19 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import { Switch, Link, useRouteMatch, withRouter } from "react-router-dom";
+import { v4 as uuid } from 'uuid';
+import NotFound from "../404Page";
+import CompassForm from "./Compass/CompassForm";
 
-const StudentItemCompass = () => {
+const StudentItemCompass = (props) => {
+
+    const { path, url } = useRouteMatch();
+    console.log(url);
+    console.log(props);
     return (
         <div>
-            <p> A Message from Student Compass.</p>
+            <CompassForm />
         </div>
     );
 }
 
-export default StudentItemCompass;
+export default withRouter(StudentItemCompass);
