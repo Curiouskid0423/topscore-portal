@@ -10,6 +10,7 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import { connect } from "react-redux";
 import Dashboard from "../defaults/Templates";
 import ContentTabs from "./ContentTabs";
 
@@ -47,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-const StudentPersonalPage = () => {
+const StudentPersonalPage = (props) => {
     const classes = useStyles();
     const chipCourse = <Chip className={clsx(classes.pkgButton, classes.pkgCourse)}
                              size="small" label="課程生" />
@@ -77,7 +78,10 @@ const StudentPersonalPage = () => {
                             {/*  Contact Information  */}
                             <Grid container>
                                 <Grid item sm={2}>
-                                    <Typography variant="h5" component="h2"> Yu-Teng Li </Typography>
+                                    <Typography variant="h5" component="h2">
+                                        {props.studentContact.firstName}
+                                        {props.studentContact.lastName}
+                                    </Typography>
                                     <Typography className={classes.pos} color="textSecondary">
                                         SID: 3034914455
                                     </Typography>
@@ -132,6 +136,13 @@ const StudentPersonalPage = () => {
     );
 }
 
-const WrappedStudentPage = () => <Dashboard content={StudentPersonalPage} />;
+const mapStateToProps = (state, ownProps) => ({
+    studentContact: state.students.find((item) => {
+        return ownProps.match.params.id === item.id
+    }),
+    studentContent: state.content
+})
+
+const WrappedStudentPage = () => <Dashboard content={connect(mapStateToProps)(StudentPersonalPage)} />;
 
 export default WrappedStudentPage;

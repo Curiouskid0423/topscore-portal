@@ -19,10 +19,10 @@ const useStyles = makeStyles((theme) => ({
  * @param students
  * @return a Loader Helper React Component.
  */
-const StudentLoader = ({ students } = {}) => {
+const StudentLoader = ({ students, ...rest } = {}) => {
     return students.map(
         (item) => (<Grid item lg={4} md={6} sm={12} key = {item.id} >
-            <StudentItem {...item.contact} id={item.id}/>
+            <StudentItem {...rest} {...item.contact} id={item.id}/>
         </Grid>)
     );
 }

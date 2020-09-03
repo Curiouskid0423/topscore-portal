@@ -1,7 +1,7 @@
 /**
  * @desc This file stores all the actions that a student db manipulation can have.
  */
-import database from "../firebase/firebase"
+import database from "../firebase/firebase";
 import {submitMessage} from "./utility";
 
 /**

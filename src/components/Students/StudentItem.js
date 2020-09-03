@@ -1,6 +1,5 @@
-import React from "react"
+import React, {useEffect} from "react"
 import clsx from "clsx";
-import { Link } from "react-router-dom";
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
@@ -9,6 +8,9 @@ import CardContent from "@material-ui/core/CardContent";
 import Divider from '@material-ui/core/Divider';
 import Typography from "@material-ui/core/Typography";
 import themehelper from "../../themes";
+import {startSetContent} from "../../actions/content";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
 
 /**
@@ -59,6 +61,11 @@ const StudentItem = (props) => {
     const circlePlan = <div className={clsx(classes.packageIcon, classes.pkgPlan)} />
     const circleApply = <div className={clsx(classes.packageIcon, classes.pkgApply)} />
 
+    const handleContent = () => {
+        props.dispatchGetContent(props.id);
+        props.history.push(`/students/content/${props.id}`);
+    }
+
     return (
         <Card className={classes.cardRoot}>
                 <ThemeProvider theme={themehelper}>
@@ -92,11 +99,8 @@ const StudentItem = (props) => {
                         }
                     </CardContent>
                     <CardActions>
-                        <Button size="small" color="primary">
-                            <Link to={`/students/content/${props.id.substring(1,)}`}
-                                  className={classes.linkStyles}>
+                        <Button size="small" color="primary" onClick={handleContent}>
                                 Check out
-                            </Link>
                         </Button>
                     </CardActions>
                 </ThemeProvider>
@@ -104,4 +108,8 @@ const StudentItem = (props) => {
     )
 }
 
-export default StudentItem;
+const mapDispatchToProps = (dispatch) => ({
+    dispatchGetContent: (id) => dispatch(startSetContent(id))
+})
+
+export default connect(undefined, mapDispatchToProps)(StudentItem);
