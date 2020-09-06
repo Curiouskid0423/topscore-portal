@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: "300px"
     },
     textStyles: {
-        margin: theme.spacing(1),
     }
 }));
 

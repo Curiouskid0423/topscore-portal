@@ -86,7 +86,7 @@ const CourseList = (props) => {
                 </Grid>
             </Grid>
             <TableContainer component={Paper} className={classes.tableContainer}>
-                <Table className={classes.table}>
+                <Table stickyHeader className={classes.table}>
                     {/*  Header */}
                     <TableHead>
                         <TableRow>

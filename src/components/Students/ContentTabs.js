@@ -4,9 +4,9 @@ import Box from "@material-ui/core/Box";
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import StudentItemOverview from "./StudentItemOverview";
-import StudentItemCore from "./StudentItemCore";
+import StudentItemCore from "./Core/StudentItemCore";
 import StudentItemCompass from "./StudentItemCompass";
-import StudentItemMentor from "./StudentItemMentor";
+import StudentItemMentor from "./Mentor/StudentItemMentor";
 import StudentItemReport from "./StudentItemReport";
 
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
