@@ -16,7 +16,8 @@ export const startSetContent = (id) => {
     return (dispatch, getState) => {
         return database.ref(`students_db/${id}/content`)
             .once("value", (snapshot)=>{
-            dispatch(setContent(snapshot.val()));
+                console.log(snapshot.val());
+                dispatch(setContent(snapshot.val()));
         }).catch((e) => {
             console.log("Failed to load in contact info. Here's why: ", e);
         });

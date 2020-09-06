@@ -1,10 +1,16 @@
 import React, {useState} from "react";
 import Typography from "@material-ui/core/Typography";
+import Checkbox from "@material-ui/core/Checkbox";
+import FormControl from "@material-ui/core/FormControl";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Divider from "@material-ui/core/Divider";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import {makeStyles} from "@material-ui/core/styles";
+import moment from "moment";
+import DateFnsUtils from "@date-io/date-fns";
+import {KeyboardDatePicker, MuiPickersUtilsProvider} from "@material-ui/pickers";
 
 const useStyles = makeStyles((theme) => ({
     rootContainer: {
@@ -17,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     },
     categoryTitle: {
         marginLeft: ".5rem"
+    },
+    pkgStyles: {
+        padding: "0 1.5rem 0 .5rem",
     },
     titleStyles: {
         paddingTop: "1rem",
@@ -72,8 +81,11 @@ const StudentForm = (props) => {
     const [parentEmail, setParentEmail] = useState("");
     const handleParentEmail = (e) => setParentEmail(e.target.value);
     // (State 13) Other: Package
-    const [studentPkg, setPackage] = useState("");
-    const handlePackage = (e) => setPackage(e.target.value);
+    const [pkg, setPackage] = useState({
+        course: false, planning: false, apply: false,
+    });
+    const handlePackage = (e) => setPackage({...pkg, [e.target.name]: e.target.checked})
+
     // (State 14) Other: Recommendation
     const [rec, setRec] = useState("");
     const handleRecPerson = (e) => setRec(e.target.value);
@@ -89,6 +101,21 @@ const StudentForm = (props) => {
     // (State 18) Other: Supervisor
     const [supervisor, setSupervisor] = useState("");
     const handleSupervisor = (e) => setSupervisor(e.target.value);
+    // (State 19) Pre-test: Reading
+    const [reading, setReading] = useState("");
+    const handleReading = (e) => setReading(e.target.value);
+    // (State 20) Pre-test: Writing
+    const [writing, setWriting] = useState("");
+    const handleWriting = (e) => setWriting(e.target.value);
+    // (State 21) Pre-test: Math
+    const [math, setMath] = useState("");
+    const handleMath = (e) => setMath(e.target.value);
+    // (State 22) Pre-test: Essay
+    const [essay, setEssay] = useState("");
+    const handleEssay = (e) => setEssay(e.target.value);
+    // (State 22) Pre-test: Date
+    const [testDate, setTestDate] = useState(moment());
+    const handleDate = (date) => setTestDate(date);
     // Error handling state
     const [error, setError] = useState("");
     const handleError = (e) => setError(e);
@@ -126,7 +153,7 @@ const StudentForm = (props) => {
                         phone: parentPhone,
                         email: parentEmail
                     },
-                    packageType: studentPkg,
+                    packageType: pkg,
                     personOfRecommendation: rec,
                     recordOfFirstAppt: firstAppt,
                     transcript: transcript,
@@ -134,6 +161,13 @@ const StudentForm = (props) => {
                     phone: phone,
                     email: email,
                     highSchool: highSchool,
+                    preTestResult: {
+                        date: testDate.valueOf(),
+                        reading: reading,
+                        writing: writing,
+                        math: math,
+                        essay: essay,
+                    }
                 }
             }
             props.onSubmit(studentObj);
@@ -148,7 +182,7 @@ const StudentForm = (props) => {
             </Typography>
             <Divider />
             <div className={classes.rootContainer}>
-                <form noValidate onSubmit={onStudentSubmit}>
+                <form noValidate onSubmit={onStudentSubmit} id={"student-form"}>
                     <Typography variant={"h6"} className={classes.categoryTitle}>
                        Contact Information
                     </Typography>
@@ -188,8 +222,18 @@ const StudentForm = (props) => {
                     </Typography>
                     <TextField className={classes.textFieldStyles} id="supervisor-text" label="Supervisor (consultant)"
                                size="small" variant="outlined" fullWidth onChange={handleSupervisor}/>
-                    <TextField className={classes.textFieldStyles} id="package-type" label="Package Type"
-                               size="small" variant="outlined" fullWidth onChange={handlePackage}/>
+                    <div id="student-pkg-manager">
+                        <Typography variant={"subtitle1"} component={"span"} className={classes.pkgStyles}><b>Package Types</b></Typography>
+                        {/* Package checkbox */}
+                        <FormControlLabel control={<Checkbox
+                            name="course" color={"primary"} checked={pkg.course} onChange={handlePackage}/>} label="Course" />
+                        <FormControlLabel control={<Checkbox
+                            name="planning" color={"primary"} checked={pkg.planning} onChange={handlePackage}/>} label="Planning" />
+                        <FormControlLabel control={<Checkbox
+                            name="apply" color={"primary"} checked={pkg.apply} onChange={handlePackage}/>} label="Apply" />
+                    </div>
+                    {/*<TextField className={classes.textFieldStyles} id="package-type" label="Package Type"*/}
+                    {/*           size="small" variant="outlined" fullWidth onChange={handlePackage}/>*/}
                     <TextField className={classes.textFieldStyles} id="outlined-basic" label="Person of Recommendation"
                                size="small" variant="outlined" fullWidth onChange={handleRecPerson}/>
                     <TextField className={classes.textFieldStyles} id="outlined-basic" label="Record of First Appt. (Google Drive Link)"
@@ -198,6 +242,26 @@ const StudentForm = (props) => {
                                size="small" variant="outlined" fullWidth onChange={handleTranscript}/>
                     <TextField className={classes.textFieldStyles} id="outlined-basic" label="List of Colleges Applied (Google Drive Link)"
                                size="small" variant="outlined" fullWidth onChange={handleCollegeList}/>
+                    {/*  Pre-test result  */}
+                    <Typography variant={"h6"} className={classes.categoryTitle}>
+                        Pre-test result (if applicable)
+                    </Typography>
+                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                        <KeyboardDatePicker className={classes.textFieldStyles}
+                                            disableToolbar variant="inline" format="MM/dd/yyyy"
+                                            margin="normal" id="date-picker-inline" label="Test Date"
+                                            value={testDate} onChange={handleDate} />
+                    </MuiPickersUtilsProvider>
+                    <div>
+                        <TextField className={classes.textFieldStyles} id="reading-score" label="Reading"
+                                   size="small" variant="outlined" onChange={handleReading}/>
+                        <TextField className={classes.textFieldStyles} id="writing-score" label="Writing"
+                                   size="small" variant="outlined" onChange={handleWriting}/>
+                        <TextField className={classes.textFieldStyles} id="math-score" label="Math"
+                                   size="small" variant="outlined" onChange={handleMath}/>
+                        <TextField className={classes.textFieldStyles} id="essay-score" label="Optional Essay"
+                                   size="small" variant="outlined" onChange={handleEssay}/>
+                    </div>
                     <Button type="submit" variant="contained" className={classes.submit}>
                         Submit
                     </Button>

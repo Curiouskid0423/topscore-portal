@@ -17,7 +17,7 @@ export const paragraphFiller = "While MongoDB emerged as part of the wave of so-
     + "relational databases like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility "
     + "that typifies NoSQL solutions.";
 
-export const courseObject = [
+export const courseInstance = [
     { name: "SAT Internsive Camp", instructor: "Johnny"},
     { name: "ML Camp", instructor: "Kevin"},
     { name: "Web dev workshop", instructor: "Kevin"},
@@ -133,7 +133,14 @@ export const studentInstance1 = {
         personOfRecommendation: "Albert Wang",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
         transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/"
+        collegeList: "https://curiouskid0423.github.io/",
+        preTestResult: {
+            date: moment().valueOf(),
+            reading: 300,
+            writing: 370,
+            math: 790,
+            essay: "7-7-7"
+        }
     },
     content: {
         partOverview: {
@@ -141,14 +148,13 @@ export const studentInstance1 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Kevin has no siblings."
             },
-            preTestResult: "Google Drive Link"
         },
         partCore: {
             currentCourseList: [
-                courseObject[0], courseObject[1], courseObject[2]
+                courseInstance[0], courseInstance[1], courseInstance[2]
             ],
             pastCourseList: [
-                courseObject[3], courseObject[4], courseObject[5]
+                courseInstance[3], courseInstance[4], courseInstance[5]
             ]
         },
         partCompass: [{
@@ -167,8 +173,10 @@ export const studentInstance1 = {
             optionals: null
         },
         partReport: {
-            SATreport: ["A list of Google Drive links"],
-            TOEFLreport: ["A list of Google Drive links"]
+            SATreport: ["https://www.youtube.com",
+                "https://www.bloomberg.com/asia",
+                "http://firebase.google.com"],
+            TOEFLreport: ["https://www.ets.org/toefl"]
         }
     }
 }
@@ -198,7 +206,14 @@ export const studentInstance2 = {
         personOfrecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
         transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/"
+        collegeList: "https://curiouskid0423.github.io/",
+        preTestResult: {
+            date: moment().valueOf(),
+            reading: 280,
+            writing: 400,
+            math: 800,
+            essay: "7-7-7"
+        }
     },
     content: {
         partOverview: {
@@ -206,14 +221,13 @@ export const studentInstance2 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Ricky has a sister currently at tenth grade."
             },
-            preTestResult: "Google Drive Link"
         },
         partCore: {
             currentCourseList: [
-                courseObject[4],
+                courseInstance[4],
             ],
             pastCourseList: [
-                courseObject[1], courseObject[3], courseObject[5]
+                courseInstance[1], courseInstance[3], courseInstance[5]
             ]
         },
         partCompass: [{
@@ -263,7 +277,14 @@ export const studentInstance3 = {
         personOfrecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
         transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/"
+        collegeList: "https://curiouskid0423.github.io/",
+        preTestResult: {
+            date: moment().valueOf(),
+            reading: 300,
+            writing: 280,
+            math: 780,
+            essay: "5-6-7"
+        }
     },
     content: {
         partOverview: {
@@ -271,14 +292,13 @@ export const studentInstance3 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Benjamin has a brother currently in 9th grade."
             },
-            preTestResult: "Google Drive Link"
         },
         partCore: {
             currentCourseList: [
-                courseObject[2],
+                courseInstance[2],
             ],
             pastCourseList: [
-                courseObject[1], courseObject[3]
+                courseInstance[1], courseInstance[3]
             ]
         },
         partCompass: [{
@@ -328,7 +348,14 @@ export const studentInstance4 = {
         personOfRecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
         transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/"
+        collegeList: "https://curiouskid0423.github.io/",
+        preTestResult: {
+            date: moment().valueOf(),
+            reading: 320,
+            writing: 340,
+            math: 800,
+            essay: "5-7-7"
+        }
     },
     content: {
         partOverview: {
@@ -336,12 +363,11 @@ export const studentInstance4 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Lavinia has two sisters."
             },
-            preTestResult: "Google Drive Link"
         },
         partCore: {
             currentCourseList: null,
             pastCourseList: [
-                courseObject[1], courseObject[3]
+                courseInstance[1], courseInstance[3]
             ]
         },
         partCompass: [{
@@ -391,7 +417,14 @@ export const studentInstance5 = {
         personOfrecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
         transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/"
+        collegeList: "https://curiouskid0423.github.io/",
+        preTestResult: {
+            date: moment().valueOf(),
+            reading: 300,
+            writing: 370,
+            math: 790,
+            essay: "7-7-7"
+        }
     },
     content: {
         partOverview: {
@@ -399,12 +432,11 @@ export const studentInstance5 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Darren is the only child in his family."
             },
-            preTestResult: "Google Drive Link"
         },
         partCore: {
             currentCourseList: null,
             pastCourseList: [
-                courseObject[3], courseObject[4]
+                courseInstance[3], courseInstance[4]
             ]
         },
         partCompass: [{
@@ -453,7 +485,14 @@ export const studentInstance6 = {
         personOfRecommendation: "Kevin Li (Yu-Teng)",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
         transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/"
+        collegeList: "https://curiouskid0423.github.io/",
+        preTestResult: {
+            date: moment().valueOf(),
+            reading: 300,
+            writing: 370,
+            math: 790,
+            essay: "7-7-7"
+        }
     },
     content: {
         partOverview: {
@@ -461,12 +500,11 @@ export const studentInstance6 = {
                 notice: "Notice will be a string.",
                 familyInfo: "Timothy is the only child in his family."
             },
-            preTestResult: "Google Drive Link"
         },
         partCore: {
             currentCourseList: null,
             pastCourseList: [
-                courseObject[3], courseObject[4]
+                courseInstance[3], courseInstance[4]
             ]
         },
         partCompass: [{

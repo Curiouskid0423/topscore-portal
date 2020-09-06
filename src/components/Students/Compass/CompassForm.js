@@ -6,6 +6,7 @@ import {TabPanel} from "../ContentTabs";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import {makeStyles} from "@material-ui/core/styles";
+import CustomTabPanel from "./CustomTabPanel";
 
 const allProps = (index) => ({id: `compass-tab-${index}`,});
 
@@ -18,9 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
     tabs: {
         borderRight: `1px solid ${theme.palette.divider}`,
-        maxHeight: "300px"
-    },
-    textStyles: {
+        maxHeight: "350px"
     }
 }));
 
@@ -48,52 +47,28 @@ const CompassForm = () => {
             </Grid>
             <Grid item md={10} sm={9}>
                 <TabPanel value={coreTab} index={0}>
-                    <Paper elevation={3} className={classes.textStyles}>
-                        <TextField id="compass-multiline-input" label="Summary"
-                                   multiline rows={rowNumber} variant="outlined" fullWidth/>
-                    </Paper>
+                    <CustomTabPanel label={"Summary"} />
                 </TabPanel>
                 <TabPanel value={coreTab} index={1}>
-                    <Paper elevation={3} className={classes.textStyles}>
-                        <TextField id="compass-multiline-input" label="Need Improvement"
-                                   multiline rows={rowNumber} variant="outlined" fullWidth/>
-                    </Paper>
+                    <CustomTabPanel label={"Need Improvement"} />
                 </TabPanel>
                 <TabPanel value={coreTab} index={2}>
-                    <Paper elevation={3} className={classes.textStyles}>
-                        <TextField id="compass-multiline-input" label="Goal Setting"
-                                   multiline rows={rowNumber} variant="outlined" fullWidth/>
-                    </Paper>
+                    <CustomTabPanel label={"Goal Setting"} />
                 </TabPanel>
                 <TabPanel value={coreTab} index={3}>
-                    <Paper elevation={3} className={classes.textStyles}>
-                        <TextField id="compass-multiline-input" label="Engagement"
-                                   multiline rows={rowNumber} variant="outlined" fullWidth/>
-                    </Paper>
+                    <CustomTabPanel label={"Engagement"} />
                 </TabPanel>
                 <TabPanel value={coreTab} index={4}>
-                    <Paper elevation={3} className={classes.textStyles}>
-                        <TextField id="compass-multiline-input" label="Grade & Tests"
-                                   multiline rows={rowNumber} variant="outlined" fullWidth/>
-                    </Paper>
+                    <CustomTabPanel label={"Grades & Tests"} />
                 </TabPanel>
                 <TabPanel value={coreTab} index={5}>
-                    <Paper elevation={3} className={classes.textStyles}>
-                        <TextField id="compass-multiline-input" label="Activities"
-                                   multiline rows={rowNumber} variant="outlined" fullWidth/>
-                    </Paper>
+                    <CustomTabPanel label={"Activities"} />
                 </TabPanel>
                 <TabPanel value={coreTab} index={6}>
-                    <Paper elevation={3} className={classes.textStyles}>
-                        <TextField id="compass-multiline-input" label="Achievements"
-                                   multiline rows={rowNumber} variant="outlined" fullWidth/>
-                    </Paper>
+                    <CustomTabPanel label={"Achievements"} />
                 </TabPanel>
                 <TabPanel value={coreTab} index={7}>
-                    <Paper elevation={3} className={classes.textStyles}>
-                        <TextField id="compass-multiline-input" label="To-Do List"
-                                   multiline rows={rowNumber} variant="outlined" fullWidth/>
-                    </Paper>
+                    <CustomTabPanel label={"To-Do Lists"} />
                 </TabPanel>
             </Grid>
         </Grid>

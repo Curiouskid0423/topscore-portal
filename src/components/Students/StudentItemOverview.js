@@ -13,6 +13,7 @@ import TableRow from '@material-ui/core/TableRow';
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import { connect } from "react-redux";
 
 import SearchIcon from '@material-ui/icons/Search';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
@@ -43,7 +44,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const StudentItemOverview = () => {
+const StudentItemOverview = (props) => {
+    console.log("Debugger", props);
     const classes = useStyles();
     const rows = [
         ["Test Date", "2019-07-12"],
@@ -55,7 +57,7 @@ const StudentItemOverview = () => {
 
     return (
         <Grid container className={classes.root}>
-            <Grid item sm={6}>
+            <Grid item sm={7}>
                 <div className={classes.flexStyle} style={{ justifyContent: "space-between", }}>
                     <div className={classes.flexStyle}>
                         <Avatar className={classes.avatarStyle} > <SearchIcon/> </Avatar>
@@ -74,18 +76,19 @@ const StudentItemOverview = () => {
                 <div>
                     <Paper elevation={3} style={{margin: "0 1rem 1rem 0"}}>
                         <TextField
-                            id="outlined-multiline-static" label="Notes"
-                            multiline rows={5} variant="outlined" fullWidth/>
+                            id="outlined-multiline-static" label="Notes" multiline rows={5}
+                            defaultValue={props.overview.atAGlance.notice} variant="outlined" fullWidth/>
                     </Paper>
                     <Divider variant="middle" style={{ width: "91%" }}/>
                     <Paper elevation={3} style={{margin: "1rem 1rem 1rem 0"}}>
                         <TextField
                             id="outlined-multiline-static" label="Family Info (Sibling Information)"
-                            multiline rows={5} variant="outlined" fullWidth/>
+                            multiline rows={5} defaultValue={props.overview.atAGlance.familyInfo}
+                            variant="outlined" fullWidth/>
                     </Paper>
                 </div>
             </Grid>
-            <Grid item sm={6}>
+            <Grid item sm={5}>
                 <div className={classes.flexStyle}>
                     <Avatar className={classes.avatarStyle} > <AssignmentTurnedInIcon/> </Avatar>
                     <Typography variant={"h5"} component={"span"}>
@@ -120,4 +123,9 @@ const StudentItemOverview = () => {
     );
 }
 
-export default StudentItemOverview;
+
+const mapStateToProps = (state) => ({
+    overview: state.content.partOverview
+});
+
+export default connect(mapStateToProps)(StudentItemOverview);

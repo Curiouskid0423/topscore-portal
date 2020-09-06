@@ -7,7 +7,8 @@ import StudentItemOverview from "./StudentItemOverview";
 import StudentItemCore from "./Core/StudentItemCore";
 import StudentItemCompass from "./StudentItemCompass";
 import StudentItemMentor from "./Mentor/StudentItemMentor";
-import StudentItemReport from "./StudentItemReport";
+import StudentItemReport from "./Report/StudentItemReport";
+import { connect } from "react-redux";
 
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import theme from "../../themes";

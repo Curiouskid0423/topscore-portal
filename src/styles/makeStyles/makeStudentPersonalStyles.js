@@ -5,9 +5,12 @@
 const makeStudentPersonalStyles = (theme) => ({
     infoColumn:{
         margin: theme.spacing(2),
+        width: "90%"
+    },
+    gridCentered: {
+        justifyContent: "center",
     },
     cardContainer: {
-        minWidth: "80vw",
         paddingLeft: "1rem"
     },
     docLink: {

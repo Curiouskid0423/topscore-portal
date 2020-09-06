@@ -34,7 +34,7 @@ const StudentPersonalPage = (props) => {
     return (
         <Container>
             {/* Student Basic Info */}
-            <Grid container item sm={12}>
+            <Grid container item sm={12} className={classes.gridCentered}>
                 <Paper elevation={3} className={classes.infoColumn}>
                     <Card className={classes.cardContainer}>
                         <CardContent>
@@ -124,7 +124,6 @@ const StudentPersonalPage = (props) => {
 const mapStateToProps = (state) => {
     return {
         students: state.students,
-        studentContent: state.content
     }
 }
 

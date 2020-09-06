@@ -18,13 +18,17 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: theme.typography.fontWeightRegular,
     },
     summaryStyles: {
-        background: "#424242",
+        background: "#787878",
         color: "#fff"
     },
     buttonGrid: {
         display: "flex",
         justifyContent: "center",
         marginTop: "1rem"
+    },
+    saveButton: {
+        padding: ".5rem 3.5rem",
+        background: "#DCD3C0"
     }
 }));
 
@@ -65,7 +69,7 @@ const StudentItemMentor = () => {
                 </Accordion>
             </Grid>
             <Grid item sm={12} className={classes.buttonGrid}>
-                <Button variant={"contained"} color={"primary"} style={{padding: ".5rem 3.5rem"}}> Save </Button>
+                <Button variant={"contained"} className={classes.saveButton}> Save </Button>
             </Grid>
         </Grid>
     );
