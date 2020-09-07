@@ -6,7 +6,6 @@ export const PrivateRoute = (
     { isAuthenticated, component: Component, ...rest}
     ) => {
     if (isAuthenticated) {
-        console.log({...rest});
         return (<div>
             <Route {...rest} component = {Component} />
         </div>);

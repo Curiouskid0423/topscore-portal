@@ -265,6 +265,12 @@ const StudentForm = (props) => {
                     <Button type="submit" variant="contained" className={classes.submit}>
                         Submit
                     </Button>
+                    {
+                        props.isEdit && (
+                        <Button type="submit" variant="contained" color={"secondary"} className={classes.submit}>
+                            Remove
+                        </Button>)
+                    }
                 </form>
             </div>
         </Paper>

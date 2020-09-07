@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useState} from "react"
 import clsx from "clsx";
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -10,7 +10,10 @@ import Typography from "@material-ui/core/Typography";
 import themehelper from "../../themes";
 import {startSetContent} from "../../actions/content";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { withRouter, useRouteMatch } from "react-router-dom";
+
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 /**
@@ -20,6 +23,10 @@ import { withRouter } from "react-router-dom";
  */
 
 const useStyles = makeStyles((theme) => ({
+    backdrop: {
+        zIndex: theme.zIndex.drawer + 1,
+        color: '#fff',
+    },
     cardRoot: {
         maxWidth: 345,
         margin: "1rem"
@@ -52,7 +59,9 @@ const useStyles = makeStyles((theme) => ({
     pkgApply: {
         backgroundColor: theme.palette.info.main,
     },
-}))
+}));
+
+
 
 const StudentItem = (props) => {
 
@@ -60,10 +69,15 @@ const StudentItem = (props) => {
     const circleCourse = <div className={clsx(classes.packageIcon, classes.pkgCourse)} />
     const circlePlan = <div className={clsx(classes.packageIcon, classes.pkgPlan)} />
     const circleApply = <div className={clsx(classes.packageIcon, classes.pkgApply)} />
+    const [backdrop, setBackdrop] = useState(false);
 
     const handleContent = () => {
         props.dispatchGetContent(props.id);
-        props.history.push(`/students/content/${props.id}`);
+        setBackdrop(true);
+        // Set timeout for fetching `content` section
+        setTimeout(() => {
+            props.history.push(`/students/content/${props.id}`);
+        }, 2000);
     }
 
     return (
@@ -104,6 +118,10 @@ const StudentItem = (props) => {
                         </Button>
                     </CardActions>
                 </ThemeProvider>
+                {/* Back drop on hold.  */}
+                <Backdrop className={classes.backdrop} open={backdrop}>
+                    <CircularProgress color="inherit" />
+                </Backdrop>
         </Card>
     )
 }

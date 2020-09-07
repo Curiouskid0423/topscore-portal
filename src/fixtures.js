@@ -164,6 +164,7 @@ export const studentInstance1 = {
                 engagement: "Compass, Spring 20, Part 4: Engagement",
                 gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
                 activities: "Compass, Spring 20, Part 6: Activities",
+                achievement: "Compass, Spring 20, Part 6.5: Achievements",
                 toDoList: "Compass, Spring 20, Part 7: To Do List"
             }
         ],
@@ -237,6 +238,7 @@ export const studentInstance2 = {
                 engagement: "Compass, Spring 20, Part 4: Engagement",
                 gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
                 activities: "Compass, Spring 20, Part 6: Activities",
+                achievement: "Compass, Spring 20, Part 6.5: Achievements",
                 toDoList: "Compass, Spring 20, Part 7: To Do List"
             }
         ],
@@ -308,6 +310,7 @@ export const studentInstance3 = {
                 engagement: "Compass, Spring 20, Part 4: Engagement",
                 gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
                 activities: "Compass, Spring 20, Part 6: Activities",
+                achievement: "Compass, Spring 20, Part 6.5: Achievements",
                 toDoList: "Compass, Spring 20, Part 7: To Do List"
             }
         ],
@@ -377,6 +380,7 @@ export const studentInstance4 = {
             engagement: "Compass, Spring 20, Part 4: Engagement",
             gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
             activities: "Compass, Spring 20, Part 6: Activities",
+            achievement: "Compass, Spring 20, Part 6.5: Achievements",
             toDoList: "Compass, Spring 20, Part 7: To Do List"
         }
         ],
@@ -446,6 +450,7 @@ export const studentInstance5 = {
             engagement: "Compass, Spring 20, Part 4: Engagement",
             gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
             activities: "Compass, Spring 20, Part 6: Activities",
+            achievement: "Compass, Spring 20, Part 6.5: Achievements",
             toDoList: "Compass, Spring 20, Part 7: To Do List"
         }],
         partMentor: {
@@ -514,6 +519,7 @@ export const studentInstance6 = {
             engagement: "Compass, Spring 20, Part 4: Engagement",
             gradesAndTests: "Compass, Spring 20, Part 5: Grades and Tests",
             activities: "Compass, Spring 20, Part 6: Activities",
+            achievement: "Compass, Spring 20, Part 6.5: Achievements",
             toDoList: "Compass, Spring 20, Part 7: To Do List"
         }],
         partMentor: {

@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link, Redirect } from "react-router-dom";
 import clsx from "clsx";
 import BeenhereIcon from '@material-ui/icons/Beenhere';
 import Button from '@material-ui/core/Button';
@@ -7,7 +7,6 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Container from "@material-ui/core/Container";
 import Chip from "@material-ui/core/Chip";
-import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -31,6 +30,7 @@ const StudentPersonalPage = (props) => {
                             size="small" label="代辦生" />
     const chipPlan = <Chip className={clsx(classes.pkgButton, classes.pkgPlan)}
                            size="small" label="規劃生" />
+
     return (
         <Container>
             {/* Student Basic Info */}
@@ -59,9 +59,11 @@ const StudentPersonalPage = (props) => {
                                     <Typography className={classes.pos} color="textSecondary">
                                         SID: {currentStudent.contact.studentID}
                                     </Typography>
-                                    <Button color={"primary"} className={classes.editStudent}>
-                                        Edit Student
-                                    </Button>
+                                    <Link to={`../edit/${currentStudent.id}`} className={classes.linkStyles}>
+                                        <Button color={"primary"} className={classes.editStudent}>
+                                            Edit Student
+                                        </Button>
+                                    </Link>
                                 </Grid>
                                 <Grid item sm={4}>
                                     <Typography color="textSecondary">High School</Typography>
@@ -98,15 +100,15 @@ const StudentPersonalPage = (props) => {
                                     </Typography>
                                 </Grid>
                                 <Grid item sm={2}>
-                                    <Link href={currentStudent.contact.recordOfFirstAppt} onClick={(e) => e.preventDefault()}>
+                                    <a href={currentStudent.contact.recordOfFirstAppt}>
                                         <Chip className={classes.docLink} clickable icon={<BeenhereIcon />} label={"初談紀錄"}/>
-                                    </Link>
-                                    <Link href={currentStudent.contact.collegeList} onClick={(e) => e.preventDefault()}>
+                                    </a>
+                                    <a href={currentStudent.contact.collegeList}>
                                         <Chip className={classes.docLink} clickable icon={<BeenhereIcon />} label={"申請大學名單"}/>
-                                    </Link>
-                                    <Link href={currentStudent.contact.transcript} onClick={(e) => e.preventDefault()}>
+                                    </a>
+                                    <a href={currentStudent.contact.transcript}>
                                         <Chip className={classes.docLink} clickable icon={<BeenhereIcon />} label={"高中成績單"}/>
-                                    </Link>
+                                    </a>
                                 </Grid>
                             </Grid>
                         </CardContent>
@@ -124,6 +126,7 @@ const StudentPersonalPage = (props) => {
 const mapStateToProps = (state) => {
     return {
         students: state.students,
+        hasContent: state.content !== {}
     }
 }
 

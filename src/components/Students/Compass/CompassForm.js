@@ -3,10 +3,9 @@ import Grid from "@material-ui/core/Grid";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import {TabPanel} from "../ContentTabs";
-import Paper from "@material-ui/core/Paper";
-import TextField from "@material-ui/core/TextField";
 import {makeStyles} from "@material-ui/core/styles";
 import CustomTabPanel from "./CustomTabPanel";
+import { connect } from "react-redux";
 
 const allProps = (index) => ({id: `compass-tab-${index}`,});
 
@@ -23,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const CompassForm = () => {
+const CompassForm = ({compass} = {}) => {
 
     const classes = useStyles();
     const [coreTab, setCoreTab] = useState(0);
@@ -47,32 +46,36 @@ const CompassForm = () => {
             </Grid>
             <Grid item md={10} sm={9}>
                 <TabPanel value={coreTab} index={0}>
-                    <CustomTabPanel label={"Summary"} />
+                    <CustomTabPanel label={"Summary"} value={compass.summary}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={1}>
-                    <CustomTabPanel label={"Need Improvement"} />
+                    <CustomTabPanel label={"Need Improvement"} value={compass.improvement}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={2}>
-                    <CustomTabPanel label={"Goal Setting"} />
+                    <CustomTabPanel label={"Goal Setting"} value={compass.goalSetting}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={3}>
-                    <CustomTabPanel label={"Engagement"} />
+                    <CustomTabPanel label={"Engagement"} value={compass.engagement}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={4}>
-                    <CustomTabPanel label={"Grades & Tests"} />
+                    <CustomTabPanel label={"Grades & Tests"} value={compass.gradesAndTests}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={5}>
-                    <CustomTabPanel label={"Activities"} />
+                    <CustomTabPanel label={"Activities"} value={compass.activities}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={6}>
-                    <CustomTabPanel label={"Achievements"} />
+                    <CustomTabPanel label={"Achievements"} value={compass.activities}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={7}>
-                    <CustomTabPanel label={"To-Do Lists"} />
+                    <CustomTabPanel label={"To-Do Lists"} value={compass.toDoList}/>
                 </TabPanel>
             </Grid>
         </Grid>
-    )
+    );
 }
 
-export default CompassForm;
+const mapStateToProps = (state) => ({
+    compass: state.content.partCompass
+})
+
+export default connect(mapStateToProps)(CompassForm);

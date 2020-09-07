@@ -36,6 +36,10 @@ const makeStudentPersonalStyles = (theme) => ({
         marginRight: ".5rem",
         color: "#fff",
         padding: ".5rem"
+    },
+    linkStyles: {
+        textDecoration: "none",
+        color: "inherit"
     }
 });
 

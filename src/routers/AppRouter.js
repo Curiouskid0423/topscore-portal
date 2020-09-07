@@ -14,6 +14,7 @@ import StudentHome from "../components/Students/StudentsHomePage";
 import Settings from "../components/Settings/Settings";
 import Courses from "../components/Courses/Courses";
 import StudentPersonalPage from "../components/Students/StudentPersonalPage";
+import EditStudentContact from "../components/Students/EditStudentContact";
 
 export const history = createBrowserHistory();
 
@@ -27,6 +28,7 @@ const AppRouter = () => (
                 <PrivateRoute path = "/courses" component = {Courses}/>
                 <PrivateRoute path = "/settings" component = {Settings}/>
                 <PrivateRoute path = "/students" exact component = {StudentHome}/>
+                <PrivateRoute path = "/students/edit/:id" component={EditStudentContact} />
                 <PrivateRoute path = "/students/content/:id" component = {StudentPersonalPage}/>
                 <Route component = {NotFound} />
             </Switch>

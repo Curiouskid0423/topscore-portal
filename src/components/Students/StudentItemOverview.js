@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
@@ -14,6 +14,8 @@ import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import moment from "moment";
 
 import SearchIcon from '@material-ui/icons/Search';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
@@ -43,17 +45,23 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+const getStudent = (id, studentList) => studentList.find((item) => item.id === id);
 
 const StudentItemOverview = (props) => {
-    console.log("Debugger", props);
+
     const classes = useStyles();
+    console.log("OVERVIEW", props);
+
+    const current = getStudent(props.match.params.id, props.studentList);
+
     const rows = [
-        ["Test Date", "2019-07-12"],
-        ["Reading", 300],
-        ["Writing", 370],
-        ["Math", 790],
-        ["Optional Writing", "7-7-7"]
+        ["Test Date", moment(current.contact.preTestResult.date).format('MMM Do YYYY')],
+        ["Reading", current.contact.preTestResult.reading],
+        ["Writing", current.contact.preTestResult.writing],
+        ["Math", current.contact.preTestResult.math],
+        ["Optional Writing", current.contact.preTestResult.essay]
     ]
+
 
     return (
         <Grid container className={classes.root}>
@@ -125,7 +133,8 @@ const StudentItemOverview = (props) => {
 
 
 const mapStateToProps = (state) => ({
+    studentList: state.students,
     overview: state.content.partOverview
 });
 
-export default connect(mapStateToProps)(StudentItemOverview);
+export default connect(mapStateToProps)(withRouter(StudentItemOverview));
