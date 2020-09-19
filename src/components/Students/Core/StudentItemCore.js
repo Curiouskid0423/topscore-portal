@@ -1,6 +1,5 @@
-import React from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import React, {useState} from "react";
+import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
@@ -22,33 +21,53 @@ const useStyles = makeStyles({
    },
     courseListStyles: {
        margin: "0 0 0 .5rem",
-       maxHeight: "60vh",
+       maxHeight: "50vh",
     },
+    searchBar: {
+        display: "flex",
+        "& button": {
+            marginLeft: "1rem", marginTop: ".25rem", marginRight: ".25rem",
+            background: "#DCD3C0",
+        }
+    }
 });
 
 const StudentItemCore = (props) => {
     const classes = useStyles();
+
+    const [search, setSearch] = useState("");
+    const handleSearch = (e) => setSearch(e.target.value);
+
     return (
         <Grid container>
-            <Grid item md={7} sm={12}>
+            <Grid item md={8} sm={12}>
                 {/* Current Course.  */}
-                <CourseTable title={"Current Course List"}/>
+                <CourseTable title={"Current Course List"} isCurrent={true} lst={props.content.currentCourseList}/>
                 {/* Past Courses.  */}
-                <CourseTable title={"Past Courses"}/>
+                <CourseTable title={"Past Courses"} lst={props.content.pastCourseList}/>
             </Grid>
-            <Grid item md={5} sm={12}>
+            <Grid item md={4} sm={12}>
                 {/* Add new course. */}
                 <TableContainer component={Paper} className={classes.courseListStyles}>
                     <Table stickyHeader>
                         <TableHead>
                             <TableRow>
-                                <TableCell style={{ color: "#000" }}>CourseName</TableCell>
-                                <TableCell align={"right"} style={{ color: "#000" }}>
+                                <TableCell>CourseName</TableCell>
+                                <TableCell align={"right"}>
                                     Instructor
                                 </TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
+                            <TableRow>
+                                <TableCell component="th" scope="row" colSpan={2}>
+                                    <div className={classes.searchBar}>
+                                        <TextField id="add-classes" label="> Add new class" size="small"
+                                                   onChange={handleSearch} fullWidth/>
+                                        <Button variant={"contained"}> Add </Button>
+                                    </div>
+                                </TableCell>
+                            </TableRow>
                             {props.courseList.map((row) => (
                                 <TableRow key={row.uid}>
                                     <TableCell component="th" scope="row">{row.courseName}</TableCell>
@@ -65,7 +84,7 @@ const StudentItemCore = (props) => {
 
 const mapStateToProps = (state) => ({
     courseList: state.courses,
-    partCore: state.content.partCore,
+    content: state.content.partCore,
 })
 
 export default connect(mapStateToProps)(StudentItemCore);

@@ -12,9 +12,8 @@ const Alert = (props) => {
 }
 
 const MessageSnackbar = (props) => {
-
-    const message = (props.submitStatus === "success")
-        ? successMessage : errorMessage;
+    const ideal = props.submitStatus === "success";
+    const message = (ideal) ? successMessage : errorMessage;
 
     return (
         <div>
@@ -24,7 +23,7 @@ const MessageSnackbar = (props) => {
                 open={props.submitStatus !== ""}
                 key={message}
             >
-                <Alert onClose={props.clearSubmit} severity="info">
+                <Alert onClose={props.clearSubmit} severity={ideal? "info" : "warning"}>
                     {message}
                 </Alert>
             </Snackbar>

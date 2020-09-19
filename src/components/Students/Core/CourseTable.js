@@ -1,5 +1,7 @@
 import React from "react";
+import moment from "moment";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import Button from "@material-ui/core/Button";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -34,18 +36,6 @@ const StyledTableRow = withStyles((theme) => ({
     },
 }))(TableRow);
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
-
 const CourseTable = (props) => {
     const classes = useStyles();
 
@@ -55,7 +45,7 @@ const CourseTable = (props) => {
                 <Table stickyHeader className={classes.table}>
                     <TableHead>
                         <StyledTableRow>
-                            <StyledTableTitle align="left" colSpan={5}>
+                            <StyledTableTitle align="left" colSpan={6}>
                                 <Typography variant={"button"} component={"p"}>
                                     {props.title}
                                 </Typography>
@@ -63,15 +53,20 @@ const CourseTable = (props) => {
                         </StyledTableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.map((row) => (
-                            <StyledTableRow key={row.name}>
+                        {(props.lst || []).map((row) => (
+                            <StyledTableRow key={row.courseName}>
                                 <TableCell component="th" scope="row">
-                                    {row.name}
+                                    {row.courseName}
                                 </TableCell>
-                                <TableCell align="right">{row.calories}</TableCell>
-                                <TableCell align="right">{row.fat}</TableCell>
-                                <TableCell align="right">{row.carbs}</TableCell>
-                                <TableCell align="right">{row.protein}</TableCell>
+                                <TableCell align="right">{row.type}</TableCell>
+                                <TableCell align="right">{row.instructor}</TableCell>
+                                <TableCell align="right">{moment(row.startDate).format('MMM Do \'YY')}</TableCell>
+                                <TableCell align="right">
+                                    {moment(row.startDate).add(row.repeatTimes, row.repeatBy).format('MMM Do \'YY')}
+                                </TableCell>
+                                {props.isCurrent && <TableCell align="right">
+                                    <Button>Done</Button>
+                                </TableCell>}
                             </StyledTableRow>
                         ))}
                     </TableBody>

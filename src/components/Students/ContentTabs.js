@@ -12,6 +12,8 @@ import { connect } from "react-redux";
 
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import theme from "../../themes";
+import MessageSnackbar from "../MessageSnackbar";
+import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
@@ -38,7 +40,7 @@ const allProps = (index) => {
     }
 }
 
-const ContentTabs = () => {
+const ContentTabs = (props) => {
 
     const classes = useStyles();
     const [value, setValue] = useState(0);
@@ -47,6 +49,7 @@ const ContentTabs = () => {
 
     return (
         <ThemeProvider theme={theme}>
+            { (props.submitStatus !== "") && <MessageSnackbar submitStatus={props.submitStatus} />}
             <div className={classes.root}>
                 <AppBar position="static">
                     <Tabs value={value} onChange={handleChange} centered variant={"fullWidth"}>
@@ -77,4 +80,8 @@ const ContentTabs = () => {
     );
 }
 
-export default ContentTabs;
+const mapStateToProps = (state) => ({
+    submitStatus: state.util.submitStatus || "",
+})
+
+export default connect(mapStateToProps)(ContentTabs);

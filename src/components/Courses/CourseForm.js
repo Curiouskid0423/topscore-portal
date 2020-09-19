@@ -95,8 +95,9 @@ const CourseForm = (props) => {
                         <InputLabel>Repeat By</InputLabel>
                         <Select labelId="course-repeat-label" id="course-repeat-select"
                                 value={repeatBy} onChange={handleRepeatBy}>
-                            <MenuItem value={"WEEK"}>Week</MenuItem>
-                            <MenuItem value={"MONTH"}>Month</MenuItem>
+                            <MenuItem value={"weeks"}>Week</MenuItem>
+                            <MenuItem value={"months"}>Month</MenuItem>
+                            <MenuItem value={"days"}>Day</MenuItem>
                             <MenuItem value={""}>Do not repeat</MenuItem>
                         </Select>
                     </FormControl>

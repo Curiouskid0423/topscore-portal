@@ -17,13 +17,6 @@ export const paragraphFiller = "While MongoDB emerged as part of the wave of so-
     + "relational databases like Oracle or MySQL, while bringing the scale-first architecture and structural flexibility "
     + "that typifies NoSQL solutions.";
 
-export const courseInstance = [
-    { name: "SAT Internsive Camp", instructor: "Johnny"},
-    { name: "ML Camp", instructor: "Kevin"},
-    { name: "Web dev workshop", instructor: "Kevin"},
-    { name: "Calligraphy program", instructor: "Ricky"},
-    { name: "Barista internship", instructor: "Johnny"},
-    { name: "AP Calculus", instructor: "Ken"}];
 
 // FIXME: Password should be stored in hash.
 export const userInstance1 = {
@@ -40,7 +33,7 @@ export const courseInstance1 = {
     courseName: "SAT Beginner Class",
     instructor: "Johnny Hope",
     startDate: moment().valueOf(),
-    repeatBy: "WEEK",
+    repeatBy: "weeks",
     repeatTimes: 12
 }
 export const courseInstance2 = {
@@ -48,7 +41,7 @@ export const courseInstance2 = {
     courseName: "ACT Advanced Class",
     instructor: "Johnny Hope",
     startDate: moment().valueOf(),
-    repeatBy: "MONTH",
+    repeatBy: "months",
     repeatTimes: 10
 }
 export const courseInstance3 = {
@@ -56,7 +49,7 @@ export const courseInstance3 = {
     courseName: "ACT Advanced Technique",
     instructor: "Johnny Hope",
     startDate: moment().valueOf(),
-    repeatBy: "WEEK",
+    repeatBy: "weeks",
     repeatTimes: 4
 }
 export const courseInstance4 = {
@@ -64,7 +57,7 @@ export const courseInstance4 = {
     courseName: "ACT Beginner Class",
     instructor: "Johnny Hope",
     startDate: moment().valueOf(),
-    repeatBy: "WEEK",
+    repeatBy: "weeks",
     repeatTimes: 10
 }
 export const courseInstance5 = {
@@ -80,7 +73,7 @@ export const courseInstance6 = {
     courseName: "Machine Learning Camp",
     instructor: "Kevin Li",
     startDate: moment().valueOf(),
-    repeatBy: "WEEK",
+    repeatBy: "weeks",
     repeatTimes: 5
 }
 
@@ -89,7 +82,7 @@ export const courseInstance7 = {
     courseName: "Calligraphy Workshop",
     instructor: "Ricky Huang",
     startDate: moment().valueOf(),
-    repeatBy: "WEEK",
+    repeatBy: "weeks",
     repeatTimes: 8
 }
 
@@ -98,10 +91,16 @@ export const courseInstance8 = {
     courseName: "Barista Internship",
     instructor: "Lousia Coffee Inc.",
     startDate: moment().valueOf(),
-    repeatBy: "DAY",
+    repeatBy: "days",
     repeatTimes: 2
 }
 
+export const courseInstance = [
+    courseInstance1, courseInstance2,
+    courseInstance3, courseInstance4,
+    courseInstance5, courseInstance6,
+    courseInstance7, courseInstance8,
+]
 
 
 /**
@@ -225,7 +224,7 @@ export const studentInstance2 = {
         },
         partCore: {
             currentCourseList: [
-                courseInstance[4],
+                courseInstance[4], courseInstance[7],
             ],
             pastCourseList: [
                 courseInstance[1], courseInstance[3], courseInstance[5]

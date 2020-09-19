@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
@@ -19,6 +19,7 @@ import moment from "moment";
 
 import SearchIcon from '@material-ui/icons/Search';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
+import {startUpdateOverview} from "../../actions/content";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,9 +51,19 @@ const getStudent = (id, studentList) => studentList.find((item) => item.id === i
 const StudentItemOverview = (props) => {
 
     const classes = useStyles();
-    console.log("OVERVIEW", props);
-
     const current = getStudent(props.match.params.id, props.studentList);
+    // state: at a glance
+    const [notice, setNotice] = useState(props.overview.atAGlance.notice);
+    const handleNotice = (e) => setNotice(e.target.value);
+    // state: family info
+    const [family, setFamily] = useState(props.overview.atAGlance.familyInfo);
+    const handleFamily = (e) => setFamily(e.target.value);
+
+    const onSubmit = () => {
+        const result = { notice: notice, familyInfo: family };
+        console.log(result);
+        props.dispatchOverview(result);
+    }
 
     const rows = [
         ["Test Date", moment(current.contact.preTestResult.date).format('MMM Do YYYY')],
@@ -74,7 +85,7 @@ const StudentItemOverview = (props) => {
                         </Typography>
                     </div>
                     <div>
-                        <Button size={"small"} variant={"outlined"} className={classes.saveButton}>
+                        <Button size={"small"} variant={"outlined"} className={classes.saveButton} onClick={onSubmit}>
                             <Typography variant={"button"} component={"p"}>
                                 Save
                             </Typography>
@@ -84,7 +95,7 @@ const StudentItemOverview = (props) => {
                 <div>
                     <Paper elevation={3} style={{margin: "0 1rem 1rem 0"}}>
                         <TextField
-                            id="outlined-multiline-static" label="Notes" multiline rows={7}
+                            id="outlined-multiline-static" label="Notes" multiline rows={7} onChange={handleNotice}
                             defaultValue={props.overview.atAGlance.notice} variant="outlined" fullWidth/>
                     </Paper>
                     <Divider variant="middle" style={{ width: "91%" }}/>
@@ -92,7 +103,7 @@ const StudentItemOverview = (props) => {
                         <TextField
                             id="outlined-multiline-static" label="Family Info (Sibling Information)"
                             multiline rows={4} defaultValue={props.overview.atAGlance.familyInfo}
-                            variant="outlined" fullWidth/>
+                            onChange={handleFamily} variant="outlined" fullWidth/>
                     </Paper>
                 </div>
             </Grid>
@@ -140,7 +151,13 @@ const StudentItemOverview = (props) => {
 
 const mapStateToProps = (state) => ({
     studentList: state.students,
-    overview: state.content.partOverview
+    overview: state.content.partOverview,
 });
 
-export default connect(mapStateToProps)(withRouter(StudentItemOverview));
+const mapDispatchToProps = (dispatch, ownProps) => ({
+    dispatchOverview: (obj) => dispatch(startUpdateOverview(obj, ownProps.match.params.id)),
+})
+
+export default withRouter(
+    connect(mapStateToProps, mapDispatchToProps)(StudentItemOverview)
+);

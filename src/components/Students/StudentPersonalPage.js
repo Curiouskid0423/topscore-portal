@@ -53,7 +53,7 @@ const StudentPersonalPage = (props) => {
                             <Grid container>
                                 <Grid item sm={2}>
                                     <Typography variant="h6" component="h2">
-                                        {currentStudent.contact.firstName}&nbsp;
+                                        {currentStudent.contact.firstName} &nbsp;
                                         {currentStudent.contact.lastName}
                                     </Typography>
                                     <Typography className={classes.pos} color="textSecondary">
