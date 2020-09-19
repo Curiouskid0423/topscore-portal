@@ -86,7 +86,7 @@ const Query = (props) => {
                                 <InputLabel>Package</InputLabel>
                                 <Select
                                     labelId="package-type-label" id="package-select"
-                                    value={pkgFilter === "" ? "" : pkgFilter} onChange={handlePkg}
+                                    value={pkgFilter} onChange={handlePkg}
                                 >
                                     <MenuItem value={""}>--</MenuItem>
                                     <MenuItem value={"Course"}>Course</MenuItem>

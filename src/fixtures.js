@@ -204,7 +204,7 @@ export const studentInstance2 = {
             phone: "0911283744",
             email: "parents0123@gmail.com"
         },
-        personOfrecommendation: "",
+        personOfRecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
         transcript: "https://curiouskid0423.github.io/",
         collegeList: "https://curiouskid0423.github.io/",
@@ -276,7 +276,7 @@ export const studentInstance3 = {
             phone: "0911283744",
             email: "parents0123@gmail.com"
         },
-        personOfrecommendation: "",
+        personOfRecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
         transcript: "https://curiouskid0423.github.io/",
         collegeList: "https://curiouskid0423.github.io/",
@@ -418,7 +418,7 @@ export const studentInstance5 = {
             phone: "0911283744",
             email: "parents0123@gmail.com"
         },
-        personOfrecommendation: "",
+        personOfRecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
         transcript: "https://curiouskid0423.github.io/",
         collegeList: "https://curiouskid0423.github.io/",

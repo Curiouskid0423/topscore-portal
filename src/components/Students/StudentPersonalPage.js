@@ -22,7 +22,6 @@ const getStudent = (id, studentList) => studentList.find((item) => item.id === i
 
 const StudentPersonalPage = (props) => {
     const currentStudent = getStudent(props.match.params.id, props.students);
-
     const classes = useStyles();
     const chipCourse = <Chip className={clsx(classes.pkgButton, classes.pkgCourse)}
                              size="small" label="課程生" />
@@ -30,7 +29,6 @@ const StudentPersonalPage = (props) => {
                             size="small" label="代辦生" />
     const chipPlan = <Chip className={clsx(classes.pkgButton, classes.pkgPlan)}
                            size="small" label="規劃生" />
-
     return (
         <Container>
             {/* Student Basic Info */}
@@ -46,7 +44,9 @@ const StudentPersonalPage = (props) => {
                                     </Typography>
                                 </Grid>
                                 <Grid item sm={6}>
-                                    {chipApply} {chipPlan}
+                                    {currentStudent.contact.packageType.apply && chipApply}
+                                    {currentStudent.contact.packageType.planning && chipPlan}
+                                    {currentStudent.contact.packageType.course && chipCourse}
                                 </Grid>
                             </Grid>
                             {/*  Contact Information  */}
@@ -59,7 +59,7 @@ const StudentPersonalPage = (props) => {
                                     <Typography className={classes.pos} color="textSecondary">
                                         SID: {currentStudent.contact.studentID}
                                     </Typography>
-                                    <Link to={`../edit/${currentStudent.id}`} className={classes.linkStyles}>
+                                    <Link to={`../../settings/editStudent/${currentStudent.id}`} className={classes.linkStyles}>
                                         <Button color={"primary"} className={classes.editStudent}>
                                             Edit Student
                                         </Button>

@@ -9,6 +9,7 @@ import AddStudent from "./AddStudent";
 import UpdateAccount from "./UpdateAccount";
 import ManageUsers from "./ManageUsers";
 import EditStudentContact from "../Students/EditStudentContact";
+import NotFound from "../404Page";
 
 const useStyles = makeStyles({
     root: {
@@ -31,9 +32,10 @@ const Settings = (props) => {
                 <Switch>
                     <PrivateRoute path={`${path}`} exact component={UpdateAccount} />
                     <PrivateRoute path={`${path}/addStudent`} component={AddStudent} />
-                    <PrivateRoute path={`${path}/editStudent:id`} component={EditStudentContact} />
+                    <PrivateRoute path={`${path}/editStudent/:id`} component={EditStudentContact} />
                     <PrivateRoute path={`${path}/updateAccount`} component={UpdateAccount} />
                     <PrivateRoute path={`${path}/manageUsers`} component={ManageUsers} />
+                    <PrivateRoute component={NotFound} />
                 </Switch>
             </Grid>
         </Grid>

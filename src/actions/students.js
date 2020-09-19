@@ -52,3 +52,40 @@ export const startAddStudent = (studentObj) => {
         });
     }
 }
+
+export const editStudent = (student, id) => ({
+    type: "EDIT_STUDENT",
+    id,
+    student
+});
+
+export const startEditStudent = (studentObj = {}, id) => {
+    return (dispatch, getState) => {
+        return database.ref(`students_db/${id}/`)
+            .update(studentObj)
+            .then(() => {
+                dispatch(editStudent(studentObj, id));
+                dispatch(submitMessage("success"));
+            }).catch((e) =>{
+                dispatch(submitMessage("error"));
+                console.log("Error", e);
+            });
+    }
+}
+
+export const removeStudent = (id) => ({
+    type: "REMOVE_STUDENT",
+    id
+});
+
+export const startRemoveStudent = (id) => {
+    return (dispatch, getState) => {
+        return database.ref(`students_db/${id}`)
+            .set(null).then(() => {
+                dispatch(removeStudent(id));
+                dispatch(submitMessage("success"));
+            }).catch((e) => {
+                dispatch(submitMessage("error"));
+            });
+    }
+}
