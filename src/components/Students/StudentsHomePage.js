@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import { connect } from "react-redux";
+import getVisibleStudents from "../../selectors/getVisibleStudents";
 import Dashboard from "../defaults/Templates";
 import Grid from "@material-ui/core/Grid";
 import StudentItem from "./StudentItem";
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 /**
  * Loader for Student Items
- * @param students
+ * @param props: react properties
  * @return a Loader Helper React Component.
  */
 const StudentLoader = (props) => {
@@ -45,9 +46,9 @@ const StudentHome = (props) => {
     )
 };
 
-const mapStatesToProps = (states) => ({
-    students: states.students,
-    submitStatus: states.util.submitStatus || ""
+const mapStatesToProps = (state) => ({
+    students: getVisibleStudents(state.students, state.filters.visibleStudents),
+    submitStatus: state.util.submitStatus || ""
 });
 
 const WrappedStudentHome = () => {

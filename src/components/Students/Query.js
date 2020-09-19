@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { connect } from "react-redux";
 import Button from "@material-ui/core/Button";
 import FormControl from "@material-ui/core/FormControl";
 import Grid from "@material-ui/core/Grid";
@@ -11,8 +12,15 @@ import theme from "../../themes";
 import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
 import Header from "../defaults/Header";
+import {setCourse, setName, setPackage, setYear} from "../../actions/filters";
 
 const useStyles = makeStyles({
+    buttonGroup: {
+        display: "flex",
+        "& button": {
+            marginRight: "1.5rem"
+        }
+    },
     formStyles: {
         width: "100%"
     },
@@ -38,11 +46,27 @@ const Query = (props) => {
     const classes = useStyles();
     // states
     const [showFilters, setFiltersOpen] = useState(false);
-    const [pkgFilter, setpkgFilter] = useState(undefined);
-    const handleFilters = () => setFiltersOpen(!showFilters);
+    const [pkgFilter, setpkgFilter] = useState("");
+    const [gradYear, setgradYear] = useState(props.filter.gradYear);
+    const [studentName, setStudentName] = useState(props.filter.name);
+    // handler functions
+    const handleFilters = () => setFiltersOpen(true);
     const handlePkg = (e) => {
         setpkgFilter(e.target.value);
+        props.setPackage(e.target.value);
     }
+    const handleGradYear = (e) => {
+        setgradYear(e.target.value);
+        props.setYear(e.target.value);
+    }
+    const handleName = (e) => {
+        setStudentName(e.target.value);
+        props.setName(e.target.value);
+    }
+    const handleCloseFilters = () => {
+        setFiltersOpen(false);
+    }
+
     return (
         <ThemeProvider theme={theme}>
             {/* Directory Header and BreadCrumb. */}
@@ -51,25 +75,30 @@ const Query = (props) => {
             <Grid container item sm={12}>
                 <Grid item sm={9}>
                     <form noValidate autoComplete="off" className={classes.formStyles}>
-                        <TextField id="standard-basic" fullWidth label="Search student" />
+                        <TextField id="standard-basic" fullWidth
+                                   label="Search student" onChange={handleName}/>
                         <div className={clsx(!showFilters && classes.hideFilters)}>
-                            <TextField className={classes.textFilter} id="standard-basic" label="Filter Grad Year" />
+                            <TextField className={classes.textFilter} id="standard-basic"
+                                       label="Filter Grad Year" onChange={handleGradYear}/>
                             <TextField className={classes.textFilter} id="standard-basic" label="Filter by Course" />
-                            <TextField className={classes.textFilter} id="standard-basic" label="Filter by HighSchool" />
+                            {/*<TextField className={classes.textFilter} id="standard-basic" label="Filter by HighSchool" />*/}
                             <FormControl className={classes.formControl}>
                                 <InputLabel>Package</InputLabel>
                                 <Select
                                     labelId="package-type-label" id="package-select"
-                                    value={pkgFilter} onChange={handlePkg}
+                                    value={pkgFilter === "" ? "" : pkgFilter} onChange={handlePkg}
                                 >
-                                    <MenuItem value={undefined}>--</MenuItem>
+                                    <MenuItem value={""}>--</MenuItem>
                                     <MenuItem value={"Course"}>Course</MenuItem>
                                     <MenuItem value={"Planning"}>Planning</MenuItem>
                                     <MenuItem value={"Application"}>Application</MenuItem>
                                 </Select>
                             </FormControl>
                         </div>
-                        <Button onClick={handleFilters}>Filters</Button>
+                        <div className={classes.buttonGroup}>
+                            <Button onClick={handleFilters}>Show Filters</Button>
+                            <Button onClick={handleCloseFilters}>Close Filters</Button>
+                        </div>
                     </form>
                 </Grid>
                 <Grid item sm={3}>
@@ -83,4 +112,15 @@ const Query = (props) => {
     )
 }
 
-export default Query;
+const mapStateToProps = (state) => ({
+    filter: state.filters.visibleStudents
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    setName: (name) => dispatch(setName(name)),
+    setCourse: (course) => dispatch(setCourse(course)),
+    setPackage: (pkg) => dispatch(setPackage(pkg)),
+    setYear: (year) => dispatch(setYear(year))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Query);

@@ -9,12 +9,9 @@ const EditStudentContact = () => {
     }
 
     return (
-        <div>
-            <p> Hello world.</p>
-        </div>
-        // <Grid item sm={12}>
-        //     <StudentForm onSubmit={handleSubmit} isEdit={true}/>
-        // </Grid>
+        <Grid item sm={12}>
+            <StudentForm onSubmit={handleSubmit} isEdit={true}/>
+        </Grid>
     )
 }
 

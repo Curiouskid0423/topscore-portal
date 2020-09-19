@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
 const StudentForm = (props) => {
     const classes = useStyles();
-
+    const edit = !!props.isEdit;
     // (State 1) Student ID
     const [sid, setSID] = useState("");
     const handleSID = (e) => setSID(e.target.value);

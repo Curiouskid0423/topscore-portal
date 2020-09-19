@@ -72,7 +72,7 @@ export const courseInstance5 = {
     courseName: "Web Dev Workshop",
     instructor: "Kevin Li",
     startDate: moment().valueOf(),
-    repeatBy: null,
+    repeatBy: "",
     repeatTimes: 0
 }
 export const courseInstance6 = {
@@ -171,7 +171,7 @@ export const studentInstance1 = {
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
-            optionals: null
+            optionals: ""
         },
         partReport: {
             SATreport: ["https://www.youtube.com",
@@ -245,7 +245,7 @@ export const studentInstance2 = {
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
-            optionals: null
+            optionals: ""
         },
         partReport: {
             SATreport: ["A list of Google Drive links"],
@@ -317,7 +317,7 @@ export const studentInstance3 = {
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
-            optionals: null
+            optionals: ""
         },
         partReport: {
             SATreport: ["A list of Google Drive links"],
@@ -368,7 +368,7 @@ export const studentInstance4 = {
             },
         },
         partCore: {
-            currentCourseList: null,
+            currentCourseList: [],
             pastCourseList: [
                 courseInstance[1], courseInstance[3]
             ]
@@ -387,7 +387,7 @@ export const studentInstance4 = {
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
-            optionals: null
+            optionals: ""
         },
         partReport: {
             SATreport: ["A list of Google Drive links"],
@@ -406,7 +406,7 @@ export const studentInstance5 = {
         email: "darren@mca.edu",
         highSchool: "Morrison Academy",
         graduationYear: 2020,
-        attendedCollege: null,
+        attendedCollege: "",
         packageType: {
             course: true,
             planning: true,
@@ -438,7 +438,7 @@ export const studentInstance5 = {
             },
         },
         partCore: {
-            currentCourseList: null,
+            currentCourseList: [],
             pastCourseList: [
                 courseInstance[3], courseInstance[4]
             ]
@@ -456,7 +456,7 @@ export const studentInstance5 = {
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
-            optionals: null
+            optionals: ""
         },
         partReport: {
             SATreport: ["A list of Google Drive links"],
@@ -507,7 +507,7 @@ export const studentInstance6 = {
             },
         },
         partCore: {
-            currentCourseList: null,
+            currentCourseList: [],
             pastCourseList: [
                 courseInstance[3], courseInstance[4]
             ]
@@ -525,7 +525,7 @@ export const studentInstance6 = {
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
-            optionals: null
+            optionals: ""
         },
         partReport: {
             SATreport: ["A list of Google Drive links"],

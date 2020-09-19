@@ -3,6 +3,7 @@ import thunk from "redux-thunk";
 import authReducer from "../reducers/auth";
 import coursesReducer from "../reducers/courses";
 import contentReducer from "../reducers/content";
+import filtersReducer from "../reducers/filters";
 import utilReducer from "../reducers/utility";
 import studentsReducer from "../reducers/students";
 
@@ -20,6 +21,7 @@ const launchStore = () => {
             auth: authReducer,
             content: contentReducer,
             courses: coursesReducer,
+            filters: filtersReducer,
             students: studentsReducer,
             util: utilReducer,
         }),
