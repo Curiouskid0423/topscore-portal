@@ -9,6 +9,7 @@ import Button from "@material-ui/core/Button";
 import AddCourse from "./AddCourse";
 import Header from "../defaults/Header";
 import NotFound from "../404Page";
+import EditCourse from "./EditCourse";
 
 const useStyles = makeStyles({
     root: {
@@ -28,7 +29,7 @@ const Courses = () => {
                 <Switch>
                     <PrivateRoute path={`${path}`} exact component={CourseList}/>
                     <PrivateRoute path={`${path}/addCourse`} component={AddCourse}/>
-                    {/*<PrivateRoute path={`${path}/editCourse`}/>*/}
+                    <PrivateRoute path={`${path}/editCourse/:id`} component={EditCourse}/>
                     <PrivateRoute component={NotFound}/>
                 </Switch>
             </Grid>

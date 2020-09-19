@@ -12,6 +12,18 @@ const coursesReducer = (prevState = coursesDefault, action) => {
                 ...prevState,
                 action.course
             ];
+        case "EDIT_COURSE":
+            return prevState.map((el) => {
+                if (el.uid === action.id) {
+                    el = {
+                        ...el,
+                        ...action.course
+                    }
+                }
+                return el;
+            });
+        case "REMOVE_COURSE":
+            return prevState.filter((el) => el.uid !== action.id);
         case "SET_COURSES":
             return action.courses;
         default:

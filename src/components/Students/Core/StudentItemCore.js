@@ -12,6 +12,8 @@ import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import TableContainer from "@material-ui/core/TableContainer";
+import CourseTable from "./CourseTable";
+import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles({
    currentRoot: {
@@ -19,34 +21,22 @@ const useStyles = makeStyles({
        marginTop: "1rem"
    },
     courseListStyles: {
-       margin: "1rem 0 0 .5rem",
+       margin: "0 0 0 .5rem",
        maxHeight: "60vh",
-    }
+    },
 });
 
 const StudentItemCore = (props) => {
     const classes = useStyles();
     return (
         <Grid container>
-            <Grid item md={8} sm={12}>
+            <Grid item md={7} sm={12}>
                 {/* Current Course.  */}
-                <Card className={classes.currentRoot}>
-                    <CardContent>
-                        <Typography variant={"h6"} component={"p"}>
-                            Current Course List.
-                        </Typography>
-                    </CardContent>
-                </Card>
-                {/* Past Course. */}
-                <Card className={classes.currentRoot}>
-                    <CardContent>
-                        <Typography variant={"h6"} component={"p"}>
-                            Past Course List.
-                        </Typography>
-                    </CardContent>
-                </Card>
+                <CourseTable title={"Current Course List"}/>
+                {/* Past Courses.  */}
+                <CourseTable title={"Past Courses"}/>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={5} sm={12}>
                 {/* Add new course. */}
                 <TableContainer component={Paper} className={classes.courseListStyles}>
                     <Table stickyHeader>
@@ -74,7 +64,8 @@ const StudentItemCore = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    courseList: state.courses
+    courseList: state.courses,
+    partCore: state.content.partCore,
 })
 
 export default connect(mapStateToProps)(StudentItemCore);

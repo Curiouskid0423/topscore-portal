@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import moment from "moment";
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { connect } from "react-redux";
@@ -16,6 +16,12 @@ import Grid from "@material-ui/core/Grid";
 import Header from "../defaults/Header";
 import {Link, useRouteMatch} from "react-router-dom";
 import MessageSnackbar from "../MessageSnackbar";
+import {startRemoveCourse} from "../../actions/courses";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogActions from "@material-ui/core/DialogActions";
 
 const StyledTitleCell = withStyles((theme) => ({
     head: {
@@ -40,7 +46,8 @@ const useStyles = makeStyles({
         minWidth: 1000,
     },
     tableContainer: {
-        maxHeight: "550px"
+        maxHeight: "550px",
+        maxWidth: "90vw",
     },
     btnStyles: {
         marginRight: ".5rem",
@@ -66,16 +73,38 @@ const tableTitles = [
 const CourseList = (props) => {
     const classes = useStyles();
     const { path } = useRouteMatch();
+
+    const [dialogOpen, setDialogChange] = useState(false);
+    const [removeTarget, setRemoveTarget] = useState("");
+
+    const stageRemoval = (uid) => {
+        setRemoveTarget(uid);
+        setDialogChange(!dialogOpen);
+    };
+
+    const clearRemoval = () => {
+        setDialogChange(!dialogOpen);
+        setRemoveTarget("");
+    }
+
+    const confirmRemoval = () => {
+        setDialogChange(!dialogOpen);
+        if (removeTarget !== "") {
+            props.dispatchRemove(removeTarget);
+        }
+        setRemoveTarget("");
+    }
+
     return (
         <Container>
             {/* Snackbar */}
             { (props.submitStatus !== "") && <MessageSnackbar submitStatus={props.submitStatus} />}
             <Grid item container md={12}>
                 <Grid item md={7} sm={12}> <Header title={"COURSE DIRECTORY"} /> </Grid>
-                <Grid item sm={3}>
+                <Grid item md={3} sm={4}>
                     <TextField id="standard-basic" label="Search" fullWidth/>
                 </Grid>
-                <Grid item sm={2}>
+                <Grid item md={2} sm={4}>
                     <div className={classes.btnContainer}>
                         <Button variant="contained" className={classes.btnStyles}>
                             <Link to={`${path}/addCourse`} className={classes.linkStyles}>
@@ -110,16 +139,36 @@ const CourseList = (props) => {
                                 </StyledTitleCell>
                                 <StyledTitleCell align="center">{entry.repeatBy}</StyledTitleCell>
                                 <StyledTitleCell align="center">
-                                    <Button>Edit</Button>
+                                    <Link to={`${path}/editCourse/${entry.uid}`} className={classes.linkStyles}>
+                                        <Button>Edit</Button>
+                                    </Link>
                                 </StyledTitleCell>
                                 <StyledTitleCell align="center">
-                                    <Button>Remove</Button>
+                                    <Button onClick={() => stageRemoval(entry.uid)}>Remove</Button>
                                 </StyledTitleCell>
                             </StyledTableRow>
                         ))}
                     </TableBody>
                 </Table>
             </TableContainer>
+
+            {/* Course Removal Dialog */}
+            <Dialog open={dialogOpen} onClose={clearRemoval}>
+                <DialogTitle id="alert-dialog-title">Sure about Removing this course?</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Removal would be final and cannot be recovered.
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={clearRemoval} color="primary">
+                        Cancel
+                    </Button>
+                    <Button onClick={confirmRemoval} color="primary" autoFocus>
+                        Confirm
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Container>
     )
 };
@@ -127,7 +176,10 @@ const CourseList = (props) => {
 const mapStateToProps = (state) => ({
     courseList: state.courses,
     submitStatus: state.util.submitStatus || ""
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    dispatchRemove: (id) => dispatch(startRemoveCourse(id)),
 })
 
-
-export default connect(mapStateToProps)(CourseList);
+export default connect(mapStateToProps, mapDispatchToProps)(CourseList);

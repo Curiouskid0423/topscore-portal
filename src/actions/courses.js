@@ -62,3 +62,38 @@ export const startAddCourse = (courseObj) => {
             });
     }
 }
+
+export const editCourse = (courseObj, id) => {
+    return {
+        type: "EDIT_COURSE",
+        id,
+        course: courseObj
+    };
+}
+
+export const startEditCourse = (courseObj, id) => {
+    return (dispatch, getState) => {
+        return database.ref(`courses_db/${id}/`)
+            .update(courseObj).then(() => {
+                dispatch(editCourse(courseObj, id));
+                dispatch(submitMessage("success"));
+            }).catch((e) => dispatch(submitMessage("error")));
+    };
+}
+
+export const removeCourse = (id) => {
+    return {
+        type: "REMOVE_COURSE",
+        id
+    }
+}
+
+export const startRemoveCourse = (id) => {
+    return (dispatch, getState) => {
+        return database.ref(`courses_db/${id}`)
+            .set(null).then(() => {
+                dispatch(removeCourse(id));
+                dispatch(submitMessage("success"));
+            }).catch((e) => dispatch(submitMessage("error")));
+    };
+}

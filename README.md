@@ -1,2 +1,2 @@
-# React Starter Template
-#### :rocket: A starter template based on the structure of Expensify App.
+# TopScore CMS Documentation
+#### :rocket: A content management system (CMS) for educational consultants to manage student data.

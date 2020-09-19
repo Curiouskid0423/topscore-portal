@@ -7,7 +7,7 @@ const makeCourseFormStyles = (theme) => ({
         padding: "2rem"
     },
     formControl: {
-        margin: theme.spacing(2),
+        margin: theme.spacing(1),
         minWidth: 200,
     },
     titleStyles: {
@@ -21,6 +21,7 @@ const makeCourseFormStyles = (theme) => ({
     },
     submit: {
         margin: "1rem .5rem",
+        backgroundColor: "#DCD3C0",
     }
 });
 

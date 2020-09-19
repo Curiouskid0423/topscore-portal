@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: ".5rem",
     },
     tableHead: {
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: "#DCD3C0",
     }
 }));
 
@@ -84,14 +84,14 @@ const StudentItemOverview = (props) => {
                 <div>
                     <Paper elevation={3} style={{margin: "0 1rem 1rem 0"}}>
                         <TextField
-                            id="outlined-multiline-static" label="Notes" multiline rows={5}
+                            id="outlined-multiline-static" label="Notes" multiline rows={7}
                             defaultValue={props.overview.atAGlance.notice} variant="outlined" fullWidth/>
                     </Paper>
                     <Divider variant="middle" style={{ width: "91%" }}/>
                     <Paper elevation={3} style={{margin: "1rem 1rem 1rem 0"}}>
                         <TextField
                             id="outlined-multiline-static" label="Family Info (Sibling Information)"
-                            multiline rows={5} defaultValue={props.overview.atAGlance.familyInfo}
+                            multiline rows={4} defaultValue={props.overview.atAGlance.familyInfo}
                             variant="outlined" fullWidth/>
                     </Paper>
                 </div>
@@ -109,9 +109,15 @@ const StudentItemOverview = (props) => {
                         <Table>
                             <TableHead className={classes.tableHead}>
                                 <TableRow>
-                                    <TableCell style={{ color: "#fff" }}>Entry</TableCell>
-                                    <TableCell align={"right"} style={{ color: "#fff" }}>
-                                        Score
+                                    <TableCell>
+                                        <Typography variant={"button"} component={"span"}>
+                                            Entry
+                                        </Typography>
+                                    </TableCell>
+                                    <TableCell align={"right"}>
+                                        <Typography variant={"button"} component={"span"}>
+                                            Score
+                                        </Typography>
                                     </TableCell>
                                 </TableRow>
                             </TableHead>

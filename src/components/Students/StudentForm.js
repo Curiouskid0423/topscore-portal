@@ -151,6 +151,7 @@ const StudentForm = (props) => {
     const [error, setError] = useState("");
     const handleError = (e) => setError(e);
 
+    // Dialog state
     const [dialogOpen, setDialogChange] = useState(false);
     const handleDialogChange = () => setDialogChange(!dialogOpen);
 

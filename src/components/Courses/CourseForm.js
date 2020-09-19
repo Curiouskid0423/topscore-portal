@@ -18,27 +18,30 @@ const useStyles = makeStyles(makeCourseFormStyles);
 
 const CourseForm = (props) => {
     const classes = useStyles();
+    const target = props.course;
+    const edit = props.isEdit;
 
     // Handle Error State
     const [error, setError] = useState("");
     const handleError = (message) => setError(message);
     // Handle Type Select (prop 1)
-    const [courseType, setType] = useState("");
+    const [courseType, setType] = useState(edit? target.type : "");
     const handleType = (e) => setType(e.target.value);
     // Handle Date Change (prop 2)
-    const [selectedDate, setSelectedDate] = useState(moment());
+    const [selectedDate, setSelectedDate] = useState(
+        edit? moment(target.startDate) : moment());
     const handleDateChange = (date) => setSelectedDate(date);
     // Handle RepeatBy Change (prop 3)
-    const [repeatBy, setRepeatBy] = useState("");
+    const [repeatBy, setRepeatBy] = useState(edit? target.repeatBy : "");
     const handleRepeatBy = (e) => setRepeatBy(e.target.value);
     // Handle Set Name. (prop 4)
-    const [name, setName] = useState("");
+    const [name, setName] = useState(edit? target.courseName : "");
     const handleName = (e) => setName(e.target.value);
     // Handle Instructor. (prop 5)
-    const [instructor, setInstructor] = useState("");
+    const [instructor, setInstructor] = useState(edit? target.instructor : "");
     const handleInstructor = (e) => setInstructor(e.target.value);
     // Handle Repeat Time. (prop 6)
-    const [repeatTimes, setRepeatTimes] = useState(0);
+    const [repeatTimes, setRepeatTimes] = useState(edit? target.repeatTimes : 0);
     const handleRepeatTimes = (e) => setRepeatTimes(e.target.value);
 
     // Submission Handler
@@ -63,9 +66,10 @@ const CourseForm = (props) => {
                 {props.title}
             </Typography>
             <Divider />
+            {error !== "" && <Typography variant={"subtitle2"}> {error} </Typography>}
             <div className={classes.rootContainer}>
                 <form noValidate onSubmit={handleAddCourse}>
-                    <FormControl className={classes.formControl}>
+                    <FormControl variant="outlined" className={classes.formControl}>
                         <InputLabel>Course Type</InputLabel>
                         <Select labelId="course-type-label" id="course-select"
                                 value={courseType} onChange={handleType}>
@@ -76,9 +80,9 @@ const CourseForm = (props) => {
                         </Select>
                     </FormControl>
                     <TextField required className={classes.textFieldStyles} id="outlined-basic" label="Course Name"
-                               size="small" variant="outlined" fullWidth onChange={handleName}/>
+                               value={name} size="small" variant="outlined" fullWidth onChange={handleName}/>
                     <TextField required className={classes.textFieldStyles} id="outlined-basic" label="Instructor"
-                               size="small" variant="outlined" fullWidth onChange={handleInstructor}/>
+                               value={instructor} size="small" variant="outlined" fullWidth onChange={handleInstructor}/>
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <KeyboardDatePicker className={classes.textFieldStyles}
                                             disableToolbar variant="inline" format="MM/dd/yyyy"
@@ -96,11 +100,11 @@ const CourseForm = (props) => {
                             <MenuItem value={""}>Do not repeat</MenuItem>
                         </Select>
                     </FormControl>
-                    <TextField className={classes.textFieldStyles} id="outlined-basic"
-                               type="number" label="Repeat Times" size="small"
+                    <TextField className={classes.textFieldStyles} id="repeated-time"
+                               type="number" label="Repeat Times" size="small" value={repeatTimes}
                                variant="outlined" fullWidth onChange={handleRepeatTimes}/>
                     <Button type="submit" variant="contained" className={classes.submit}>
-                        Submit
+                        {edit? "Save Edit" : "Submit"}
                     </Button>
                 </form>
             </div>

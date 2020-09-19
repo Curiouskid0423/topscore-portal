@@ -12,7 +12,7 @@ const EditStudentContact = (props) => {
         props.history.push("/students");
     }
     const handleRemoval = (studentObj) => {
-        props.dispatchRemove(studentObj.id);
+        props.dispatchRemove(id);
         props.history.push("/students");
     }
 

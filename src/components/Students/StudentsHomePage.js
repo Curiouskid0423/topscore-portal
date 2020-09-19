@@ -11,7 +11,7 @@ import MessageSnackbar from "../MessageSnackbar";
 const useStyles = makeStyles((theme) => ({
     queryStyles: {
         paddingLeft: "1.2rem",
-    }
+    },
 }));
 
 /**
