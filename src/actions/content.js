@@ -38,3 +38,41 @@ export const startUpdateOverview = (overviewObj, id) => {
             }).catch((e) => dispatch(submitMessage("error")));
     }
 }
+
+// Update Compass Section
+
+export const updateSummary = (summary) => ({ type: "UPDATE_SUMMARY", summary });
+export const updateImprove = (improve) => ({ type: "UPDATE_IMPROVE", improve });
+export const updateActivities= (activities) => ({ type: "UPDATE_ACTIVITIES", activities });
+export const updateEngage= (engage) => ({ type: "UPDATE_ENGAGE", engage });
+export const updateAchieve = (achieve) => ({ type: "UPDATE_ACHIEVE", achieve });
+export const updateToDo = (todo) => ({ type: "UPDATE_TODO", todo });
+export const updateGoal = (goal) => ({ type: "UPDATE_GOAL", goal });
+export const updateGradeTest = (grade) => ({ type: "UPDATE_TEST", grade });
+
+export const startUpdateCompass = (compassObj, id, command) => {
+    return (dispatch, getState) => {
+        return database.ref(`students_db/${id}/content/partCompass/${command}`)
+            .set(compassObj).then(() => {
+                switch (command) {
+                    case "summary":
+                        dispatch(updateSummary(compassObj)); break;
+                    case "improve":
+                        dispatch(updateImprove(compassObj)); break;
+                    case "activities":
+                        dispatch(updateActivities(compassObj)); break;
+                    case "achieve":
+                        dispatch(updateAchieve(compassObj)); break;
+                    case "toDoList":
+                        dispatch(updateToDo(compassObj)); break;
+                    case "goal":
+                        dispatch(updateGoal(compassObj)); break;
+                    case "gradesAndTests":
+                        dispatch(updateGradeTest(compassObj)); break;
+                    case "engagement":
+                        dispatch(updateEngage(compassObj)); break;
+                }
+                dispatch(submitMessage("success"));
+            }).catch((e) => dispatch(submitMessage("error")));
+    }
+}

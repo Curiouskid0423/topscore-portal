@@ -156,7 +156,7 @@ export const studentInstance1 = {
                 courseInstance[3], courseInstance[4], courseInstance[5]
             ]
         },
-        partCompass: [{
+        partCompass: {
                 summary: "Compass, Spring 20, Part 1: Summary",
                 improvement: "Compass, Spring 20, Part 2: Improve",
                 goalSetting: "Compass, Spring 20, Part 3: Goals",
@@ -165,8 +165,7 @@ export const studentInstance1 = {
                 activities: "Compass, Spring 20, Part 6: Activities",
                 achievement: "Compass, Spring 20, Part 6.5: Achievements",
                 toDoList: "Compass, Spring 20, Part 7: To Do List"
-            }
-        ],
+        },
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -230,7 +229,7 @@ export const studentInstance2 = {
                 courseInstance[1], courseInstance[3], courseInstance[5]
             ]
         },
-        partCompass: [{
+        partCompass: {
                 summary: "Compass, Spring 20, Part 1: Summary",
                 improvement: "Compass, Spring 20, Part 2: Improve",
                 goalSetting: "Compass, Spring 20, Part 3: Goals",
@@ -239,8 +238,7 @@ export const studentInstance2 = {
                 activities: "Compass, Spring 20, Part 6: Activities",
                 achievement: "Compass, Spring 20, Part 6.5: Achievements",
                 toDoList: "Compass, Spring 20, Part 7: To Do List"
-            }
-        ],
+        },
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -302,7 +300,7 @@ export const studentInstance3 = {
                 courseInstance[1], courseInstance[3]
             ]
         },
-        partCompass: [{
+        partCompass: {
                 summary: "Compass, Spring 20, Part 1: Summary",
                 improvement: "Compass, Spring 20, Part 2: Improve",
                 goalSetting: "Compass, Spring 20, Part 3: Goals",
@@ -311,8 +309,7 @@ export const studentInstance3 = {
                 activities: "Compass, Spring 20, Part 6: Activities",
                 achievement: "Compass, Spring 20, Part 6.5: Achievements",
                 toDoList: "Compass, Spring 20, Part 7: To Do List"
-            }
-        ],
+        },
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -372,7 +369,7 @@ export const studentInstance4 = {
                 courseInstance[1], courseInstance[3]
             ]
         },
-        partCompass: [{
+        partCompass: {
             summary: "Compass, Spring 20, Part 1: Summary",
             improvement: "Compass, Spring 20, Part 2: Improve",
             goalSetting: "Compass, Spring 20, Part 3: Goals",
@@ -381,8 +378,7 @@ export const studentInstance4 = {
             activities: "Compass, Spring 20, Part 6: Activities",
             achievement: "Compass, Spring 20, Part 6.5: Achievements",
             toDoList: "Compass, Spring 20, Part 7: To Do List"
-        }
-        ],
+        },
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -442,7 +438,7 @@ export const studentInstance5 = {
                 courseInstance[3], courseInstance[4]
             ]
         },
-        partCompass: [{
+        partCompass: {
             summary: "Compass, Spring 20, Part 1: Summary",
             improvement: "Compass, Spring 20, Part 2: Improve",
             goalSetting: "Compass, Spring 20, Part 3: Goals",
@@ -451,7 +447,7 @@ export const studentInstance5 = {
             activities: "Compass, Spring 20, Part 6: Activities",
             achievement: "Compass, Spring 20, Part 6.5: Achievements",
             toDoList: "Compass, Spring 20, Part 7: To Do List"
-        }],
+        },
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",
@@ -511,7 +507,7 @@ export const studentInstance6 = {
                 courseInstance[3], courseInstance[4]
             ]
         },
-        partCompass: [{
+        partCompass: {
             summary: "Compass, Spring 20, Part 1: Summary",
             improvement: "Compass, Spring 20, Part 2: Improve",
             goalSetting: "Compass, Spring 20, Part 3: Goals",
@@ -520,7 +516,7 @@ export const studentInstance6 = {
             activities: "Compass, Spring 20, Part 6: Activities",
             achievement: "Compass, Spring 20, Part 6.5: Achievements",
             toDoList: "Compass, Spring 20, Part 7: To Do List"
-        }],
+        },
         partMentor: {
             testInfo: "Google Drive Link",
             collegeList: "Google Drive Link",

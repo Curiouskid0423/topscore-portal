@@ -15,6 +15,8 @@ const contentReducer = (prevState = {}, action) => {
                     }
                 }
             };
+        case "UPDATE_SUMMARY":
+            return prevState;
         default:
             return prevState;
     }

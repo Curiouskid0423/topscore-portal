@@ -306,13 +306,13 @@ const StudentForm = (props) => {
                     </MuiPickersUtilsProvider>
                     <div>
                         <TextField className={classes.textFieldStyles} id="reading-score" label="Reading"
-                                   size="small" variant="outlined" onChange={handleReading}/>
+                                   value={reading} size="small" variant="outlined" onChange={handleReading}/>
                         <TextField className={classes.textFieldStyles} id="writing-score" label="Writing"
-                                   size="small" variant="outlined" onChange={handleWriting}/>
+                                   value={writing} size="small" variant="outlined" onChange={handleWriting}/>
                         <TextField className={classes.textFieldStyles} id="math-score" label="Math"
-                                   size="small" variant="outlined" onChange={handleMath}/>
+                                   value={math} size="small" variant="outlined" onChange={handleMath}/>
                         <TextField className={classes.textFieldStyles} id="essay-score" label="Optional Essay"
-                                   size="small" variant="outlined" onChange={handleEssay}/>
+                                   value={essay} size="small" variant="outlined" onChange={handleEssay}/>
                     </div>
                     <Button type="submit" variant="contained" className={classes.submit}>
                         {edit? "Save Edit" : "Submit"}

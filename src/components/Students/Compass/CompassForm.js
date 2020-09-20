@@ -46,28 +46,28 @@ const CompassForm = ({compass} = {}) => {
             </Grid>
             <Grid item md={10} sm={9}>
                 <TabPanel value={coreTab} index={0}>
-                    <CustomTabPanel label={"Summary"} value={compass.summary}/>
+                    <CustomTabPanel label={"Summary"} value={compass.summary} id={"summary"}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={1}>
-                    <CustomTabPanel label={"Need Improvement"} value={compass.improvement}/>
+                    <CustomTabPanel label={"Need Improvement"} value={compass.improvement} id={"improvement"}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={2}>
-                    <CustomTabPanel label={"Goal Setting"} value={compass.goalSetting}/>
+                    <CustomTabPanel label={"Goal Setting"} value={compass.goalSetting} id={"goalSetting"}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={3}>
-                    <CustomTabPanel label={"Engagement"} value={compass.engagement}/>
+                    <CustomTabPanel label={"Engagement"} value={compass.engagement} id={"engagement"}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={4}>
-                    <CustomTabPanel label={"Grades & Tests"} value={compass.gradesAndTests}/>
+                    <CustomTabPanel label={"Grades & Tests"} value={compass.gradesAndTests} id={"gradesAndTests"}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={5}>
-                    <CustomTabPanel label={"Activities"} value={compass.activities}/>
+                    <CustomTabPanel label={"Activities"} value={compass.activities} id={"activities"}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={6}>
-                    <CustomTabPanel label={"Achievements"} value={compass.activities}/>
+                    <CustomTabPanel label={"Achievements"} value={compass.achievement} id={"achievement"}/>
                 </TabPanel>
                 <TabPanel value={coreTab} index={7}>
-                    <CustomTabPanel label={"To-Do Lists"} value={compass.toDoList}/>
+                    <CustomTabPanel label={"To-Do Lists"} value={compass.toDoList} id={"toDoList"}/>
                 </TabPanel>
             </Grid>
         </Grid>
