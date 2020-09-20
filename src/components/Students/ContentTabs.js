@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     root: {
         flexGrow: 1,
         margin: theme.spacing(2),
+        padding: "0 2.5rem",
     },
 });
 

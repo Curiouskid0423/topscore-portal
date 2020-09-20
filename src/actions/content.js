@@ -76,3 +76,18 @@ export const startUpdateCompass = (compassObj, id, command) => {
             }).catch((e) => dispatch(submitMessage("error")));
     }
 }
+
+export const updateMentor = (mentorObj) => ({
+    type: "UPDATE_MENTOR",
+    mentorObj
+});
+
+export const startUpdateMentor = (mentorObj, id) => {
+    return (dispatch, getState) => {
+        return database.ref(`students_db/${id}/content/partMentor`)
+            .update(mentorObj).then(() => {
+                dispatch(updateMentor(mentorObj));
+                dispatch(submitMessage("success"));
+            }).catch((e) => dispatch(submitMessage("error")));
+    }
+}

@@ -62,7 +62,7 @@ const StudentItemCore = (props) => {
                             <TableRow>
                                 <TableCell component="th" scope="row" colSpan={2}>
                                     <div className={classes.searchBar}>
-                                        <TextField id="add-classes" label="> Add new class" size="small"
+                                        <TextField id="add-classes" label="Enroll in New Course" size="small"
                                                    onChange={handleSearch} fullWidth/>
                                         <Button variant={"contained"}> Add </Button>
                                     </div>

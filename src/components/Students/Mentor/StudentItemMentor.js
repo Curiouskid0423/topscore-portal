@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -8,6 +8,9 @@ import TextField from "@material-ui/core/TextField";
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles } from "@material-ui/core/styles";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import {startUpdateMentor} from "../../../actions/content";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,8 +35,29 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const StudentItemMentor = () => {
+const StudentItemMentor = (props) => {
     const classes = useStyles();
+
+    // state: testing
+    const [testInfo, setTestInfo] = useState(props.content.testInfo);
+    const handleTestInfo = (e) => setTestInfo(e.target.value);
+    // state: college list
+    const [collegeLst, setCollegeLst] = useState(props.content.collegeList);
+    const handleCollegeLst = (e) => setCollegeLst(e.target.value);
+    // state document reference
+    const [docRef, setDocRef] = useState(props.content.optionals);
+    const handleDocREf = (e) => setDocRef(e.target.value);
+
+    // handleSubmit
+    const onSubmit = () => {
+        const result = {
+            collegeList: collegeLst,
+            testInfo: testInfo,
+            optionals: docRef
+        }
+        props.dispatchMentor(result, props.match.params.id);
+    }
+
     return (
         <Grid container>
             <Grid item md={12}>
@@ -44,7 +68,8 @@ const StudentItemMentor = () => {
                         <Typography className={classes.heading}>Testing </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <TextField label="Contents" multiline rows={5} fullWidth/>
+                        <TextField label="Contents" multiline rows={5} fullWidth
+                                   value={testInfo} onChange={handleTestInfo}/>
                     </AccordionDetails>
                 </Accordion>
                 {/* College List */}
@@ -54,7 +79,8 @@ const StudentItemMentor = () => {
                         <Typography className={classes.heading}>College List </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                            <TextField label="Contents" multiline rows={5} fullWidth/>
+                            <TextField label="Contents" multiline rows={5} fullWidth
+                            value={collegeLst} onChange={handleCollegeLst}/>
                     </AccordionDetails>
                 </Accordion>
                 {/* Document Reference. */}
@@ -64,15 +90,26 @@ const StudentItemMentor = () => {
                         <Typography className={classes.heading}>Document Reference</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <TextField label="Contents" multiline rows={5} fullWidth/>
+                        <TextField label="Contents" multiline rows={5} fullWidth
+                        value={docRef} onChange={handleDocREf}/>
                     </AccordionDetails>
                 </Accordion>
             </Grid>
             <Grid item sm={12} className={classes.buttonGrid}>
-                <Button variant={"contained"} className={classes.saveButton}> Save </Button>
+                <Button variant={"contained"} className={classes.saveButton} onClick={onSubmit}>
+                    Save
+                </Button>
             </Grid>
         </Grid>
     );
 }
 
-export default StudentItemMentor;
+const mapStateToProps = (state) => ({
+    content: state.content.partMentor
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    dispatchMentor: (mentorObj, id) => dispatch(startUpdateMentor(mentorObj, id))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(StudentItemMentor));

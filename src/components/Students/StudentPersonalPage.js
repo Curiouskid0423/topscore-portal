@@ -15,12 +15,14 @@ import { connect } from "react-redux";
 import Dashboard from "../defaults/Templates";
 import ContentTabs from "./ContentTabs";
 import personalStyles from "../../styles/makeStyles/makeStudentPersonalStyles";
+import {startSetContent} from "../../actions/content";
 
 const useStyles = makeStyles(personalStyles);
 
 const getStudent = (id, studentList) => studentList.find((item) => item.id === id);
 
 const StudentPersonalPage = (props) => {
+
     const currentStudent = getStudent(props.match.params.id, props.students);
     const classes = useStyles();
     const chipCourse = <Chip className={clsx(classes.pkgButton, classes.pkgCourse)}
@@ -130,8 +132,12 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps = (dispatch) => ({
+    dispatchGetContent: (id) => dispatch(startSetContent(id))
+})
+
 const WrappedStudentPage = () => <Dashboard
-    content={connect(mapStateToProps)(withRouter(StudentPersonalPage))}
+    content={connect(mapStateToProps, mapDispatchToProps)(withRouter(StudentPersonalPage))}
 />;
 
 export default WrappedStudentPage;

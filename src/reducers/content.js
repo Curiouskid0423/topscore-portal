@@ -16,7 +16,68 @@ const contentReducer = (prevState = {}, action) => {
                 }
             };
         case "UPDATE_SUMMARY":
-            return prevState;
+            return {
+                ...prevState,
+                partCompass: {
+                    ...prevState.partCompass, summary: action.summary,
+                }
+            };
+        case "UPDATE_IMPROVE":
+            return {
+                ...prevState,
+                partCompass: {
+                    ...prevState.partCompass, improvement: action.improve,
+                }
+            };
+        case "UPDATE_GOAL":
+            return {
+                ...prevState,
+                partCompass: {
+                    ...prevState.partCompass, goalSetting: action.goal,
+                }
+            };
+        case "UPDATE_ACTIVITIES":
+            return {
+                ...prevState,
+                partCompass: {
+                    ...prevState.partCompass, activities: action.activities,
+                }
+            };
+        case "UPDATE_ACHIEVE":
+            return {
+                ...prevState,
+                partCompass: {
+                    ...prevState.partCompass, achievement: action.achieve,
+                }
+            };
+        case "UPDATE_TEST":
+            return {
+                ...prevState,
+                partCompass: {
+                    ...prevState.partCompass, gradesAndTests: action.grade,
+                }
+            };
+        case "UPDATE_ENGAGE":
+            return {
+                ...prevState,
+                partCompass: {
+                    ...prevState.partCompass, engagement: action.engage,
+                }
+            };
+        case "UPDATE_TODO":
+            return {
+                ...prevState,
+                partCompass: {
+                    ...prevState.partCompass, toDoList: action.todo,
+                }
+            };
+        case "UPDATE_MENTOR":
+            return {
+                ...prevState,
+                partMentor: {
+                    ...prevState.partMentor, ...action.mentorObj,
+                }
+            }
         default:
             return prevState;
     }
