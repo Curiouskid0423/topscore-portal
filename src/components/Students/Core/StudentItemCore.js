@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -13,6 +13,8 @@ import TableBody from "@material-ui/core/TableBody";
 import TableContainer from "@material-ui/core/TableContainer";
 import CourseTable from "./CourseTable";
 import TextField from "@material-ui/core/TextField";
+import getVisibleCourse from "../../../selectors/getVisibleCourse";
+import {setCourseQuery} from "../../../actions/filters";
 
 const useStyles = makeStyles({
    currentRoot: {
@@ -35,8 +37,16 @@ const useStyles = makeStyles({
 const StudentItemCore = (props) => {
     const classes = useStyles();
 
-    const [search, setSearch] = useState("");
-    const handleSearch = (e) => setSearch(e.target.value);
+    const [search, setSearch] = useState(props.query);
+    const handleSearch = (e) => {
+        setSearch(e.target.value);
+        props.dispatchSearch(e.target.value);
+    }
+
+    // Upon un-mounting, clear the query string.
+    useEffect(() => {
+        return () => props.dispatchSearch("");
+    }, []);
 
     return (
         <Grid container>
@@ -50,6 +60,7 @@ const StudentItemCore = (props) => {
                 {/* Add new course. */}
                 <TableContainer component={Paper} className={classes.courseListStyles}>
                     <Table stickyHeader>
+                        {/* Enroll Course __ Header */}
                         <TableHead>
                             <TableRow>
                                 <TableCell>CourseName</TableCell>
@@ -58,13 +69,13 @@ const StudentItemCore = (props) => {
                                 </TableCell>
                             </TableRow>
                         </TableHead>
+                        {/* Enroll Course __ Body */}
                         <TableBody>
                             <TableRow>
                                 <TableCell component="th" scope="row" colSpan={2}>
                                     <div className={classes.searchBar}>
                                         <TextField id="add-classes" label="Enroll in New Course" size="small"
-                                                   onChange={handleSearch} fullWidth/>
-                                        <Button variant={"contained"}> Add </Button>
+                                                   onChange={handleSearch} value={search} fullWidth/>
                                     </div>
                                 </TableCell>
                             </TableRow>
@@ -83,8 +94,13 @@ const StudentItemCore = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    courseList: state.courses,
+    courseList: getVisibleCourse(state.filters.visibleCourses.query, state.courses),
     content: state.content.partCore,
+    query: state.filters.visibleCourses.query,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    dispatchSearch: (query) => dispatch(setCourseQuery(query)),
 })
 
-export default connect(mapStateToProps)(StudentItemCore);
+export default connect(mapStateToProps, mapDispatchToProps)(StudentItemCore);

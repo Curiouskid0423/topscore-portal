@@ -8,10 +8,21 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import moment from "moment";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles({
+    dutyTableContainer: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+    },
     table: {
         minWidth: 650,
+    },
+    saveButton: {
+        background: "#DCD3C0",
+        marginTop: "1rem",
+        padding: ".5rem 5rem",
     },
 });
 
@@ -40,30 +51,33 @@ const rows = [
 const DutyTable = (props) => {
     const classes = useStyles();
     return (
-        <TableContainer component={Paper}>
-            <Table className={classes.table} aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <StyledTableTitle> Date </StyledTableTitle>
-                        <StyledTableTitle align="right">Morning (9am - 12pm)</StyledTableTitle>
-                        <StyledTableTitle align="right">Afternoon (2pm - 6pm)</StyledTableTitle>
-                        <StyledTableTitle align="right">Evening (7pm - 9pm)</StyledTableTitle>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {rows.map((row) => (
-                        <TableRow key={row.name}>
-                            <TableCell component="th" scope="row">
-                                {row.name}
-                            </TableCell>
-                            <TableCell align="right">{row.calories}</TableCell>
-                            <TableCell align="right">{row.fat}</TableCell>
-                            <TableCell align="right">{row.carbs}</TableCell>
+        <div className={classes.dutyTableContainer}>
+            <TableContainer component={Paper}>
+                <Table className={classes.table} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <StyledTableTitle> Date </StyledTableTitle>
+                            <StyledTableTitle align="right">Morning (9am - 12pm)</StyledTableTitle>
+                            <StyledTableTitle align="right">Afternoon (2pm - 6pm)</StyledTableTitle>
+                            <StyledTableTitle align="right">Evening (7pm - 9pm)</StyledTableTitle>
                         </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+                    </TableHead>
+                    <TableBody>
+                        {rows.map((row) => (
+                            <TableRow key={row.name}>
+                                <TableCell component="th" scope="row">
+                                    {row.name}
+                                </TableCell>
+                                <TableCell align="right">{row.calories}</TableCell>
+                                <TableCell align="right">{row.fat}</TableCell>
+                                <TableCell align="right">{row.carbs}</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+            <Button className={classes.saveButton}> SAVE </Button>
+        </div>
     );
 }
 

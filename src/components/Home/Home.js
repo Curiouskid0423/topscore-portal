@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "space-around",
         width: "100vw",
-        marginBottom: "2rem",
+        marginBottom: "1rem"
     },
     typeWriter: {
         fontWeight: 400,

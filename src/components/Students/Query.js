@@ -13,8 +13,22 @@ import clsx from "clsx";
 import Typography from "@material-ui/core/Typography";
 import Header from "../defaults/Header";
 import {setCourse, setName, setPackage, setYear} from "../../actions/filters";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
+import Modal from "@material-ui/core/Modal";
 
 const useStyles = makeStyles({
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: "50vw"
+    },
+    paper: {
+        backgroundColor: theme.palette.background.paper,
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(2, 4, 3),
+    },
     buttonGroup: {
         display: "flex",
         "& button": {
@@ -49,6 +63,8 @@ const Query = (props) => {
     const [pkgFilter, setpkgFilter] = useState("");
     const [gradYear, setgradYear] = useState(props.filter.gradYear);
     const [studentName, setStudentName] = useState(props.filter.name);
+    const [open, setOpen] = React.useState(false);
+    const handleModalChange = () => setOpen(!open);
     // handler functions
     const handleFilters = () => setFiltersOpen(true);
     const handlePkg = (e) => {
@@ -103,11 +119,28 @@ const Query = (props) => {
                 </Grid>
                 <Grid item sm={3}>
                     <Button variant={"contained"} color={"primary"}
-                            className={classes.searchButton}>
+                            className={classes.searchButton} onClick={handleModalChange}>
                         Get List
                     </Button>
                 </Grid>
             </Grid>
+            {/* Get_List Modal  */}
+            <Modal
+                className={classes.modal}
+                open={open}
+                onClose={handleModalChange}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}>
+                <Fade in={open}>
+                    <div className={classes.paper}>
+                        <h2 id="transition-modal-title">Transition modal</h2>
+                        <p id="transition-modal-description">react-transition-group animates me.</p>
+                    </div>
+                </Fade>
+            </Modal>
         </ThemeProvider>
     )
 }

@@ -10,3 +10,9 @@ export const setCourse = (course) => ({ type: "SET_COURSE", course });
 export const setPackage = (pkg) => ({ type: "SET_PACKAGE", pkg });
 
 export const setYear = (year) => ({ type: "SET_YEAR", year });
+
+//----- For course selector -----//
+export const setCourseQuery = (query) => ({
+    type: "SET_COURSE_QUERY",
+    query
+});

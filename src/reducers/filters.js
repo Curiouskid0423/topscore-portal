@@ -14,7 +14,9 @@ const defaults = {
         course: "",
         pkg: ""
     },
-    visibleCourses: {}
+    visibleCourses: {
+        query: ""
+    }
 }
 
 const filtersReducer = (prevState = defaults, action) => {
@@ -49,6 +51,14 @@ const filtersReducer = (prevState = defaults, action) => {
                 visibleStudents: {
                     ...prevState.visibleStudents,
                     pkg: action.pkg
+                }
+            };
+        case "SET_COURSE_QUERY":
+            return {
+                ...prevState,
+                visibleCourses: {
+                    ...prevState.visibleCourses,
+                    query: action.query
                 }
             };
         default:

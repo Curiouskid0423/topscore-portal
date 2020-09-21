@@ -42,6 +42,7 @@ const StudentHome = (props) => {
             <Grid item container sm={12}>
                 <StudentLoader {...props} students = {props.students}/>
             </Grid>
+
         </Grid>
     )
 };

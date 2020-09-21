@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import moment from "moment";
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { connect } from "react-redux";
@@ -22,11 +22,14 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogActions from "@material-ui/core/DialogActions";
+import getVisibleCourse from "../../selectors/getVisibleCourse";
+import {setCourseQuery} from "../../actions/filters";
 
 const StyledTitleCell = withStyles((theme) => ({
     head: {
-        backgroundColor: "#5B3330",
+        backgroundColor: "#DBD3C0",
         color: theme.palette.common.white,
+        fontSize: 17
     },
     body: {
         fontSize: 14
@@ -47,6 +50,7 @@ const useStyles = makeStyles({
     },
     tableContainer: {
         maxHeight: "550px",
+        minWidth: "81vw",
         maxWidth: "90vw",
     },
     btnStyles: {
@@ -73,9 +77,19 @@ const tableTitles = [
 const CourseList = (props) => {
     const classes = useStyles();
     const { path } = useRouteMatch();
-
+    const [search, setSearch] = useState(props.query);
     const [dialogOpen, setDialogChange] = useState(false);
     const [removeTarget, setRemoveTarget] = useState("");
+
+    // Upon un-mounting, clear the query string.
+    useEffect(() => {
+        return () => props.dispatchSearch("");
+    }, []);
+
+    const handleSearch = (e) => {
+        setSearch(e.target.value);
+        props.dispatchSearch(e.target.value);
+    }
 
     const stageRemoval = (uid) => {
         setRemoveTarget(uid);
@@ -102,7 +116,8 @@ const CourseList = (props) => {
             <Grid item container md={12}>
                 <Grid item md={7} sm={12}> <Header title={"COURSE DIRECTORY"} /> </Grid>
                 <Grid item md={3} sm={4}>
-                    <TextField id="standard-basic" label="Search" fullWidth/>
+                    <TextField id="standard-basic" label="Search" fullWidth
+                               value={search} onChange={handleSearch}/>
                 </Grid>
                 <Grid item md={2} sm={4}>
                     <div className={classes.btnContainer}>
@@ -174,12 +189,14 @@ const CourseList = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-    courseList: state.courses,
-    submitStatus: state.util.submitStatus || ""
+    courseList: getVisibleCourse(state.filters.visibleCourses.query, state.courses),
+    submitStatus: state.util.submitStatus || "",
+    query: state.filters.visibleCourses.query
 });
 
 const mapDispatchToProps = (dispatch) => ({
     dispatchRemove: (id) => dispatch(startRemoveCourse(id)),
+    dispatchSearch: (query) => dispatch(setCourseQuery(query)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CourseList);
