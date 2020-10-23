@@ -145,7 +145,6 @@ export const studentInstance1 = {
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",
-                familyInfo: "Kevin has no siblings."
             },
         },
         partCore: {
@@ -218,7 +217,6 @@ export const studentInstance2 = {
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",
-                familyInfo: "Ricky has a sister currently at tenth grade."
             },
         },
         partCore: {
@@ -289,7 +287,6 @@ export const studentInstance3 = {
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",
-                familyInfo: "Benjamin has a brother currently in 9th grade."
             },
         },
         partCore: {
@@ -360,7 +357,6 @@ export const studentInstance4 = {
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",
-                familyInfo: "Lavinia has two sisters."
             },
         },
         partCore: {
@@ -429,7 +425,6 @@ export const studentInstance5 = {
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",
-                familyInfo: "Darren is the only child in his family."
             },
         },
         partCore: {
@@ -498,7 +493,6 @@ export const studentInstance6 = {
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",
-                familyInfo: "Timothy is the only child in his family."
             },
         },
         partCore: {

@@ -7,11 +7,21 @@ import StudentItem from "./StudentItem";
 import Query from "./Query";
 import {makeStyles} from "@material-ui/core/styles";
 import MessageSnackbar from "../MessageSnackbar";
+import Header from "../defaults/Header";
 
 const useStyles = makeStyles((theme) => ({
     queryStyles: {
         paddingLeft: "1.2rem",
     },
+    queryContainer: {
+        background: "#b9b9b924",
+        borderRadius: ".5rem",
+        boxShadow: "0px 10px 30px -4px rgba(0,0,0,0.1)",
+        maxWidth: "95%",
+        margin: "auto",
+        marginBottom: "1rem",
+        padding: "9px",
+    }
 }));
 
 /**
@@ -33,12 +43,16 @@ const StudentHome = (props) => {
         <Grid container>
             {/* Snackbar */}
             { (props.submitStatus !== "") && <MessageSnackbar submitStatus={props.submitStatus} />}
-            {/*Query Section*/}
-            <Grid item container sm={12} spacing={1} className={classes.queryStyles}>
-                <Query/>
+            <Grid item sm={12} className={classes.queryContainer}>
+                {/* Header */}
+                <Header title={"STUDENT SEARCH"}/>
+                {/* Query Section */}
+                <Grid item container sm={12} spacing={1} className={classes.queryStyles}>
+                    <Query/>
+                </Grid>
             </Grid>
             {/*Student results*/}
-            <Grid item container sm={12}>
+            <Grid container item sm={12}>
                 <StudentLoader {...props} students = {props.students}/>
             </Grid>
         </Grid>

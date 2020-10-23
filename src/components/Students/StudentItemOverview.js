@@ -52,15 +52,16 @@ const StudentItemOverview = (props) => {
 
     const classes = useStyles();
     const current = getStudent(props.match.params.id, props.studentList);
+    const noticeRowNum = 12;
     // state: at a glance
     const [notice, setNotice] = useState(props.overview.atAGlance.notice);
     const handleNotice = (e) => setNotice(e.target.value);
-    // state: family info
-    const [family, setFamily] = useState(props.overview.atAGlance.familyInfo);
-    const handleFamily = (e) => setFamily(e.target.value);
+    // (removed this state) state: family info
+    // const [family, setFamily] = useState(props.overview.atAGlance.familyInfo);
+    // const handleFamily = (e) => setFamily(e.target.value);
 
     const onSubmit = () => {
-        const result = { notice: notice, familyInfo: family };
+        const result = { notice: notice };
         console.log(result);
         props.dispatchOverview(result);
     }
@@ -95,15 +96,8 @@ const StudentItemOverview = (props) => {
                 <div>
                     <Paper elevation={3} style={{margin: "0 1rem 1rem 0"}}>
                         <TextField
-                            id="outlined-multiline-static" label="Notes" multiline rows={7} onChange={handleNotice}
+                            id="outlined-multiline-static" label="Notes" multiline rows={noticeRowNum} onChange={handleNotice}
                             defaultValue={props.overview.atAGlance.notice} variant="outlined" fullWidth/>
-                    </Paper>
-                    <Divider variant="middle" style={{ width: "91%" }}/>
-                    <Paper elevation={3} style={{margin: "1rem 1rem 1rem 0"}}>
-                        <TextField
-                            id="outlined-multiline-static" label="Family Info (Sibling Information)"
-                            multiline rows={4} defaultValue={props.overview.atAGlance.familyInfo}
-                            onChange={handleFamily} variant="outlined" fullWidth/>
                     </Paper>
                 </div>
             </Grid>

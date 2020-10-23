@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
     cardRoot: {
         maxWidth: 345,
-        margin: "1rem"
+        margin: "1rem auto"
     },
     cardTitle: {
         display: "flex",

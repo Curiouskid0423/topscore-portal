@@ -87,7 +87,7 @@ const StudentItemMentor = (props) => {
                 <Accordion>
                     <AccordionSummary expandIcon={<ExpandMoreIcon style={{color: "#fff"}} />}
                                       id="panel2a-header" className={classes.summaryStyles}>
-                        <Typography className={classes.heading}>Document Reference</Typography>
+                        <Typography className={classes.heading}>Document Reference (e.g. High School Transcript)</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <TextField label="Contents" multiline rows={5} fullWidth

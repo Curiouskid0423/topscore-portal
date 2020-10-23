@@ -8,9 +8,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
     root: {
-        margin: ".5rem 0",
+        margin: ".5rem 0 2rem .8rem",
         "& h2": {
-            fontWeight: 800
+            fontWeight: 600,
+            letterSpacing: "1px"
         }
     }
 })
@@ -19,7 +20,7 @@ const Header = (props) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Typography component="h2" variant="h4" gutterBottom>
+            <Typography component="h2" variant="h4" gutterBottom style={{ fontFamily: "\'Commissioner\', sans-serif", }}>
                 {props.title}
             </Typography>
         </div>

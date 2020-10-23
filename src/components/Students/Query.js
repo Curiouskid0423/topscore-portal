@@ -90,8 +90,6 @@ const Query = (props) => {
 
     return (
         <ThemeProvider theme={theme}>
-            {/* Directory Header and BreadCrumb. */}
-            <Grid item sm={12}> <Header title={"STUDENT DIRECTORY"} /> </Grid>
             {/* Directory content */}
             <Grid container item sm={12}>
                 <Grid item sm={9}>

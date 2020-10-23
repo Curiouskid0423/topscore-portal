@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import moment from "moment";
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import { connect } from "react-redux";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
@@ -24,6 +24,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogActions from "@material-ui/core/DialogActions";
 import getVisibleCourse from "../../selectors/getVisibleCourse";
 import {setCourseQuery} from "../../actions/filters";
+import themehelper from "../../themes";
 
 const StyledTitleCell = withStyles((theme) => ({
     head: {
@@ -114,20 +115,22 @@ const CourseList = (props) => {
             {/* Snackbar */}
             { (props.submitStatus !== "") && <MessageSnackbar submitStatus={props.submitStatus} />}
             <Grid item container md={12}>
-                <Grid item md={7} sm={12}> <Header title={"COURSE DIRECTORY"} /> </Grid>
-                <Grid item md={3} sm={4}>
-                    <TextField id="standard-basic" label="Search" fullWidth
-                               value={search} onChange={handleSearch}/>
-                </Grid>
-                <Grid item md={2} sm={4}>
-                    <div className={classes.btnContainer}>
-                        <Button variant="contained" className={classes.btnStyles}>
-                            <Link to={`${path}/addCourse`} className={classes.linkStyles}>
-                                Add New Course
-                            </Link>
-                        </Button>
-                    </div>
-                </Grid>
+                <ThemeProvider theme={themehelper}>
+                    <Grid item md={7} sm={12}> <Header title={"COURSE DIRECTORY"} /> </Grid>
+                    <Grid item md={3} sm={4}>
+                        <TextField id="standard-basic" label="Search" fullWidth
+                                   value={search} onChange={handleSearch}/>
+                    </Grid>
+                    <Grid item md={2} sm={4}>
+                        <div className={classes.btnContainer}>
+                            <Button variant="contained" className={classes.btnStyles}>
+                                <Link to={`${path}/addCourse`} className={classes.linkStyles}>
+                                    Add New Course
+                                </Link>
+                            </Button>
+                        </div>
+                    </Grid>
+                </ThemeProvider>
             </Grid>
             <TableContainer component={Paper} className={classes.tableContainer}>
                 <Table stickyHeader className={classes.table}>

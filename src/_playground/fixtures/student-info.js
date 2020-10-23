@@ -25,7 +25,7 @@ const studentInstance = {
         partOverview: {
             atAGlance: {
                 notice: "Notice will be a string.",
-                familyInfo: "Kevin has no siblings."
+                // familyInfo: "Kevin has no siblings."
             },
             firstAppointment: "Google Drive Link",
             preTestResult: "Google Drive Link" // Or `null`

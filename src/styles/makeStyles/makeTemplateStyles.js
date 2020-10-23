@@ -20,7 +20,9 @@ const templateStyles = (theme) => ({
     },
     logoStyles: {
         textDecoration: "none",
-        color: "inherit"
+        color: "inherit",
+        fontFamily: "\'Commissioner\', sans-serif",
+        fontWeight: "600"
     },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,

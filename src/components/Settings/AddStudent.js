@@ -9,8 +9,7 @@ const defaultContent = {
     content: {
         partOverview: {
             atAGlance: {
-                notice: "Type any notice here.",
-                familyInfo: ""
+                notice: "Notes about students, family info, sibling info...etc.",
             },
         },
         partCore: {
