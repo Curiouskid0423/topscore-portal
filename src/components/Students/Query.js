@@ -72,8 +72,13 @@ const Query = (props) => {
         props.setPackage(e.target.value);
     }
     const handleGradYear = (e) => {
-        setgradYear(e.target.value);
-        props.setYear(e.target.value);
+        const regex = /[1-9][0-9]{3}/g;
+        if (e.target.value !== "" && !e.target.value.match(regex)) {
+            return;
+        }
+        const parsedYear = JSON.parse(e.target.value || 0);
+        setgradYear(parsedYear);
+        props.setYear(parsedYear);
     }
     const handleName = (e) => {
         setStudentName(e.target.value);
@@ -94,7 +99,7 @@ const Query = (props) => {
                         <TextField id="standard-basic" fullWidth
                                    label="Search student" onChange={handleName}/>
                         <div className={clsx(!showFilters && classes.hideFilters)}>
-                            <TextField className={classes.textFilter} id="standard-basic"
+                            <TextField type={"number"} className={classes.textFilter} id="standard-basic"
                                        label="Filter Grad Year" onChange={handleGradYear}/>
                             <TextField className={classes.textFilter} id="standard-basic" label="Filter by Course" />
                             {/*<TextField className={classes.textFilter} id="standard-basic" label="Filter by HighSchool" />*/}

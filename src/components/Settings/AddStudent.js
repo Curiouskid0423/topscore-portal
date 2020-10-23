@@ -20,14 +20,14 @@ const defaultContent = {
             ]
         },
         partCompass: [{
-            summary: "(Default Message) Part 1: Summary",
-            improvement: "(Default Message) Part 2: Improve",
-            goalSetting: "(Default Message) Part 3: Goals",
-            engagement: "(Default Message) Part 4: Engagement",
-            gradesAndTests: "(Default Message) Part 5: Grades and Tests",
-            activities: "(Default Message) Part 6: Activities",
-            achievement: "(Default Message) Part 6.5: Achievements",
-            toDoList: "(Default Message) Part 7: To Do List"
+            summary: "(Default Message) Part 1: Summary Placeholder",
+            improvement: "(Default Message) Part 2: Improve Placeholder",
+            goalSetting: "(Default Message) Part 3: Goals Placeholder",
+            engagement: "(Default Message) Part 4: Engagement Placeholder",
+            gradesAndTests: "(Default Message) Part 5: Grades and Tests Placeholder",
+            activities: "(Default Message) Part 6: Activities Placeholder",
+            achievement: "(Default Message) Part 6.5: Achievements Placeholder",
+            toDoList: "(Default Message) Part 7: To Do List Placeholder"
         }],
         partMentor: {
             testInfo: "",

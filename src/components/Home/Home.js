@@ -1,63 +1,52 @@
 import React, {useEffect} from "react";
 import Dashboard from "../defaults/Templates";
-import Header from "../defaults/Header";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Calendar from "./Calendar";
+import { connect } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
-import Typewriter from 'typewriter-effect';
 
 const useStyles = makeStyles((theme) => ({
     logoHolder:{
-        maxWidth: "55%",
+        maxWidth: "50%",
+        display: "block",
+        margin: "auto"
     },
     topStyles: {
         display: "flex",
         justifyContent: "space-around",
         width: "100vw",
-        marginBottom: "1rem",
-        marginLeft: "2rem"
+        margin: "0 1.5rem 1rem 1.5rem",
+        padding: "2rem 2rem",
+        border: ".1px solid #7c7c7c8c",
+        borderRadius: ".2rem",
     },
-    typeWriter: {
-        fontWeight: 400,
-        letterSpacing: ".3rem",
-        color: "#862929",
+    greetingMsg: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+    },
+    subtitleGreet: {
+        color: "#7c7c7c",
+        fontWeight: 400
     }
 }))
 
-const Home = () => {
+const Home = (props) => {
 
     const classes = useStyles();
-    const sourceWord = "TOPSCORE";
-    let index = 0;
-    let typer = "";
-    const typeWriter = () => {
-       if (index < sourceWord.length) {
-           typer += sourceWord[index];
-           setTimeout(typeWriter, 50);
-       }
-    }
-
-    useEffect(typeWriter, [typer]);
 
     return (
         <Grid container>
             {/*<Header title={"DASHBOARD"} />*/}
             <Grid item md={12} className={classes.topStyles}>
                 <Grid item md={2}>
-                    <img className={classes.logoHolder} src={"./images/high-res-logo.png"} alt={"round-logo"}/>
+                    <img className={classes.logoHolder} src={"/images/high-res-logo.png"} />
                 </Grid>
-                <Grid item md={10}>
-                    <Typography variant={"h3"}>
-                        <span style={{fontWeight: 300 }}>
-                            WELCOME TO
-                        </span>
-                        <span className={classes.typeWriter}>
-                            <Typewriter options={{
-                                strings: ["TopScore Portal"],
-                                autoStart: true, loop: true
-                            }}/>
-                        </span>
+                <Grid item md={10} className={classes.greetingMsg}>
+                    <Typography variant={"h4"}>Hello, {props.loginName}.</Typography>
+                    <Typography variant={"h6"} className={classes.subtitleGreet}>
+                        Welcome to TopScore Portal. The following is your schedule of the week.
                     </Typography>
                 </Grid>
             </Grid>
@@ -68,7 +57,11 @@ const Home = () => {
     )
 };
 
-const WrappedHome = () => <Dashboard content={Home} />;
+const mapStateToProps = (state) => ({
+    loginName: state.util.loginName,
+})
+
+const WrappedHome = () => <Dashboard content={connect(mapStateToProps)(Home)} />;
 
 
 export default WrappedHome;

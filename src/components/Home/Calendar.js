@@ -19,7 +19,7 @@ const Calendar = (props) => {
     return (
         <Container>
             <iframe className={classes.calStyles}
-                    src={`https://calendar.google.com/calendar/embed?src=${props.loginEmail}`}>
+                    src={`https://calendar.google.com/calendar/embed?src=${props.loginEmail}&mode=WEEK`}>
             </iframe>
         </Container>
     );

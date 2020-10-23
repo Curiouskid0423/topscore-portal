@@ -31,7 +31,7 @@ const StudentPersonalPage = (props) => {
                             size="small" label="代辦生" />
     const chipPlan = <Chip className={clsx(classes.pkgButton, classes.pkgPlan)}
                            size="small" label="規劃生" />
-
+    console.log(props);
     return (
         <Container>
             {/* Student Basic Info */}

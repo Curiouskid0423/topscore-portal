@@ -29,7 +29,6 @@ const StudentLoader = (props) => {
 
 const StudentHome = (props) => {
     const classes = useStyles();
-
     return (
         <Grid container>
             {/* Snackbar */}
@@ -42,7 +41,6 @@ const StudentHome = (props) => {
             <Grid item container sm={12}>
                 <StudentLoader {...props} students = {props.students}/>
             </Grid>
-
         </Grid>
     )
 };
