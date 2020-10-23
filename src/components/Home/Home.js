@@ -3,19 +3,20 @@ import Dashboard from "../defaults/Templates";
 import Header from "../defaults/Header";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import DutyTable from "./DutyTable";
+import Calendar from "./Calendar";
 import { makeStyles } from "@material-ui/core/styles";
 import Typewriter from 'typewriter-effect';
 
 const useStyles = makeStyles((theme) => ({
     logoHolder:{
-        maxWidth: "82%",
+        maxWidth: "55%",
     },
     topStyles: {
         display: "flex",
         justifyContent: "space-around",
         width: "100vw",
-        marginBottom: "1rem"
+        marginBottom: "1rem",
+        marginLeft: "2rem"
     },
     typeWriter: {
         fontWeight: 400,
@@ -48,20 +49,20 @@ const Home = () => {
                 </Grid>
                 <Grid item md={10}>
                     <Typography variant={"h3"}>
-                        <span style={{fontWeight: 300 }}>WELCOME TO</span>
-                        </Typography>
-                    <Typography variant={"h1"}>
+                        <span style={{fontWeight: 300 }}>
+                            WELCOME TO
+                        </span>
                         <span className={classes.typeWriter}>
                             <Typewriter options={{
-                                strings: ["TopScore", "Brilliance"],
-                                autoStart: true, loop: true,
+                                strings: ["TopScore Portal"],
+                                autoStart: true, loop: true
                             }}/>
                         </span>
                     </Typography>
                 </Grid>
             </Grid>
             <Grid item md={12}>
-                <DutyTable />
+                <Calendar />
             </Grid>
         </Grid>
     )

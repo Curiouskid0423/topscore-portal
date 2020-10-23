@@ -15,3 +15,12 @@ export const submitMessage = (submitStatus) => ({
     type: "SUBMIT_MSG",
     submitStatus
 });
+
+/**
+ * @desc Keep track of logged in user's name and email.
+ */
+export const storeLoginUserInfo = (name, email) => ({
+    type: "LOGIN_USER_INFO",
+    name,
+    email
+});

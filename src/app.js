@@ -16,6 +16,7 @@ import {login, logout} from "./actions/auth";
 // Two firebase call that are necessary at the beginning.
 import {startSetStudents} from "./actions/students";
 import {startSetCourses} from "./actions/courses";
+import {storeLoginUserInfo} from "./actions/utility";
 
 /* Redux store object. */
 const store = configStore();
@@ -38,8 +39,11 @@ const renderApp = () => {
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         console.log("logged in");
+
         const nameInitial = user.displayName[0].toUpperCase();
         store.dispatch(login(user.uid, nameInitial));
+        store.dispatch(storeLoginUserInfo(user.displayName, user.email));
+
         // For the first setCourse call, leave the error catch code to the action itself.
         store.dispatch(startSetCourses());
         store.dispatch(startSetStudents()).then(() => {
