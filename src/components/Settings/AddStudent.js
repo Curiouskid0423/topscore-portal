@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import StudentForm from "../Students/StudentForm";
 import { connect } from "react-redux";
 import {startAddStudent} from "../../actions/students";
-import {courseInstance} from "../../fixtures";
+import {courseInstance0} from "../../fixtures";
 
 const defaultContent = {
     content: {
@@ -14,11 +14,9 @@ const defaultContent = {
         },
         partCore: {
             currentCourseList: [],
-            pastCourseList: [
-                courseInstance[3], courseInstance[4]
-            ]
+            pastCourseList: [courseInstance0]
         },
-        partCompass: [{
+        partCompass: {
             summary: "(Default Message) Part 1: Summary Placeholder",
             improvement: "(Default Message) Part 2: Improve Placeholder",
             goalSetting: "(Default Message) Part 3: Goals Placeholder",
@@ -27,7 +25,7 @@ const defaultContent = {
             activities: "(Default Message) Part 6: Activities Placeholder",
             achievement: "(Default Message) Part 6.5: Achievements Placeholder",
             toDoList: "(Default Message) Part 7: To Do List Placeholder"
-        }],
+        },
         partMentor: {
             testInfo: "",
             collegeList: "",

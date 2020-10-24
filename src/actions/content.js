@@ -91,3 +91,18 @@ export const startUpdateMentor = (mentorObj, id) => {
             }).catch((e) => dispatch(submitMessage("error")));
     }
 }
+
+export const addCourseToStudent = (courseObj) => ({
+    type: "ADD_COURSE_TO_STUDENT",
+    courseObj
+});
+
+export const startAddCourseToStudent = (courseObj, studentID) => {
+    return (dispatch, getState) => {
+        return database.ref(`students_db/${studentID}/content/partCore/currentCourseList`)
+            .push(courseObj).then((ref) => {
+                dispatch(addCourseToStudent(courseObj));
+                dispatch(submitMessage("success"));
+            }).catch((e) => dispatch(submitMessage("error")));
+    }
+}

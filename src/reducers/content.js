@@ -77,7 +77,21 @@ const contentReducer = (prevState = {}, action) => {
                 partMentor: {
                     ...prevState.partMentor, ...action.mentorObj,
                 }
-            }
+            };
+        case "ADD_COURSE_TO_STUDENT":
+            const courseID = action.courseObj.uid;
+            return {
+                ...prevState,
+                partCore: {
+                    ...prevState.partCore,
+                    currentCourseList: {
+                        ...prevState.partCore.currentCourseList,
+                        [courseID]: action.courseObj
+                        // The term "newAddedCourse" does not has any substantial effect
+                        // on accessing here. It's just to avoid `object` syntax error.
+                    },
+                }
+            };
         default:
             return prevState;
     }

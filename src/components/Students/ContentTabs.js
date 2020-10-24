@@ -9,11 +9,11 @@ import StudentItemCompass from "./StudentItemCompass";
 import StudentItemMentor from "./Mentor/StudentItemMentor";
 import StudentItemReport from "./Report/StudentItemReport";
 import { connect } from "react-redux";
-
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import theme from "../../themes";
 import MessageSnackbar from "../MessageSnackbar";
-import Grid from "@material-ui/core/Grid";
+
+
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
@@ -65,7 +65,7 @@ const ContentTabs = (props) => {
                     <StudentItemOverview />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <StudentItemCore />
+                    <StudentItemCore studentID={props.studentID}/>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     <StudentItemCompass />

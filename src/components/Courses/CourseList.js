@@ -74,7 +74,7 @@ const useStyles = makeStyles({
     courseDirStyles: {
         background: "#F3DFAF45",
         marginBottom: "1rem",
-        padding: "1.2rem 1rem 0rem .3rem",
+        padding: "1.2rem 1rem 0rem 1.5rem",
         borderRadius: "5px",
         border: ".1px solid #7c7c7c12",
     }
@@ -132,7 +132,7 @@ const CourseList = (props) => {
                         <Header title={"COURSE DIRECTORY"} />
                     </Grid>
                     <Grid item md={3} sm={4}>
-                        <TextField id="standard-basic" label="Search" fullWidth
+                        <TextField id="standard-basic" label="Search (course / instructor)" fullWidth
                                    value={search} onChange={handleSearch}/>
                     </Grid>
                     <Grid item md={2} sm={4}>

@@ -38,7 +38,7 @@ const StyledTableRow = withStyles((theme) => ({
 
 const CourseTable = (props) => {
     const classes = useStyles();
-
+    console.log(props.lst)
     return (
         <div>
             <TableContainer className={classes.tableContainer} component={Paper}>
@@ -53,7 +53,7 @@ const CourseTable = (props) => {
                         </StyledTableRow>
                     </TableHead>
                     <TableBody>
-                        {(props.lst || []).map((row) => (
+                        {Object.values(props.lst || []).map((row) => (
                             <StyledTableRow key={row.courseName}>
                                 <TableCell component="th" scope="row">
                                     {row.courseName}

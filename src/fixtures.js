@@ -95,6 +95,15 @@ export const courseInstance8 = {
     repeatTimes: 2
 }
 
+export const courseInstance0 = {
+    type: "INIT",
+    courseName: "INIT COURSE",
+    instructor: "Developer",
+    startDate: moment(0).valueOf(),
+    repeatBy: "days",
+    repeatTimes: 1
+}
+
 export const courseInstance = [
     courseInstance1, courseInstance2,
     courseInstance3, courseInstance4,

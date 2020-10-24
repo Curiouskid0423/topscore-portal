@@ -147,7 +147,7 @@ const StudentPersonalPage = (props) => {
             </Grid>
             {/* Content tabs */}
             <Grid container item sm={12}>
-                <ContentTabs />
+                <ContentTabs studentID={props.match.params.id}/>
             </Grid>
         </Container>
     );

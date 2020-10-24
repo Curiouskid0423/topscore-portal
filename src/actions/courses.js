@@ -17,7 +17,9 @@ export const setCourses = (courses) => {
     }
 }
 
-
+/**
+ * @desc Async action to set course list by fetching from firebase
+ */
 export const startSetCourses = () => {
     let courseList = [];
     return (dispatch, getStates) => {
@@ -46,7 +48,9 @@ export const addCourse = (course) => {
         course
     }
 }
-
+/**
+ * @desc Async action to add new course (universally on the system).
+ */
 export const startAddCourse = (courseObj) => {
     return (dispatch, getState) => {
         return database.ref("courses_db")
@@ -62,7 +66,11 @@ export const startAddCourse = (courseObj) => {
             });
     }
 }
-
+/**
+ * EditCourse Object.
+ * @param courseObj, id
+ * @return an Edit Course Action Object.
+ */
 export const editCourse = (courseObj, id) => {
     return {
         type: "EDIT_COURSE",
@@ -70,7 +78,9 @@ export const editCourse = (courseObj, id) => {
         course: courseObj
     };
 }
-
+/**
+ * @desc Async action to edit course.
+ */
 export const startEditCourse = (courseObj, id) => {
     return (dispatch, getState) => {
         return database.ref(`courses_db/${id}/`)

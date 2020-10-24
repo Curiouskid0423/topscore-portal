@@ -52,7 +52,7 @@ const StudentItemOverview = (props) => {
 
     const classes = useStyles();
     const current = getStudent(props.match.params.id, props.studentList);
-    const noticeRowNum = 12;
+    const noticeRowNum = 13;
     // state: at a glance
     const [notice, setNotice] = useState(props.overview.atAGlance.notice);
     const handleNotice = (e) => setNotice(e.target.value);

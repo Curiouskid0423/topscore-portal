@@ -116,13 +116,13 @@ const StudentForm = (props) => {
         edit? target.contact.recordOfFirstAppt : "");
     const handleFirstAppt = (e) => setFirstAppt(e.target.value);
     // (State 16) Other: High School Transcript
-    const [transcript, setTranscript] = useState(
-        edit? target.contact.transcript : "");
-    const handleTranscript = (e) => setTranscript(e.target.value);
+    // const [transcript, setTranscript] = useState(
+    //     edit? target.contact.transcript : "");
+    // const handleTranscript = (e) => setTranscript(e.target.value);
     // (State 17) Other: List of Colleges Applied To
-    const [collegeList, setCollegeList] = useState(
-        edit? target.contact.collegeList : "");
-    const handleCollegeList = (e) => setCollegeList(e.target.value);
+    // const [collegeList, setCollegeList] = useState(
+    //     edit? target.contact.collegeList : "");
+    // const handleCollegeList = (e) => setCollegeList(e.target.value);
     // (State 18) Other: Supervisor
     const [supervisor, setSupervisor] = useState(
         edit? target.supervisor : "");
@@ -191,8 +191,12 @@ const StudentForm = (props) => {
                     packageType: pkg,
                     personOfRecommendation: rec,
                     recordOfFirstAppt: firstAppt,
-                    transcript: transcript,
-                    collegeList: collegeList,
+                    specialId: {
+                        isVIP: false,
+                        isBlackList: false
+                    },
+                    // transcript: transcript,
+                    // collegeList: collegeList,
                     phone: phone,
                     email: email,
                     highSchool: highSchool,
@@ -280,20 +284,18 @@ const StudentForm = (props) => {
                         <FormControlLabel control={<Checkbox
                             name="apply" color={"secondary"} checked={pkg.apply} onChange={handlePackage}/>} label="Apply" />
                     </div>
-                    {/*<TextField className={classes.textFieldStyles} id="package-type" label="Package Type"*/}
-                    {/*           size="small" variant="outlined" fullWidth onChange={handlePackage}/>*/}
                     <TextField className={classes.textFieldStyles} id="outlined-basic"
                                label="Person of Recommendation" size="small" variant="outlined" fullWidth
                                value={rec} onChange={handleRecPerson}/>
                     <TextField className={classes.textFieldStyles} id="outlined-basic"
                                label="Record of First Appt. (Google Drive Link)" size="small" variant="outlined" fullWidth
                                value={firstAppt} onChange={handleFirstAppt}/>
-                    <TextField className={classes.textFieldStyles} id="outlined-basic"
-                               label="High School Transcript (Google Drive Link)" size="small" variant="outlined" fullWidth
-                               value={transcript} onChange={handleTranscript}/>
-                    <TextField className={classes.textFieldStyles} id="outlined-basic"
-                               label="List of Colleges Applied (Google Drive Link)" size="small" variant="outlined" fullWidth
-                               value={collegeList} onChange={handleCollegeList}/>
+                    {/*<TextField className={classes.textFieldStyles} id="outlined-basic"*/}
+                    {/*           label="High School Transcript (Google Drive Link)" size="small" variant="outlined" fullWidth*/}
+                    {/*           value={transcript} onChange={handleTranscript}/>*/}
+                    {/*<TextField className={classes.textFieldStyles} id="outlined-basic"*/}
+                    {/*           label="List of Colleges Applied (Google Drive Link)" size="small" variant="outlined" fullWidth*/}
+                    {/*           value={collegeList} onChange={handleCollegeList}/>*/}
                     {/*  Pre-test result  */}
                     <Typography variant={"h6"} className={classes.categoryTitle}>
                         Pre-test result (if applicable)
