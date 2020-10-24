@@ -65,6 +65,9 @@ const Home = (props) => {
                     <Typography variant={"h6"} className={classes.subtitleGreet}>
                         Welcome to TopScore Portal. The following is your schedule of the week.
                     </Typography>
+                    <Typography variant={"caption"} style={{ color: "#5f5f5f" }}>
+                        Please Keep your window width at least <b>1100px</b> for better user experience!
+                    </Typography>
                     <Button className={classes.buttonStyles} size={"small"} onClick={handleHelpOpen}>
                         Cannot see Calendar?
                     </Button>

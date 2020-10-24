@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import { connect } from "react-redux";
 import getVisibleStudents from "../../selectors/getVisibleStudents";
 import Dashboard from "../defaults/Templates";
+import { Alert } from "@material-ui/lab";
 import Grid from "@material-ui/core/Grid";
 import StudentItem from "./StudentItem";
 import Query from "./Query";
@@ -44,6 +45,7 @@ const StudentHome = (props) => {
         <Grid container>
             {/* Snackbar */}
             { (props.submitStatus !== "") && <MessageSnackbar submitStatus={props.submitStatus} />}
+
             <Grid item sm={12} className={classes.queryContainer}>
                 {/* Header */}
                 <Header title={"STUDENT DIRECTORY"}/>
