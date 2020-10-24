@@ -26,7 +26,7 @@ const studentsReducer = (prevState = [], action) => {
         case "CHANGE_VIP":
             const targetStudent = prevState.find((el) => el.id === action.id);
             return [
-                ...prevState, {
+                ...prevState.filter((el) => el.id !== action.id), {
                     id: targetStudent.id,
                     supervisor: targetStudent.supervisor,
                     contact: {
@@ -41,7 +41,8 @@ const studentsReducer = (prevState = [], action) => {
         case "CHANGE_BLACKLIST":
             const blackListStudent = prevState.find((el) => el.id === action.id);
             return [
-                ...prevState, {
+                ...prevState.filter((el) => el.id !== action.id),
+                {
                     id: blackListStudent.id,
                     supervisor: blackListStudent.supervisor,
                     contact: {

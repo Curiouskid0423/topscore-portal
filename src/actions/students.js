@@ -97,8 +97,8 @@ export const changeVIP = (id, vipValue) => ({
 
 export const startChangeVIP = (id, vipValue) => {
     return (dispatch) => {
-        return database.ref(`students_db/${id}/contact/specialId/isVIP`)
-            .set(vipValue).then(() => {
+        return database.ref(`students_db/${id}/contact/specialId`)
+            .update({ isVIP: vipValue }).then(() => {
                 dispatch(changeVIP(id, vipValue));
             }).catch((e) => {
                 dispatch(submitMessage("error"));
@@ -113,8 +113,8 @@ export const changeBlackList = (id, blackListValue) => ({
 
 export const startChangeBlackList = (id, blackListValue) => {
     return (dispatch) => {
-        return database.ref(`students_db/${id}/contact/specialId/isBlackList`)
-            .set(blackListValue).then(() => {
+        return database.ref(`students_db/${id}/contact/specialId/`)
+            .update({isBlackList: blackListValue}).then(() => {
                 dispatch(changeBlackList(id, blackListValue));
             }).catch((e) => {
                 dispatch(submitMessage("error"));

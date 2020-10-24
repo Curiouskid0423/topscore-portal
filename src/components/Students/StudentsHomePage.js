@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "1.2rem",
     },
     queryContainer: {
+        background: "#F3DFAF45",
         border: ".1px solid #7c7c7c1f",
         borderRadius: ".5rem",
         boxShadow: "0px 10px 30px -4px rgba(0,0,0,0.1)",

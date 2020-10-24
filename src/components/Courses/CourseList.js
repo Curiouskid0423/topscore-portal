@@ -55,7 +55,12 @@ const useStyles = makeStyles({
         maxWidth: "90vw",
     },
     btnStyles: {
+        background: "#BD3A3A",
+        color: "#FFFFFF",
         marginRight: ".5rem",
+        "&:hover": {
+            background: "#F78A8A"
+        }
     },
     linkStyles: {
         color: "inherit",
@@ -65,6 +70,13 @@ const useStyles = makeStyles({
         display: "flex",
         justifyContent: "flex-end",
         marginTop: ".6rem"
+    },
+    courseDirStyles: {
+        background: "#F3DFAF45",
+        marginBottom: "1rem",
+        padding: "1.2rem 1rem 0rem .3rem",
+        borderRadius: "5px",
+        border: ".1px solid #7c7c7c12",
     }
 });
 
@@ -114,9 +126,11 @@ const CourseList = (props) => {
         <Container>
             {/* Snackbar */}
             { (props.submitStatus !== "") && <MessageSnackbar submitStatus={props.submitStatus} />}
-            <Grid item container md={12}>
+            <Grid item container md={12} className={classes.courseDirStyles}>
                 <ThemeProvider theme={themehelper}>
-                    <Grid item md={7} sm={12}> <Header title={"COURSE DIRECTORY"} /> </Grid>
+                    <Grid item md={7} sm={12}>
+                        <Header title={"COURSE DIRECTORY"} />
+                    </Grid>
                     <Grid item md={3} sm={4}>
                         <TextField id="standard-basic" label="Search" fullWidth
                                    value={search} onChange={handleSearch}/>
