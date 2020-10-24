@@ -131,8 +131,10 @@ export const studentInstance1 = {
         },
         personOfRecommendation: "Albert Wang",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
-        transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/",
+        specialId: {
+            isVIP: true,
+            isBlackList: false
+        },
         preTestResult: {
             date: moment().valueOf(),
             reading: 300,
@@ -203,8 +205,10 @@ export const studentInstance2 = {
         },
         personOfRecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
-        transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/",
+        specialId: {
+            isVIP: false,
+            isBlackList: false
+        },
         preTestResult: {
             date: moment().valueOf(),
             reading: 280,
@@ -273,8 +277,10 @@ export const studentInstance3 = {
         },
         personOfRecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
-        transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/",
+        specialId: {
+            isVIP: false,
+            isBlackList: false
+        },
         preTestResult: {
             date: moment().valueOf(),
             reading: 300,
@@ -342,9 +348,10 @@ export const studentInstance4 = {
             email: "lavMom@gmail.com"
         },
         personOfRecommendation: "",
-        recordOfFirstAppt: "https://curiouskid0423.github.io/",
-        transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/",
+        recordOfFirstAppt: "https://curiouskid0423.github.io/",specialId: {
+            isVIP: false,
+            isBlackList: true
+        },
         preTestResult: {
             date: moment().valueOf(),
             reading: 320,
@@ -411,8 +418,10 @@ export const studentInstance5 = {
         },
         personOfRecommendation: "",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
-        transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/",
+        specialId: {
+            isVIP: false,
+            isBlackList: false
+        },
         preTestResult: {
             date: moment().valueOf(),
             reading: 300,
@@ -479,8 +488,10 @@ export const studentInstance6 = {
         },
         personOfRecommendation: "Kevin Li (Yu-Teng)",
         recordOfFirstAppt: "https://curiouskid0423.github.io/",
-        transcript: "https://curiouskid0423.github.io/",
-        collegeList: "https://curiouskid0423.github.io/",
+        specialId: {
+            isVIP: true,
+            isBlackList: false
+        },
         preTestResult: {
             date: moment().valueOf(),
             reading: 300,

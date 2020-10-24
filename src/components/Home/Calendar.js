@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     calStyles: {
         width: "100%",
         height: "40rem",
-        boxShadow: "10px 33px 75px -20px rgba(0,0,0,0.75)",
+        boxShadow: "10px 33px 75px -20px rgba(0,0,0,0.15)",
         border: "1px solid #fff",
         padding: "1.2rem"
     }

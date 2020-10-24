@@ -39,10 +39,10 @@ const LeftDrawer = (props) => {
 
 
 const mapStateToProps = (state) => ({
-    drawerOpen: state.util.templateDrawerOpen
+    drawerOpen: state.util.templateDrawerOpen,
 })
 const mapDispatchToProps = (dispatch) => ({
-    dispatchDrawer: () => dispatch(templateDrawerChange())
+    dispatchDrawer: () => dispatch(templateDrawerChange()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LeftDrawer);

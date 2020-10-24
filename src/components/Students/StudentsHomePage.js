@@ -14,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "1.2rem",
     },
     queryContainer: {
-        background: "#b9b9b924",
+        border: ".1px solid #7c7c7c1f",
         borderRadius: ".5rem",
         boxShadow: "0px 10px 30px -4px rgba(0,0,0,0.1)",
         maxWidth: "95%",
         margin: "auto",
         marginBottom: "1rem",
-        padding: "9px",
+        padding: "20px",
     }
 }));
 
@@ -45,7 +45,7 @@ const StudentHome = (props) => {
             { (props.submitStatus !== "") && <MessageSnackbar submitStatus={props.submitStatus} />}
             <Grid item sm={12} className={classes.queryContainer}>
                 {/* Header */}
-                <Header title={"STUDENT SEARCH"}/>
+                <Header title={"STUDENT DIRECTORY"}/>
                 {/* Query Section */}
                 <Grid item container sm={12} spacing={1} className={classes.queryStyles}>
                     <Query/>

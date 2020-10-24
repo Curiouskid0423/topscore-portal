@@ -24,13 +24,13 @@ const makeStudentPersonalStyles = (theme) => ({
         marginBottom: 12,
     },
     pkgCourse: {
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: "#BD3A3A",     // Dark Red
     },
     pkgPlan: {
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: "#DCD3C0",     // Light Brown color
     },
     pkgApply: {
-        backgroundColor: theme.palette.info.main,
+        backgroundColor: theme.palette.primary.main,
     },
     pkgButton: {
         marginRight: ".5rem",
@@ -40,6 +40,13 @@ const makeStudentPersonalStyles = (theme) => ({
     linkStyles: {
         textDecoration: "none",
         color: "inherit"
+    },
+    specialIdStyles: {
+        marginBottom: ".5rem",
+        '& span': {
+            display: "flex",
+            alignItems: "center",
+        }
     }
 });
 

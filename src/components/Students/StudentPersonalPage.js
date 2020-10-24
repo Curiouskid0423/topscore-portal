@@ -1,21 +1,24 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { withRouter, Link, Redirect } from "react-router-dom";
 import clsx from "clsx";
 import BeenhereIcon from '@material-ui/icons/Beenhere';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Checkbox from "@material-ui/core/Checkbox";
 import Container from "@material-ui/core/Container";
 import Chip from "@material-ui/core/Chip";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import { connect } from "react-redux";
 import Dashboard from "../defaults/Templates";
 import ContentTabs from "./ContentTabs";
 import personalStyles from "../../styles/makeStyles/makeStudentPersonalStyles";
 import {startSetContent} from "../../actions/content";
+import themehelper from "../../themes";
+import {startChangeBlackList, startChangeVIP} from "../../actions/students";
 
 const useStyles = makeStyles(personalStyles);
 
@@ -25,13 +28,26 @@ const StudentPersonalPage = (props) => {
 
     const currentStudent = getStudent(props.match.params.id, props.students);
     const classes = useStyles();
+
+    // State for checkbox (isVIP and isBlacklist).
+    const [isVIP, setIsVIP] = useState(currentStudent.contact.specialId.isVIP);
+    const [isBlacklist, setIsBlacklist] = useState(currentStudent.contact.specialId.isBlackList);
+
+    const handleVIP = (e) => {
+        setIsVIP(e.target.checked);
+        props.dispatchChangeVIP(currentStudent.id, e.target.checked);
+    }
+    const handleBlacklist = (e) => {
+        setIsBlacklist(e.target.checked);
+        props.disptachChangeBlackList(currentStudent.id, e.target.checked);
+    }
+
     const chipCourse = <Chip className={clsx(classes.pkgButton, classes.pkgCourse)}
                              size="small" label="課程生" />
     const chipApply = <Chip className={clsx(classes.pkgButton, classes.pkgApply)}
                             size="small" label="代辦生" />
     const chipPlan = <Chip className={clsx(classes.pkgButton, classes.pkgPlan)}
                            size="small" label="規劃生" />
-    console.log(props);
     return (
         <Container>
             {/* Student Basic Info */}
@@ -41,20 +57,22 @@ const StudentPersonalPage = (props) => {
                         <CardContent>
                             {/* Title */}
                             <Grid container>
-                                <Grid item sm={2}>
-                                    <Typography variant={"subtitle1"} color="textSecondary" gutterBottom>
-                                        Basic Information
-                                    </Typography>
-                                </Grid>
-                                <Grid item sm={6}>
-                                    {currentStudent.contact.packageType.apply && chipApply}
-                                    {currentStudent.contact.packageType.planning && chipPlan}
-                                    {currentStudent.contact.packageType.course && chipCourse}
-                                </Grid>
+                                <ThemeProvider theme={themehelper}>
+                                    <Grid item sm={2}>
+                                        <Typography variant={"subtitle1"} color="textSecondary" gutterBottom>
+                                            Basic Information
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item sm={6}>
+                                        {currentStudent.contact.packageType.apply && chipApply}
+                                        {currentStudent.contact.packageType.planning && chipPlan}
+                                        {currentStudent.contact.packageType.course && chipCourse}
+                                    </Grid>
+                                </ThemeProvider>
                             </Grid>
                             {/*  Contact Information  */}
                             <Grid container>
-                                <Grid item sm={2}>
+                                <Grid item sm={3}>
                                     <Typography variant="h6" component="h2">
                                         {currentStudent.contact.firstName} &nbsp;
                                         {currentStudent.contact.lastName}
@@ -92,7 +110,7 @@ const StudentPersonalPage = (props) => {
                                         </Grid>
                                     </Grid>
                                 </Grid>
-                                <Grid item sm={4}>
+                                <Grid item sm={3}>
                                     <Typography color="textSecondary">Phone Number</Typography>
                                     <Typography variant="subtitle1" component="p" className={classes.pos}>
                                         <b>{currentStudent.contact.phone}</b>
@@ -103,15 +121,24 @@ const StudentPersonalPage = (props) => {
                                     </Typography>
                                 </Grid>
                                 <Grid item sm={2}>
+                                    {/* First appt Record */}
                                     <a href={currentStudent.contact.recordOfFirstAppt}>
                                         <Chip className={classes.docLink} clickable icon={<BeenhereIcon />} label={"初談紀錄"}/>
                                     </a>
-                                    <a href={currentStudent.contact.collegeList}>
-                                        <Chip className={classes.docLink} clickable icon={<BeenhereIcon />} label={"申請大學名單"}/>
-                                    </a>
-                                    <a href={currentStudent.contact.transcript}>
-                                        <Chip className={classes.docLink} clickable icon={<BeenhereIcon />} label={"高中成績單"}/>
-                                    </a>
+                                    {/* Is VIP */}
+                                    <Chip className={classes.specialIdStyles} label={
+                                        <span>
+                                            <Checkbox checked={isVIP} color={"primary"} onChange={handleVIP}/>
+                                            <Typography component={"span"} variant={"button"}>VIP</Typography>
+                                        </span>
+                                    } />
+                                    {/* Is Blacklist */}
+                                    <Chip className={classes.specialIdStyles} label={
+                                        <span>
+                                            <Checkbox checked={isBlacklist} color={"primary"} onChange={handleBlacklist}/>
+                                            <Typography component={"span"} variant={"button"}>Blacklist</Typography>
+                                        </span>
+                                    } />
                                 </Grid>
                             </Grid>
                         </CardContent>
@@ -134,7 +161,9 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    dispatchGetContent: (id) => dispatch(startSetContent(id))
+    dispatchGetContent: (id) => dispatch(startSetContent(id)),
+    dispatchChangeVIP: (id, value) => dispatch(startChangeVIP(id, value)),
+    disptachChangeBlackList: (id, value) => dispatch(startChangeBlackList(id, value)),
 })
 
 const WrappedStudentPage = () => <Dashboard

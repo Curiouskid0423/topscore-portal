@@ -51,13 +51,13 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "4px"
     },
     pkgCourse: {
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: "#BD3A3A",     // Dark Red
     },
     pkgPlan: {
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: "#DCD3C0",     // Light Brown color
     },
     pkgApply: {
-        backgroundColor: theme.palette.info.main,
+        backgroundColor: theme.palette.primary.main,
     },
 }));
 

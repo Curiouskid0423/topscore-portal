@@ -89,3 +89,35 @@ export const startRemoveStudent = (id) => {
             });
     }
 }
+
+export const changeVIP = (id, vipValue) => ({
+    type: "CHANGE_VIP",
+    id, vipValue
+});
+
+export const startChangeVIP = (id, vipValue) => {
+    return (dispatch) => {
+        return database.ref(`students_db/${id}/contact/specialId/isVIP`)
+            .set(vipValue).then(() => {
+                dispatch(changeVIP(id, vipValue));
+            }).catch((e) => {
+                dispatch(submitMessage("error"));
+            });
+    }
+}
+
+export const changeBlackList = (id, blackListValue) => ({
+    type: "CHANGE_BLACKLIST",
+    id, blackListValue
+});
+
+export const startChangeBlackList = (id, blackListValue) => {
+    return (dispatch) => {
+        return database.ref(`students_db/${id}/contact/specialId/isBlackList`)
+            .set(blackListValue).then(() => {
+                dispatch(changeBlackList(id, blackListValue));
+            }).catch((e) => {
+                dispatch(submitMessage("error"));
+            });
+    }
+}
