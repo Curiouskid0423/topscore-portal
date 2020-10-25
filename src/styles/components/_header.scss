@@ -28,7 +28,10 @@
 }
 
 .header__avatar {
-  color: black;
   background: #DCD3C0 !important;
   margin: 0 1rem;
+} .header__avatar:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+  transition: ease-in-out 0.2s;
 }
