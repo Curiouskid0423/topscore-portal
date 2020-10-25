@@ -86,12 +86,23 @@ const contentReducer = (prevState = {}, action) => {
                     ...prevState.partCore,
                     currentCourseList: {
                         ...prevState.partCore.currentCourseList,
-                        [courseID]: action.courseObj
-                        // The term "newAddedCourse" does not has any substantial effect
-                        // on accessing here. It's just to avoid `object` syntax error.
+                        [courseID]: action.courseObj,
                     },
                 }
             };
+        case "COURSE_DONE":
+            const completedCourseID = action.courseObj.uid;
+            return {
+                ...prevState,
+                partCore: {
+                    currentCourseList: Object.values(prevState.partCore.currentCourseList)
+                        .filter((el) => el.uid !== completedCourseID),
+                    pastCourseList: {
+                        ...prevState.partCore.pastCourseList,
+                        [completedCourseID]: action.courseObj
+                    }
+                }
+            }
         default:
             return prevState;
     }

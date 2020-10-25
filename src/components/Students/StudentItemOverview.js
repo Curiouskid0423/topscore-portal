@@ -56,13 +56,12 @@ const StudentItemOverview = (props) => {
     // state: at a glance
     const [notice, setNotice] = useState(props.overview.atAGlance.notice);
     const handleNotice = (e) => setNotice(e.target.value);
-    // (removed this state) state: family info
+    // (This state is removed) state: family info
     // const [family, setFamily] = useState(props.overview.atAGlance.familyInfo);
     // const handleFamily = (e) => setFamily(e.target.value);
 
     const onSubmit = () => {
         const result = { notice: notice };
-        console.log(result);
         props.dispatchOverview(result);
     }
 

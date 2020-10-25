@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
  */
 const StudentLoader = (props) => {
     return props.students.map(
-        (item) => (<Grid item lg={4} md={6} sm={12} key = {item.id} >
+        (item) => (<Grid item lg={4} md={6} sm={12} key = {item.id}>
             <StudentItem {...item.contact} id={item.id}/>
         </Grid>)
     );

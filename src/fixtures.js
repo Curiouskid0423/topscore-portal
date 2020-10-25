@@ -97,7 +97,7 @@ export const courseInstance8 = {
 
 export const courseInstance0 = {
     type: "INIT",
-    courseName: "INIT COURSE",
+    courseName: "INIT_COURSE",
     instructor: "Developer",
     startDate: moment(0).valueOf(),
     repeatBy: "days",
@@ -159,12 +159,8 @@ export const studentInstance1 = {
             },
         },
         partCore: {
-            currentCourseList: [
-                courseInstance[0], courseInstance[1], courseInstance[2]
-            ],
-            pastCourseList: [
-                courseInstance[3], courseInstance[4], courseInstance[5]
-            ]
+            currentCourseList: [],
+            pastCourseList: [courseInstance0]
         },
         partCompass: {
                 summary: "Compass, Spring 20, Part 1: Summary",
@@ -233,12 +229,8 @@ export const studentInstance2 = {
             },
         },
         partCore: {
-            currentCourseList: [
-                courseInstance[4], courseInstance[7],
-            ],
-            pastCourseList: [
-                courseInstance[1], courseInstance[3], courseInstance[5]
-            ]
+            currentCourseList: [],
+            pastCourseList: [courseInstance0]
         },
         partCompass: {
                 summary: "Compass, Spring 20, Part 1: Summary",
@@ -305,12 +297,8 @@ export const studentInstance3 = {
             },
         },
         partCore: {
-            currentCourseList: [
-                courseInstance[2],
-            ],
-            pastCourseList: [
-                courseInstance[1], courseInstance[3]
-            ]
+            currentCourseList: [],
+            pastCourseList: [courseInstance0]
         },
         partCompass: {
                 summary: "Compass, Spring 20, Part 1: Summary",

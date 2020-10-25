@@ -10,6 +10,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Typography from "@material-ui/core/Typography";
+import { connect } from "react-redux";
+import {startCourseDone} from "../../../actions/content";
 
 const useStyles = makeStyles({
     table: {
@@ -38,7 +40,6 @@ const StyledTableRow = withStyles((theme) => ({
 
 const CourseTable = (props) => {
     const classes = useStyles();
-    console.log(props.lst)
     return (
         <div>
             <TableContainer className={classes.tableContainer} component={Paper}>
@@ -65,7 +66,7 @@ const CourseTable = (props) => {
                                     {moment(row.startDate).add(row.repeatTimes, row.repeatBy).format('MMM Do \'YY')}
                                 </TableCell>
                                 {props.isCurrent && <TableCell align="right">
-                                    <Button>Done</Button>
+                                    <Button onClick={() => props.dispatchCompleteCourse(row, props.studentID)}>Done</Button>
                                 </TableCell>}
                             </StyledTableRow>
                         ))}
@@ -76,4 +77,8 @@ const CourseTable = (props) => {
     );
 }
 
-export default CourseTable;
+const mapDispatchToProps = (dispatch) => ({
+    dispatchCompleteCourse: (courseObj, studentID) => dispatch(startCourseDone(courseObj, studentID))
+});
+
+export default connect(undefined, mapDispatchToProps)(CourseTable);

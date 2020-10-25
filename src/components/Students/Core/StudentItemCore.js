@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import Alert from "@material-ui/lab/Alert";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -15,25 +16,28 @@ import TableContainer from "@material-ui/core/TableContainer";
 import CourseTable from "./CourseTable";
 import TextField from "@material-ui/core/TextField";
 import getVisibleCourse from "../../../selectors/getVisibleCourse";
-import {setCourseQuery} from "../../../actions/filters";
+import { setCourseQuery} from "../../../actions/filters";
 import moment from "moment";
 import {startAddCourseToStudent} from "../../../actions/content";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
-import {PDFViewer} from "@react-pdf/renderer";
-import MyDocument from "../PDFProcessing/PdfModal";
 import DialogActions from "@material-ui/core/DialogActions";
 
 const useStyles = makeStyles((theme) => ({
+    addCourseBtn: {
+        "&:hover": {
+            cursor: "pointer",
+        }
+    },
     currentRoot: {
         height: "30vh",
         marginTop: "1rem"
     },
     courseListStyles: {
         margin: "0 0 0 .5rem",
-        maxHeight: "70vh",
+        maxHeight: "60vh",
     },
     searchBar: {
         display: "flex",
@@ -49,6 +53,8 @@ const StudentItemCore = (props) => {
 
     // Student's current course list
     const currentCourseList = Object.values(props.content.currentCourseList || []);
+    // Student's past course list
+    const pastCourseList = Object.values(props.content.pastCourseList || []);
     // State for courseList (not for specific student) searching query
     const [search, setSearch] = useState(props.query);
     const handleSearch = (e) => {
@@ -56,23 +62,32 @@ const StudentItemCore = (props) => {
         props.dispatchSearch(e.target.value);
     }
 
+    // State for duplicate course alert window
+    const [courseAlert, setCourseAlert] = useState(false);
+    const openCourseAlert = () => setCourseAlert(true);
+    const clearCourseAlert = () => setCourseAlert(false);
+
+    // State for course prompt open
     const [coursePromptOpen, setCoursePromptOpen] = useState(false);
-    const [currentCourseID, setCurrentCourseID] = useState("");
-    const handlePromptOpen = (courseID) => {
-        setCurrentCourseID(courseID);
+    const [currentCourseObj, setCurrentCourseObj] = useState("");
+    const handlePromptOpen = (courseObj) => {
+        setCurrentCourseObj(courseObj);
         setCoursePromptOpen(true);
     };
     const handlePromptClose = () => {
-        setCurrentCourseID("");
+        setCurrentCourseObj("");
+        clearCourseAlert();
         setCoursePromptOpen(false);
     };
 
     const handleAddCourse = (courseID) => {
-        const courseExist = currentCourseList !== undefined
-            && currentCourseList.find((el) => el.uid === courseID);
-        if (!courseExist) {
+        const courseExist = currentCourseList.find((el) => el.uid === courseID)
+            || pastCourseList.find((el) => el.uid === courseID);
+        if (courseExist) {
+            openCourseAlert();
+        } else {
             const candidateCourse = props.courseList.find((el) => el.uid === courseID);
-            console.log(candidateCourse);
+            console.log("Candidate course to be added: " + candidateCourse);
             setCoursePromptOpen(false);
             props.dispatchAddCourseToStudent(candidateCourse, props.studentID);
         }
@@ -87,9 +102,10 @@ const StudentItemCore = (props) => {
         <Grid container>
             <Grid item md={8} sm={12}>
                 {/* Current Course.  */}
-                <CourseTable title={"Current Course List"} isCurrent={true} lst={props.content.currentCourseList}/>
+                <CourseTable title={"Current Course List"} isCurrent={true}
+                             studentID={props.studentID} lst={props.content.currentCourseList}/>
                 {/* Past Courses.  */}
-                <CourseTable title={"Past Courses"} lst={props.content.pastCourseList}/>
+                <CourseTable title={"Past Courses"} lst={props.content.pastCourseList} />
             </Grid>
             <Grid item md={4} sm={12}>
                 {/* Add new course. */}
@@ -121,8 +137,8 @@ const StudentItemCore = (props) => {
                                     </TableCell>
                                     <TableCell component="th" scope="row"> {row.instructor} </TableCell>
                                     <TableCell align="right" size={"small"}>
-                                        <AddCircleIcon color={"primary"} fontSize={"small"}
-                                                       onClick={() => handlePromptOpen(row.uid)}/>
+                                        <AddCircleIcon className={classes.addCourseBtn} color={"primary"} fontSize={"small"}
+                                                       onClick={() => handlePromptOpen(row)}/>
                                     </TableCell>
                                 </TableRow>
                             ))}
@@ -133,17 +149,26 @@ const StudentItemCore = (props) => {
 
             {/* Alert Dialog */}
             <Dialog open={coursePromptOpen} onClose={handlePromptClose} maxWidth={"sm"} fullWidth={true}>
+
+                {/* Alert if course exist in student's list already. */}
+                {
+                    courseAlert && <Alert onClose={clearCourseAlert} severity={"warning"}>
+                        The student has taken this course already. No duplicate course entry allowed!
+                    </Alert>
+                }
+
                 <DialogTitle id="alert-dialog-title">
                     Confirm Add Course to Student
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        Are you sure about adding (<b>ID: { currentCourseID }</b>) to selected student? Course items
+                        Are you sure about adding <b>{ currentCourseObj.courseName }</b>&nbsp;
+                        (ID:<b> { currentCourseObj.uid } </b>) to selected student? Course items
                         cannot be removed entirely after this action.
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => handleAddCourse(currentCourseID)} color="primary">
+                    <Button onClick={() => handleAddCourse(currentCourseObj.uid)} color="primary">
                         Confirm
                     </Button>
                     <Button onClick={handlePromptClose} color="primary">

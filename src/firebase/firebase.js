@@ -34,13 +34,13 @@ const db = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 // TODO: Just some testing fixture data.
-// db.ref("students_db").set(null);
-// db.ref("students_db").push(studentInstance1);
-// db.ref("students_db").push(studentInstance2);
-// db.ref("students_db").push(studentInstance3);
-// db.ref("students_db").push(studentInstance4);
-// db.ref("students_db").push(studentInstance5);
-// db.ref("students_db").push(studentInstance6);
+db.ref("students_db").set(null);
+db.ref("students_db").push(studentInstance1);
+db.ref("students_db").push(studentInstance2);
+db.ref("students_db").push(studentInstance3);
+db.ref("students_db").push(studentInstance4);
+db.ref("students_db").push(studentInstance5);
+db.ref("students_db").push(studentInstance6);
 
 // TODO: Fixture data to Firebase "courses_db"
 // db.ref("courses_db").set(null);

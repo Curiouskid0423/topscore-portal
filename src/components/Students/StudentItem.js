@@ -29,7 +29,12 @@ const useStyles = makeStyles((theme) => ({
     },
     cardRoot: {
         maxWidth: 345,
-        margin: "1rem auto"
+        margin: "1rem auto",
+        "&:hover": {
+            cursor: "pointer",
+        //     transition: "ease-in-out 0.2s",
+        //     transform: "scale(1.04)",
+        }
     },
     cardTitle: {
         display: "flex",

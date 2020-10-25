@@ -17,7 +17,6 @@ export const startSetContent = (id) => {
     return (dispatch, getState) => {
         return database.ref(`students_db/${id}/content`)
             .once("value", (snapshot)=>{
-                console.log(snapshot.val());
                 dispatch(setContent(snapshot.val()));
         }).catch((e) => {
             console.log("Failed to load in contact info. Here's why: ", e);
@@ -104,5 +103,36 @@ export const startAddCourseToStudent = (courseObj, studentID) => {
                 dispatch(addCourseToStudent(courseObj));
                 dispatch(submitMessage("success"));
             }).catch((e) => dispatch(submitMessage("error")));
+    }
+}
+
+export const studentCourseDone = (courseObj) => ({
+    type: "COURSE_DONE",
+    courseObj
+});
+
+export const startCourseDone = (courseObj, studentID) => {
+    return (dispatch, getState) => {
+        // 1. Push the courseObj into pastCourseList
+        return database.ref(`students_db/${studentID}/content/partCore/pastCourseList`)
+            .push(courseObj).then(() => {
+                // 2. Snapshot the value of current course list.
+                return database.ref(`students_db/${studentID}/content/partCore/currentCourseList`)
+                    .once("value").then((snapshot) => {
+                        // 3. Find the "actual" stored courseID and then remove it.
+                        const studentCourseList = Object.entries(snapshot.val());
+                        const actualcourseObj = studentCourseList.find((el) => el[1].uid === courseObj.uid);
+                        // console.log("Actual ID: " + actualcourseObj[0]); // actualcourseObj = [key, courseObj]
+                        return database
+                            .ref(`students_db/${studentID}/content/partCore/currentCourseList/${actualcourseObj[0]}`)
+                            .set(null).then(() => {
+                                dispatch(studentCourseDone(courseObj));
+                                dispatch(submitMessage("success"));
+                            });
+                    });
+            }).catch((e) => {
+                dispatch(submitMessage("error"));
+                console.log(e);
+            })
     }
 }
