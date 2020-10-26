@@ -41,6 +41,7 @@ const StudentLoader = (props) => {
 
 const StudentHome = (props) => {
     const classes = useStyles();
+
     return (
         <Grid container>
             {/* Snackbar */}

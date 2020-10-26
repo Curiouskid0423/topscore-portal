@@ -16,7 +16,7 @@ function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
-            <Link color="inherit" href={"#"}> TopScore Education Inc</Link>
+            <Link color="inherit" href={"https://topscore.education"}> TopScore Education Inc</Link>
             {' '} {new Date().getFullYear()} {'.'}
         </Typography>
     );
@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        paddingTop: "18%",
     },
     avatar: {
         margin: theme.spacing(1),
@@ -46,7 +47,12 @@ const useStyles = makeStyles((theme) => ({
     },
     form: {
         width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(5),
+        marginTop: theme.spacing(3),
+    },
+    signInButtonDiv: {
+        display: "block",
+        margin: "auto",
+        width: "75%",
     },
     submit: {
         margin: theme.spacing(3, 0, 2),
@@ -75,17 +81,12 @@ export const SignInSide = (props) => {
                             WELCOME TO <span style={{ color: "#BD3A3A", fontWeight: "600"}}>TOPSCORE</span>
                         </Typography>
                         <div className={classes.form} noValidate>
-                            <Button type="submit" fullWidth variant="contained" color="primary"
-                                    className={classes.submit} onClick={props.dispatchLogin}>
-                                Sign In
-                            </Button>
-                            <Grid container>
-                                <Grid item xs>
-                                    <Link href="#" variant="body2">
-                                        Forgot password?
-                                    </Link>
-                                </Grid>
-                            </Grid>
+                            <div className={classes.signInButtonDiv}>
+                                <Button type="submit" fullWidth variant="contained" color="primary"
+                                        className={classes.submit} onClick={props.dispatchLogin}>
+                                    Sign In
+                                </Button>
+                            </div>
                             <Box mt={5}> <Copyright /> </Box>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { connect } from "react-redux";
 import Button from "@material-ui/core/Button";
 import FormControl from "@material-ui/core/FormControl";
@@ -58,6 +58,15 @@ const useStyles = makeStyles({
 
 const Query = (props) => {
     const classes = useStyles();
+    // Upon un-mounting, clear the query string and other filter options.
+    useEffect(() => {
+        return () => {
+            props.setName("");
+            props.setYear(0);
+            props.setPackage("");
+        }
+    }, []);
+
     // states
     const [showFilters, setFiltersOpen] = useState(false);
     const [pkgFilter, setpkgFilter] = useState("");
@@ -140,7 +149,7 @@ const Query = (props) => {
                 <Fade in={open}>
                     <div className={classes.paper}>
                         <h2 id="transition-modal-title">Transition modal</h2>
-                        <p id="transition-modal-description">react-transition-group animates me.</p>
+                        <p id="transition-modal-description">This is a temporary modal for getting student list.</p>
                     </div>
                 </Fade>
             </Modal>
