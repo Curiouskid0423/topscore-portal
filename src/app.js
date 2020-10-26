@@ -37,38 +37,51 @@ const renderApp = () => {
     }
 }
 
-firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-        // 1. fetch user db.
-        db.ref("users_db").once("value", (snapshot) => {
-            console.log(snapshot.val());
-            const authList = snapshot.val();
-            // 2. if user is allowed.
-            const nameInitial = user.displayName[0].toUpperCase();
-            if (!checkAuthorizedUser(authList, user.email)) {
-                alert(`Hi ${user.displayName}, your email ${user.email} is not authorized to log in. Contact technical support if you think this is an error.`);
-                return renderApp();
-            }
-            // 3. Log in after validating the identity.
-            console.log("logged in");
-            store.dispatch(login(user.uid, nameInitial));
-            store.dispatch(storeLoginUserInfo(user.displayName, user.email));
+const logOutHelper = () => {
+    console.log("logged out / not logged in");
+    store.dispatch(logout());
+    renderApp();
+    history.push("/");
+}
 
-            // For the first setCourse call, leave the error catch code to the action itself.
-            store.dispatch(startSetCourses());
-            store.dispatch(startSetStudents()).then(() => {
-                renderApp();
-                if (history.location.pathname === "/") {
-                    history.push("/dashboard");
-                }
-            }).catch((e) => console.log("Error message from startSetStudents:", e));
+firebase.auth().onAuthStateChanged((user) => {
+
+    if (user) {
+        let authorized = false;
+        // 1. Fetch user db, and set `authorized` variable.
+        db.ref("users_db").once("value", (snapshot) => {
+            const authList = snapshot.val();
+            console.log(snapshot.val());
+            console.log("Allowed log in!");
+            if (checkAuthorizedUser(authList, user.email)) {
+                authorized = true;
+            }
+
+            // 2. Kick out if not authorized.
+            if (authorized) {
+                const nameInitial = user.displayName[0].toUpperCase();
+                // 3. Log in after validating the identity.
+                console.log("logged in");
+                store.dispatch(login(user.uid, nameInitial));
+                store.dispatch(storeLoginUserInfo(user.displayName, user.email));
+                // 4. For the first setCourse call, leave the error catch code to the action itself.
+                store.dispatch(startSetCourses());
+                store.dispatch(startSetStudents()).then(() => {
+                    renderApp();
+                    if (history.location.pathname === "/") {
+                        history.push("/dashboard");
+                    }
+                }).catch((e) => console.log("Error message from startSetStudents:", e));
+            } else {
+                firebase.auth().signOut();
+                logOutHelper();
+                alert(`Hi ${user.displayName}, your email ${user.email} is not authorized to log in. Contact technical support if you think this is an error.`);
+            }
+
         }).catch((e) => {
             console.log("Error in fetching authorized user list. " + e);
         });
     } else {
-        console.log("logged out");
-        store.dispatch(logout());
-        renderApp();
-        history.push("/");
+        logOutHelper();
     }
 });

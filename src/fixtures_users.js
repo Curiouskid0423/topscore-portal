@@ -7,7 +7,7 @@ export const authUsers = [
     {
         email: "yutengli@berkeley.edu",
     },
-    // {
-    //     email: "yulin.li@berkeley.edu",
-    // },
+    {
+        email: "kevinli042389@gmail.com",
+    },
 ]
