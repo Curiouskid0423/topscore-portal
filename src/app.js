@@ -25,6 +25,9 @@ const storage = (
         <Router />
     </Provider>
 );
+if (process.env.NODE_ENV === 'production'){
+    console.log("Looks like we are not in dev mode.");
+}
 
 ReactDOM.render(<LoadingPage />, document.getElementById("app"));
 

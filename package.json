@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node server/server.js",
-    "build": "webpack -p --config=webpack.prod.js",
+    "build": "webpack -p --config webpack.prod.js",
     "dev-server": "webpack-dev-server --open --config webpack.dev.js",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json"
   },
@@ -52,9 +52,8 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
     "typewriter-effect": "^2.13.1",
-    "uuid": "^8.3.0",
     "webpack": "^4.43.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^5.2.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
