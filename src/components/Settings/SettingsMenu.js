@@ -17,7 +17,7 @@ const SettingsMenu = () => {
                 <MenuList>
                     <NavLink to={`${url}/updateAccount`} className={classes.navLinkStyle}>
                         <MenuItem className={classes.menuButton}>
-                            Update My Account
+                            About Account
                         </MenuItem>
                     </NavLink>
                     <NavLink to={`${url}/addStudent`} className={classes.navLinkStyle}>

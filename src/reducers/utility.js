@@ -22,7 +22,8 @@ const utilReducer = (prevState = utilDefaults, action) => {
             return {
                 ...prevState,
                 loginName: action.name,
-                loginEmail: action.email
+                loginEmail: action.email,
+                loginType: action.userType,
             };
         default:
             return prevState;

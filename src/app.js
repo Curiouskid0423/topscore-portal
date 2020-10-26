@@ -60,10 +60,11 @@ firebase.auth().onAuthStateChanged((user) => {
             // 2. Kick out if not authorized.
             if (authorized) {
                 const nameInitial = user.displayName[0].toUpperCase();
+                const currentUser = authList.find((authEl) => authEl.email === user.email);
                 // 3. Log in after validating the identity.
                 console.log("logged in");
                 store.dispatch(login(user.uid, nameInitial));
-                store.dispatch(storeLoginUserInfo(user.displayName, user.email));
+                store.dispatch(storeLoginUserInfo(user.displayName, user.email, currentUser.type));
                 // 4. For the first setCourse call, leave the error catch code to the action itself.
                 store.dispatch(startSetCourses());
                 store.dispatch(startSetStudents()).then(() => {

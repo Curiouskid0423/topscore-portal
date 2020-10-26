@@ -14,6 +14,10 @@ import NotFound from "../404Page";
 const useStyles = makeStyles({
     root: {
         marginTop: "1rem"
+    },
+    contentBox: {
+        display: "block",
+        margin: "auto"
     }
 });
 
@@ -28,7 +32,7 @@ const Settings = (props) => {
                 <SettingsMenu />
             </Grid>
             {/* Subpage Routing */}
-            <Grid item container sm={10}>
+            <Grid item container sm={10} className={classes.contentBox}>
                 <Switch>
                     <PrivateRoute path={`${path}`} exact component={UpdateAccount} />
                     <PrivateRoute path={`${path}/addStudent`} component={AddStudent} />

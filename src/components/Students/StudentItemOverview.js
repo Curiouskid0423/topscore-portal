@@ -23,7 +23,7 @@ import {startUpdateOverview} from "../../actions/content";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        margin: theme.spacing(2),
+        // margin: theme.spacing(2),
     },
     flexStyle: {
         display: "flex",

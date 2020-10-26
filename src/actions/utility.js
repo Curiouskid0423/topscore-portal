@@ -19,8 +19,9 @@ export const submitMessage = (submitStatus) => ({
 /**
  * @desc Keep track of logged in user's name and email.
  */
-export const storeLoginUserInfo = (name, email) => ({
+export const storeLoginUserInfo = (name, email, userType) => ({
     type: "LOGIN_USER_INFO",
     name,
-    email
+    email,
+    userType,
 });
