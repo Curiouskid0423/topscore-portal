@@ -16,6 +16,7 @@ import {studentInstance1,
     courseInstance6,
     courseInstance7,
     courseInstance8} from "../fixtures";
+import {authUsers} from "../fixtures_users";
 
 
 const firebaseConfig = {
@@ -30,7 +31,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
 
-const db = firebase.database();
+export const db = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 // TODO: Just some testing fixture data.
@@ -52,5 +53,10 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 // db.ref("courses_db").push(courseInstance6);
 // db.ref("courses_db").push(courseInstance7);
 // db.ref("courses_db").push(courseInstance8);
+
+// TODO: Fixture data to Firebase "users_db"
+// db.ref("users_db").set(authUsers);
+
+
 
 export {firebase, googleAuthProvider, db as default };
