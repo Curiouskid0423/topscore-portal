@@ -47,7 +47,6 @@ const UserInfoForm = (props) => {
             props.dispatchAddUser({
                 email, type: userType
             });
-            setEmail("");
         }
     }
 
