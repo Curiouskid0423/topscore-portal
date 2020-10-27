@@ -13,6 +13,7 @@ import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import {makeStyles} from "@material-ui/core/styles";
 import makeCourseFormStyles from "../../styles/makeStyles/makeCourseFormStyles";
+import Alert from "@material-ui/lab/Alert";
 
 const useStyles = makeStyles(makeCourseFormStyles);
 
@@ -66,7 +67,11 @@ const CourseForm = (props) => {
                 {props.title}
             </Typography>
             <Divider />
-            {error !== "" && <Typography variant={"subtitle2"}> {error} </Typography>}
+            {
+                error !== "" && <Alert severity={"warning"}>
+                    {error}
+                </Alert>
+            }
             <div className={classes.rootContainer}>
                 <form noValidate onSubmit={handleAddCourse}>
                     <FormControl variant="outlined" className={classes.formControl}>

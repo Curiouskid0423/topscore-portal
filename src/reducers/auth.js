@@ -12,6 +12,19 @@ const authReducer = (prevState = {}, action) => {
             }
         case "LOGOUT":
             return {};
+        case "SET_USER_DB":
+            return {
+                ...prevState,
+                userDB: action.usersList,
+            };
+        case "ADD_NEW_USER":
+            return {
+                ...prevState,
+                userDB: [
+                    ...prevState.userDB,
+                    action.userObj
+                ],
+            };
         default:
             return prevState;
     }

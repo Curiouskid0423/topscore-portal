@@ -12,7 +12,7 @@ import "./styles/styles.scss";
 import {db, firebase} from "./firebase/firebase";
 import configStore from "./store/configStore";
 import LoadingPage from "./components/LoadingPage";
-import {login, logout} from "./actions/auth";
+import {login, logout, startSetUserDB} from "./actions/auth";
 // Two firebase call that are necessary at the beginning.
 import {startSetStudents} from "./actions/students";
 import {startSetCourses} from "./actions/courses";
@@ -50,9 +50,7 @@ firebase.auth().onAuthStateChanged((user) => {
         let authorized = false;
         // 1. Fetch user db, and set `authorized` variable.
         db.ref("users_db").once("value", (snapshot) => {
-            const authList = snapshot.val();
-            console.log(snapshot.val());
-            console.log("Allowed log in!");
+            const authList = Object.values(snapshot.val());
             if (checkAuthorizedUser(authList, user.email)) {
                 authorized = true;
             }
@@ -67,6 +65,7 @@ firebase.auth().onAuthStateChanged((user) => {
                 store.dispatch(storeLoginUserInfo(user.displayName, user.email, currentUser.type));
                 // 4. For the first setCourse call, leave the error catch code to the action itself.
                 store.dispatch(startSetCourses());
+                store.dispatch(startSetUserDB());
                 store.dispatch(startSetStudents()).then(() => {
                     renderApp();
                     if (history.location.pathname === "/") {

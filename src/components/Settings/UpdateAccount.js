@@ -46,7 +46,7 @@ const UpdateAccount = (props) => {
 
     // State: Either ADMIN or EDITOR
     const editorText = (
-       <span>
+       <div>
            Editor (consultant) roles may manage course and one's students' data on TopScore Portal. Here are some cautions to keep in mind:
            <ol>
                 <li>Editors cannot EDIT, or view advanced info of students whom you are not supervisor of.</li>
@@ -54,15 +54,15 @@ const UpdateAccount = (props) => {
                 <li>Any malicious actions attempting to breach system security, or to tamper with company data are recorded in the
                     activity log.If you have observed a bug in system design, please contact the ADMIN user, or the developer.</li>
            </ol>
-       </span>
+       </div>
     );
 
     const adminText = (
-        <span>
+        <Typography component="p" variant="body1">
             <b>Admin</b> has access to all actions across the portal. Any new user has to be added via admin portal.<br/>
             Any malicious actions attempting to breach system security, or to tamper with company data are recorded in the activity log.
             If you have observed a bug in system design, please contact the ADMIN user, or the developer.
-        </span>
+        </Typography>
     );
 
     return (
@@ -101,10 +101,8 @@ const UpdateAccount = (props) => {
                                     <Typography component="h3" variant="h6" className={classes.title} color="textSecondary" gutterBottom>
                                         {props.loginType}&nbsp;Manual
                                     </Typography>
-                                    <Typography component="p" variant="body1">
-                                        { props.loginType === "EDITOR" && editorText }
-                                        { props.loginType === "ADMIN" || props.loginType === "DEVELOPER" && adminText }
-                                    </Typography>
+                                    { props.loginType === "EDITOR" && editorText }
+                                    { props.loginType === "ADMIN" || props.loginType === "DEVELOPER" && adminText }
                                 </CardContent>
                             </Card>
                         </ThemeProvider>

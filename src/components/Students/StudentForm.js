@@ -16,6 +16,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogActions from "@material-ui/core/DialogActions";
+import Alert from "@material-ui/lab/Alert";
 
 const useStyles = makeStyles((theme) => ({
     rootContainer: {
@@ -115,14 +116,7 @@ const StudentForm = (props) => {
     const [firstAppt, setFirstAppt] = useState(
         edit? target.contact.recordOfFirstAppt : "");
     const handleFirstAppt = (e) => setFirstAppt(e.target.value);
-    // (State 16) Other: High School Transcript
-    // const [transcript, setTranscript] = useState(
-    //     edit? target.contact.transcript : "");
-    // const handleTranscript = (e) => setTranscript(e.target.value);
-    // (State 17) Other: List of Colleges Applied To
-    // const [collegeList, setCollegeList] = useState(
-    //     edit? target.contact.collegeList : "");
-    // const handleCollegeList = (e) => setCollegeList(e.target.value);
+
     // (State 18) Other: Supervisor
     const [supervisor, setSupervisor] = useState(
         edit? target.supervisor : "");
@@ -148,8 +142,7 @@ const StudentForm = (props) => {
         edit? moment(target.contact.preTestResult.date) : moment());
     const handleDate = (date) => setTestDate(date);
     // Error handling state
-    const [error, setError] = useState("");
-    const handleError = (e) => setError(e);
+    const [error, setError] = useState(false);
 
     // Dialog state
     const [dialogOpen, setDialogChange] = useState(false);
@@ -157,23 +150,18 @@ const StudentForm = (props) => {
 
     // Check if all required columns are filled.
     const checkRequired = () => {
-        let allFilled = true;
         const requiredColumns = [sid, first, last, phone, email,
             highSchool, gradYear, parent, relation, parentPhone];
-        requiredColumns.forEach((el) => {
-            if (el === "") {
-                allFilled = false;
-            }
-        });
-        return allFilled;
+        return requiredColumns.filter((el) => el === "").length === 0;
     }
 
     const onStudentSubmit = (e) => {
         e.preventDefault();
         if (!checkRequired()) {
-            return handleError("Please fill out all required columns");
+           setError(true);
         }
         else {
+            setError(false);
             const studentObj = {
                 supervisor: supervisor,
                 contact: {
@@ -215,6 +203,11 @@ const StudentForm = (props) => {
 
     return (
         <Paper elevation={3}>
+            {
+                error && <Alert severity={"warning"}>
+                    Please complete all required inputs!
+                </Alert>
+            }
             <Typography component="h2" variant="h6"
                         gutterBottom className={classes.titleStyles}>
                 {edit ? "Edit Student": "Add New Student Info"}
@@ -290,12 +283,6 @@ const StudentForm = (props) => {
                     <TextField className={classes.textFieldStyles} id="outlined-basic"
                                label="Record of First Appt. (Google Drive Link)" size="small" variant="outlined" fullWidth
                                value={firstAppt} onChange={handleFirstAppt}/>
-                    {/*<TextField className={classes.textFieldStyles} id="outlined-basic"*/}
-                    {/*           label="High School Transcript (Google Drive Link)" size="small" variant="outlined" fullWidth*/}
-                    {/*           value={transcript} onChange={handleTranscript}/>*/}
-                    {/*<TextField className={classes.textFieldStyles} id="outlined-basic"*/}
-                    {/*           label="List of Colleges Applied (Google Drive Link)" size="small" variant="outlined" fullWidth*/}
-                    {/*           value={collegeList} onChange={handleCollegeList}/>*/}
                     {/*  Pre-test result  */}
                     <Typography variant={"h6"} className={classes.categoryTitle}>
                         Pre-test result (if applicable)
