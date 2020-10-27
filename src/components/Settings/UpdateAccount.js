@@ -46,17 +46,20 @@ const UpdateAccount = (props) => {
 
     // State: Either ADMIN or EDITOR
     const editorText = (
-        "Editor (consultant) roles may manage course and one's students' data on TopScore Portal. " +
-        "Here are some cautions to keep in mind: "
-        + "1. Editors cannot EDIT, or view advanced info of students whom you are not supervisor of. "
-        + "2. Editors are NOT permitted to ADD or REMOVE any users. "
-        + "3. Any malicious actions attempting to breach system security, or to tamper with company data are recorded in the activity log. "
-        + "If you have observed a bug in system design, please contact the ADMIN user, or the developer."
+       <span>
+           Editor (consultant) roles may manage course and one's students' data on TopScore Portal. Here are some cautions to keep in mind:
+           <ol>
+                <li>Editors cannot EDIT, or view advanced info of students whom you are not supervisor of.</li>
+                <li>Editors are NOT permitted to ADD or REMOVE any users.</li>
+                <li>Any malicious actions attempting to breach system security, or to tamper with company data are recorded in the
+                    activity log.If you have observed a bug in system design, please contact the ADMIN user, or the developer.</li>
+           </ol>
+       </span>
     );
 
     const adminText = (
         <span>
-            Admin has access to all actions across the portal. Any new user has to be added via admin portal.<br/>
+            <b>Admin</b> has access to all actions across the portal. Any new user has to be added via admin portal.<br/>
             Any malicious actions attempting to breach system security, or to tamper with company data are recorded in the activity log.
             If you have observed a bug in system design, please contact the ADMIN user, or the developer.
         </span>
@@ -96,7 +99,7 @@ const UpdateAccount = (props) => {
                             <Card className={classes.cardContainer}>
                                 <CardContent>
                                     <Typography component="h3" variant="h6" className={classes.title} color="textSecondary" gutterBottom>
-                                        Manual
+                                        {props.loginType}&nbsp;Manual
                                     </Typography>
                                     <Typography component="p" variant="body1">
                                         { props.loginType === "EDITOR" && editorText }

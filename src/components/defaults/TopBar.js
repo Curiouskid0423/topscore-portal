@@ -15,7 +15,7 @@ import Typography from "@material-ui/core/Typography";
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import { connect } from "react-redux";
 import templateStyles from "../../styles/makeStyles/makeTemplateStyles";
-import theme from "../../themes";
+import themehelper from "../../themes";
 import {templateDrawerChange} from "../../actions/utility";
 import {startLogout} from "../../actions/auth";
 import {Link} from "react-router-dom";
@@ -30,7 +30,7 @@ const TopBar = (props) => {
     const handleDialogChange = () => setDialogChange(!dialogOpen);
 
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={themehelper}>
             <AppBar position="absolute"
                     className={clsx(classes.appBar, props.drawerOpen && classes.appBarShift)}
             >
