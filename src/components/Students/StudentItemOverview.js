@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Table from '@material-ui/core/Table';
@@ -144,7 +143,7 @@ const StudentItemOverview = (props) => {
 
 const mapStateToProps = (state) => ({
     studentList: state.students,
-    overview: state.content.partOverview,
+    overview: state.content.partOverview || {},
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

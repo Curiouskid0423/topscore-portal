@@ -32,8 +32,6 @@ const useStyles = makeStyles((theme) => ({
         margin: "1rem auto",
         "&:hover": {
             cursor: "pointer",
-        //     transition: "ease-in-out 0.2s",
-        //     transform: "scale(1.04)",
         }
     },
     cardTitle: {
@@ -82,7 +80,7 @@ const StudentItem = (props) => {
         // Set timeout for fetching `content` section
         setTimeout(() => {
             props.history.push(`/students/content/${props.id}`);
-        }, 2000);
+        }, 1500);
     }
 
     return (

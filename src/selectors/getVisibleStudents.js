@@ -29,7 +29,7 @@ const sortStudents = (studentList) => {
  * @param filter: filters.visibleStudents (course filter isn't passed in)
  * @return visible student list
  */
-const getVisibleStudents = (students, filter) => {
+const getVisibleStudents = (students = [], filter) => {
     const { name, gradYear, course, pkg } = filter;
     const unsorted = students.filter((el) => {
         const itemFullName = el.contact.firstName + " " + el.contact.lastName;
@@ -49,7 +49,7 @@ const getVisibleStudents = (students, filter) => {
                 break;
         }
         return nameMatch && yearMatch && courseMatch && packageMatch;
-    })
+    });
     return sortStudents(unsorted);
 }
 

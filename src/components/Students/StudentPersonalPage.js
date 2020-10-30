@@ -16,7 +16,6 @@ import { connect } from "react-redux";
 import Dashboard from "../defaults/Templates";
 import ContentTabs from "./ContentTabs";
 import personalStyles from "../../styles/makeStyles/makeStudentPersonalStyles";
-import {startSetContent} from "../../actions/content";
 import themehelper from "../../themes";
 import {startChangeBlackList, startChangeVIP} from "../../actions/students";
 
@@ -153,15 +152,11 @@ const StudentPersonalPage = (props) => {
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        students: state.students,
-        hasContent: state.content !== {}
-    }
-}
+const mapStateToProps = (state) => ({
+    students: state.students,
+});
 
 const mapDispatchToProps = (dispatch) => ({
-    dispatchGetContent: (id) => dispatch(startSetContent(id)),
     dispatchChangeVIP: (id, value) => dispatch(startChangeVIP(id, value)),
     disptachChangeBlackList: (id, value) => dispatch(startChangeBlackList(id, value)),
 })

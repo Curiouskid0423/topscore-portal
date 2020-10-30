@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Grid from "@material-ui/core/Grid";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import {TabPanel} from "../ContentTabs";
+import {TabPanel} from "../ContentTabsDisplayItem";
 import {makeStyles} from "@material-ui/core/styles";
 import CustomTabPanel from "./CustomTabPanel";
 import { connect } from "react-redux";
