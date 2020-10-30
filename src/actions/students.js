@@ -20,10 +20,16 @@ export const startSetStudents = () => {
         return database.ref("students_db")
             .once("value", (snapshot) => {
                 snapshot.forEach((child) => {
+                    const allCourseNameList = Object.values({
+                        ...child.val().content.partCore.currentCourseList,
+                        ...child.val().content.partCore.pastCourseList
+                    }).map((el) => el.courseName);
+
                     studentlist.push({
                         id: child.key,
                         supervisor: child.val().supervisor,
-                        contact: child.val().contact
+                        contact: child.val().contact,
+                        courseNameList: allCourseNameList
                     });
                 });
                 dispatch(setStudents(studentlist));

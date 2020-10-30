@@ -35,7 +35,8 @@ const getVisibleStudents = (students = [], filter) => {
         const itemFullName = el.contact.firstName + " " + el.contact.lastName;
         const nameMatch = itemFullName.toLowerCase().includes(name.toLowerCase());
         const yearMatch = (gradYear === 0) ? true : el.contact.graduationYear === gradYear;
-        const courseMatch = true;     // TODO: Temporary placeholder. Currently, "contact" does not include courseList.
+        const courseMatch = course === ""
+            || el.courseNameList.find((name) => name.toLowerCase().includes(course.toLowerCase()));
         let packageMatch = true;
         switch (pkg) {
             case "Course":

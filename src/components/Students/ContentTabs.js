@@ -6,7 +6,7 @@ import ContentTabsDisplayItem from "./ContentTabsDisplayItem";
 const ContentTabs = (props) => {
 
     // State to monitor if content is ready.
-    // ready has three values: "NULL", "READY" (newly-loaded), and "PRELOADED"
+    // ready has three values: "NULL", "READY" (newly-loaded), and "PRELOADED" (loaded in StudentItem component)
     const [ready, setReady] = useState("NULL");
     useEffect(() => {
         if (props.content.partOverview === undefined) {

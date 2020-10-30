@@ -63,6 +63,7 @@ const Query = (props) => {
             props.setName("");
             props.setYear(0);
             props.setPackage("");
+            props.setCourse("");
         }
     }, []);
 
@@ -71,9 +72,14 @@ const Query = (props) => {
     const [pkgFilter, setpkgFilter] = useState("");
     const [gradYear, setgradYear] = useState(props.filter.gradYear);
     const [studentName, setStudentName] = useState(props.filter.name);
+    const [courseName, setCourseName] = useState(props.filter.course);
     const [open, setOpen] = React.useState(false);
     const handleModalChange = () => setOpen(!open);
     // handler functions
+    const handleCourseName = (e) => {
+        setCourseName(e.target.value);
+        props.setCourse((e.target.value));
+    };
     const handleFilters = () => setFiltersOpen(true);
     const handlePkg = (e) => {
         setpkgFilter(e.target.value);
@@ -107,7 +113,8 @@ const Query = (props) => {
                         <div className={clsx(!showFilters && classes.hideFilters)}>
                             <TextField type={"number"} className={classes.textFilter} id="standard-basic"
                                        label="Filter Grad Year" onChange={handleGradYear}/>
-                            <TextField className={classes.textFilter} id="standard-basic" label="Filter by Course" />
+                            <TextField className={classes.textFilter} id="standard-basic"
+                                       label="Filter by Course" onChange={handleCourseName} />
                             {/*<TextField className={classes.textFilter} id="standard-basic" label="Filter by HighSchool" />*/}
                             <FormControl className={classes.formControl}>
                                 <InputLabel>Package</InputLabel>
