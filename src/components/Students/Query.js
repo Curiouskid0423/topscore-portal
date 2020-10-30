@@ -7,54 +7,53 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import TextField from "@material-ui/core/TextField";
-import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
+import {makeStyles, ThemeProvider, withStyles} from "@material-ui/core/styles";
 import theme from "../../themes";
 import clsx from "clsx";
-import Typography from "@material-ui/core/Typography";
-import Header from "../defaults/Header";
 import {setCourse, setName, setPackage, setYear} from "../../actions/filters";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import Modal from "@material-ui/core/Modal";
+import getVisibleStudents from "../../selectors/getVisibleStudents";
+import Paper from "@material-ui/core/Paper";
+import Table from "@material-ui/core/Table";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import TableBody from "@material-ui/core/TableBody";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableCell from "@material-ui/core/TableCell";
+import {queryStyles} from "../../styles/makeStyles/makeQueryStyles";
+import Header from "../defaults/Header";
+import Typography from "@material-ui/core/Typography";
 
-const useStyles = makeStyles({
-    modal: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: "50vw"
+const useStyles = makeStyles(queryStyles);
+
+const StyledTitleCell = withStyles((theme) => ({
+    head: {
+        backgroundColor: "#DBD3C0",
+        color: theme.palette.common.white,
+        fontSize: 15
     },
-    paper: {
-        backgroundColor: theme.palette.background.paper,
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
+    body: {
+        fontSize: 12
     },
-    buttonGroup: {
-        display: "flex",
-        "& button": {
-            marginRight: "1.5rem"
-        }
+}))(TableCell);
+
+const StyledTableRow = withStyles((theme) => ({
+    root: {
+        '&:nth-of-type(odd)': {
+            backgroundColor: theme.palette.action.hover,
+        },
     },
-    formStyles: {
-        width: "100%"
-    },
-    formControl: {
-        margin: theme.spacing(1),
-        minWidth: 180
-    },
-    textFilter: {
-        marginTop: "0.5rem",
-        paddingRight: "2rem"
-    },
-    hideFilters: {
-        display: "none"
-    },
-    searchButton: {
-        display: "block",
-        margin: ".5rem auto",
-        padding: ".5rem 2.5rem"
-    }
-})
+}))(TableRow);
+
+// The table has 8 columns.
+const tableTitles = [
+    "Student ID", "Name", "Email",
+    "High School", "Graduation Year", "Attended College",
+    "Phone", "Parent Phone"
+];
+
 
 const Query = (props) => {
     const classes = useStyles();
@@ -138,18 +137,50 @@ const Query = (props) => {
             </Grid>
             {/* Get_List Modal  */}
             <Modal
-                className={classes.modal}
-                open={open}
-                onClose={handleModalChange}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                    timeout: 500,
-                }}>
+                className={classes.modal} open={open} onClose={handleModalChange}
+                closeAfterTransition BackdropComponent={Backdrop}
+                BackdropProps={{ timeout: 500, }}>
                 <Fade in={open}>
                     <div className={classes.paper}>
-                        <h2 id="transition-modal-title">Transition modal</h2>
-                        <p id="transition-modal-description">This is a temporary modal for getting student list.</p>
+                        <div className={classes.exportListStyles}>
+                            <Typography component="h2" variant="h4" gutterBottom className={classes.modalTitle}>
+                                STUDENT LIST
+                            </Typography>
+                            <Button variant="outlined" size="small" color="primary">
+                                 Viewing { props.availableStudents.length } students
+                            </Button>
+                        </div>
+                        <TableContainer component={Paper} className={classes.tableContainer}>
+                            <Table stickyHeader className={classes.table}>
+                                {/*  Header */}
+                                <TableHead>
+                                    <TableRow>
+                                        {tableTitles.map((colName) => (
+                                            <StyledTitleCell align="center" key={colName}>
+                                                {colName}
+                                            </StyledTitleCell>)
+                                        )}
+                                    </TableRow>
+                                </TableHead>
+                                {/*  Table Body  */}
+                                <TableBody>
+                                    {props.availableStudents.map((entry) => (
+                                        <StyledTableRow key={entry.uid}>
+                                            <StyledTitleCell component={"th"} scope={"row"}>{entry.id}</StyledTitleCell>
+                                            <StyledTitleCell align="center">
+                                                {entry.contact.firstName + " " + entry.contact.lastName}
+                                            </StyledTitleCell>
+                                            <StyledTitleCell align="center">{entry.contact.email}</StyledTitleCell>
+                                            <StyledTitleCell align="center">{entry.contact.highSchool}</StyledTitleCell>
+                                            <StyledTitleCell align="center">{entry.contact.graduationYear}</StyledTitleCell>
+                                            <StyledTitleCell align="center">{entry.contact.attendedCollege}</StyledTitleCell>
+                                            <StyledTitleCell align="center">{entry.contact.phone}</StyledTitleCell>
+                                            <StyledTitleCell align="center">{entry.contact.family.phone}</StyledTitleCell>
+                                        </StyledTableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
                     </div>
                 </Fade>
             </Modal>
@@ -158,7 +189,8 @@ const Query = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    filter: state.filters.visibleStudents
+    filter: state.filters.visibleStudents,
+    availableStudents: getVisibleStudents(state.students, state.filters.visibleStudents)
 });
 
 const mapDispatchToProps = (dispatch) => ({

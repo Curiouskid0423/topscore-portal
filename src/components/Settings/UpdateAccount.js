@@ -74,28 +74,24 @@ const UpdateAccount = (props) => {
                 </Typography>
                 <Divider />
                 <div className={classes.rootContainer}>
-                    {/* 1. User Type */}
-                    <div className={classes.rowContainer}>
-                        <ThemeProvider theme={themehelper}>
+                    <ThemeProvider theme={themehelper}>
+                        {/* 1. User Type */}
+                        <div className={classes.rowContainer}>
                             <Typography component="h2" variant="h6" className={classes.rowName}>
                                 User Type:
                             </Typography>
                             <Chip avatar={<Avatar>{ props.loginType[0].toUpperCase() }</Avatar>} label={ props.loginType }
                                   color="primary" clickable variant="outlined" />
-                        </ThemeProvider>
-                    </div>
-                    {/* 2. User Email */}
-                    <div className={classes.rowContainer}>
-                        <ThemeProvider theme={themehelper}>
+                        </div>
+                        {/* 2. User Email */}
+                        <div className={classes.rowContainer}>
                             <Typography component="h2" variant="h6" className={classes.rowName}>
                                 Current Login Email:
                             </Typography>
                             <Typography component="h2" variant="h6" style={{ fontWeight: 400 }}> { props.loginEmail } </Typography>
-                        </ThemeProvider>
-                    </div>
-                    {/* 3. Manual */}
-                    <div className={classes.rowContainer}>
-                        <ThemeProvider theme={themehelper}>
+                        </div>
+                        {/* 3. Manual */}
+                        <div className={classes.rowContainer}>
                             <Card className={classes.cardContainer}>
                                 <CardContent>
                                     <Typography component="h3" variant="h6" className={classes.title} color="textSecondary" gutterBottom>
@@ -105,8 +101,8 @@ const UpdateAccount = (props) => {
                                     { props.loginType === "ADMIN" || props.loginType === "DEVELOPER" && adminText }
                                 </CardContent>
                             </Card>
-                        </ThemeProvider>
-                    </div>
+                        </div>
+                    </ThemeProvider>
                 </div>
             </Paper>
         </Grid>
