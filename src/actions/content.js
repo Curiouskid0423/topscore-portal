@@ -136,3 +136,25 @@ export const startCourseDone = (courseObj, studentID) => {
             })
     }
 }
+
+export const addReport = (reportObj) => ({
+    type: "ADD_REPORT",
+    reportObj,
+})
+
+export const startAddReport = (studentID, reportObj) => {
+    return (dispatch, getState) => {
+        const det = (reportObj.type === "SAT") ? "SATreport" : "TOEFLreport";
+        return database.ref(`students_db/${studentID}/content/partReport/${det}`)
+            .push(reportObj).then((ref) => {
+                dispatch(addReport({
+                    id: ref.key,
+                    ...reportObj,
+                }));
+                dispatch(submitMessage("success"));
+            }).catch((e) => {
+                dispatch(submitMessage("error"));
+                console.log(e);
+            })
+    }
+}

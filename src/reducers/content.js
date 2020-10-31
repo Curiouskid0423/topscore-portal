@@ -102,7 +102,22 @@ const contentReducer = (prevState = {}, action) => {
                         [completedCourseID]: action.courseObj
                     }
                 }
-            }
+            };
+        case "ADD_REPORT":
+            const detSAT = action.reportObj.type === "SAT";
+            return {
+                ...prevState,
+                partReport: {
+                    SATreport: detSAT ? [
+                        ...Object.values(prevState.partReport.SATreport || []),
+                        action.reportObj,
+                    ] : prevState.partReport.SATreport,
+                    TOEFLreport: !detSAT ? [
+                        ...Object.values(prevState.partReport.TOEFLreport || []),
+                        action.reportObj,
+                    ] : prevState.partReport.TOEFLreport,
+                },
+            };
         default:
             return prevState;
     }

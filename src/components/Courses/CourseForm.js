@@ -94,8 +94,6 @@ const CourseForm = (props) => {
                                             margin="normal" id="date-picker-inline" label="Start Date"
                                             value={selectedDate} onChange={handleDateChange} />
                     </MuiPickersUtilsProvider>
-                    {/*<TextField className={classes.textFieldStyles} id="outlined-basic" label="Repeat By"*/}
-                    {/*           size="small" variant="outlined" fullWidth />*/}
                     <FormControl variant={"outlined"} className={classes.formControl}>
                         <InputLabel>Repeat By</InputLabel>
                         <Select labelId="course-repeat-label" id="course-repeat-select"

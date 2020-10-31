@@ -69,7 +69,7 @@ const ContentTabsDisplayItem = (props) => {
                     <StudentItemMentor />
                 </TabPanel>
                 <TabPanel value={value} index={4}>
-                    <StudentItemReport />
+                    <StudentItemReport studentID={props.studentID}/>
                 </TabPanel>
             </div>
         </ThemeProvider>

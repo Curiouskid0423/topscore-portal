@@ -111,7 +111,7 @@ export const courseInstance = [
 
 export const reportCardInstance0 = {
     type: "SAT",
-    title: "MOCK EXAM PLACEHOLDER",
+    title: "PLACEHOLDER",
     testDate: moment().valueOf(),
     sourceLink: "https://www.ets.org/toefl",
 }

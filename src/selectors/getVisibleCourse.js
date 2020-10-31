@@ -4,7 +4,7 @@
  */
 
 const getVisibleCourse = (query, courseList) => {
-    return courseList.filter((el) => {
+    return (courseList || []).filter((el) => {
         const keyword = el.courseName + " " + el.instructor;
         return keyword.toLowerCase().includes(query.toLowerCase());
     });

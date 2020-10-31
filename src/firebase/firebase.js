@@ -57,6 +57,4 @@ const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 // TODO: Fixture data to Firebase "users_db"
 // db.ref("users_db").set(authUsers);
 
-
-
 export {firebase, googleAuthProvider, db as default };
