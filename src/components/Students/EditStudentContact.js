@@ -20,13 +20,17 @@ const EditStudentContact = (props) => {
     return (
         <Grid item sm={12}>
             <StudentForm onSubmit={handleSubmit} onRemoval={handleRemoval}
-                         isEdit={true} student={props.student} />
+                         isEdit={true} student={props.student} currentViewer={props.currentViewer} />
         </Grid>
     )
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    student: state.students.find((el) => el.id === ownProps.match.params.id)
+    student: state.students.find((el) => el.id === ownProps.match.params.id),
+    currentViewer: {
+        name: state.util.loginName,
+        type: state.util.loginType,
+    },
 })
 
 const mapDispatchToProps = (dispatch) => ({

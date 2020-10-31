@@ -120,7 +120,7 @@ const StudentForm = (props) => {
     // (State 18) Other: Supervisor
     const [supervisor, setSupervisor] = useState(
         edit? target.supervisor : "");
-    const handleSupervisor = (e) => setSupervisor(e.target.value);
+    const handleSupervisor = (e) => setSupervisor(e.target.value.trim());
     // (State 19) Pre-test: Reading
     const [reading, setReading] = useState(
         edit? target.contact.preTestResult.reading : "");
@@ -142,11 +142,17 @@ const StudentForm = (props) => {
         edit? moment(target.contact.preTestResult.date) : moment());
     const handleDate = (date) => setTestDate(date);
     // Error handling state
-    const [error, setError] = useState(false);
+    const [error, setError] = useState("");
 
     // Dialog state
     const [dialogOpen, setDialogChange] = useState(false);
-    const handleDialogChange = () => setDialogChange(!dialogOpen);
+    const handleDialogChange = () => {
+        if (props.currentViewer.type === "ADMIN") {
+            setDialogChange(!dialogOpen);
+        } else {
+            setError("Only ADMIN user(s) is allowed to REMOVE students!");
+        }
+    }
 
     // Check if all required columns are filled.
     const checkRequired = () => {
@@ -158,10 +164,10 @@ const StudentForm = (props) => {
     const onStudentSubmit = (e) => {
         e.preventDefault();
         if (!checkRequired()) {
-           setError(true);
+           setError("Please complete all required inputs!");
         }
         else {
-            setError(false);
+            setError("");
             const studentObj = {
                 supervisor: supervisor,
                 contact: {
@@ -204,8 +210,8 @@ const StudentForm = (props) => {
     return (
         <Paper elevation={3}>
             {
-                error && <Alert severity={"warning"}>
-                    Please complete all required inputs!
+                !!error && <Alert severity={"warning"}>
+                    {error}
                 </Alert>
             }
             <Typography component="h2" variant="h6"

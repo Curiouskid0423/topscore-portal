@@ -75,12 +75,20 @@ const StudentItem = (props) => {
     const [backdrop, setBackdrop] = useState(false);
 
     const handleContent = () => {
-        props.dispatchGetContent(props.id);
-        setBackdrop(true);
-        // Set timeout for fetching `content` section
-        setTimeout(() => {
-            props.history.push(`/students/content/${props.id}`);
-        }, 1500);
+        const currentStudent = props.students.find((el) => el.id === props.id);
+        const blockCheckOut = props.currentViewer.type === "EDITOR"
+            && !!currentStudent.supervisor
+            && !props.currentViewer.name.toLowerCase().includes(currentStudent.supervisor.toLowerCase());
+        if (blockCheckOut) {
+            alert(`The student's supervisor has been set to ${currentStudent.supervisor}, which does not match with your login name.`);
+        } else {
+            props.dispatchGetContent(props.id);
+            setBackdrop(true);
+            // Set timeout for fetching `content` section
+            setTimeout(() => {
+                props.history.push(`/students/content/${props.id}`);
+            }, 1500);
+        }
     }
 
     return (
@@ -129,8 +137,16 @@ const StudentItem = (props) => {
     )
 }
 
+const mapStateToProps = (state) => ({
+    students: state.students || [],
+    currentViewer: {
+        name: state.util.loginName,
+        type: state.util.loginType,
+    },
+});
+
 const mapDispatchToProps = (dispatch) => ({
     dispatchGetContent: (id) => dispatch(startSetContent(id))
 })
 
-export default connect(undefined, mapDispatchToProps)(withRouter(StudentItem));
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(StudentItem));
