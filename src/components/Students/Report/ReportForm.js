@@ -12,6 +12,7 @@ import Button from "@material-ui/core/Button";
 import moment from "moment";
 import {makeStyles} from "@material-ui/core/styles";
 import makeCourseFormStyles from "../../../styles/makeStyles/makeCourseFormStyles";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(makeCourseFormStyles);
 
@@ -48,7 +49,7 @@ const ReportForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const notComplete = title === "" || docLink === "";
+        const notComplete = title === "" || docLink === "" || reportType === "";
         if (notComplete) {
             setError("Please fill in all required fields!");
         } else {
@@ -71,7 +72,10 @@ const ReportForm = (props) => {
             <Divider />
             <div className={classes.rootContainer}>
                 <form noValidate onSubmit={handleSubmit}>
-                    <FormControl variant="outlined" className={classes.formControl}>
+                    <Typography variant={"caption"} style={{ color: "#5f5f5f" }}>
+                        Please keep each word of your title below <b>20 characters</b> for better display!
+                    </Typography>
+                    <FormControl variant="outlined" className={classes.formControl} required>
                         <InputLabel>Course Type</InputLabel>
                         <Select labelId="course-type-label" id="course-select"
                                 value={reportType} onChange={handleType}>
@@ -85,10 +89,10 @@ const ReportForm = (props) => {
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <KeyboardDatePicker className={classes.textFieldStyles}
                                             disableToolbar variant="inline" format="MM/dd/yyyy"
-                                            margin="normal" id="date-picker-inline" label="Start Date"
+                                            margin="normal" id="date-picker-inline" label="Test Date"
                                             value={date} onChange={handleDate} />
                     </MuiPickersUtilsProvider>
-                    <TextField className={classes.textFieldStyles} id="repeated-time"
+                    <TextField className={classes.textFieldStyles} id="repeated-time" required
                                label="Document Link (e.g. Google Drive)" size="small" value={docLink}
                                variant="outlined" fullWidth onChange={handleDocLink}/>
                     <Button type="submit" variant="contained" className={classes.submit}>

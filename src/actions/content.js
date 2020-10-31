@@ -147,6 +147,9 @@ export const startAddReport = (studentID, reportObj) => {
         const det = (reportObj.type === "SAT") ? "SATreport" : "TOEFLreport";
         return database.ref(`students_db/${studentID}/content/partReport/${det}`)
             .push(reportObj).then((ref) => {
+                // Access the database gain to include ref.key into Report object. DB promise returning ignored for now.
+                database.ref(`students_db/${studentID}/content/partReport/${det}/${ref.key}`)
+                    .update({id: ref.key,});
                 dispatch(addReport({
                     id: ref.key,
                     ...reportObj,
@@ -156,5 +159,24 @@ export const startAddReport = (studentID, reportObj) => {
                 dispatch(submitMessage("error"));
                 console.log(e);
             })
+    }
+}
+
+export const editReport = (reportObj) => ({
+    type: "EDIT_REPORT",
+    reportObj,
+});
+
+export const startEditReport = (studentID, reportObj) => {
+    return (dispatch, getState) => {
+        const det = (reportObj.type === "SAT") ? "SATreport" : "TOEFLreport";
+        return database.ref(`students_db/${studentID}/content/partReport/${det}/${reportObj.id}`)
+            .update(reportObj).then(() => {
+                dispatch(editReport(reportObj));
+                dispatch(submitMessage("success"));
+            }).catch((e) => {
+                dispatch(submitMessage("error"));
+                console.log(e);
+            });
     }
 }

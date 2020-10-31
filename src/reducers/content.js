@@ -118,6 +118,25 @@ const contentReducer = (prevState = {}, action) => {
                     ] : prevState.partReport.TOEFLreport,
                 },
             };
+        case "EDIT_REPORT":
+            const detSATEdit = action.reportObj.type === "SAT";
+            const processedToeflList = Object.values(prevState.partReport.TOEFLreport || [])
+                .filter((el) => el.id !== action.reportObj.id);
+            const processedSatList = Object.values(prevState.partReport.SATreport || [])
+                .filter((el) => el.id !== action.reportObj.id);
+            return {
+                ...prevState,
+                partReport: {
+                    SATreport: detSATEdit ? [
+                        ...processedSatList,
+                        action.reportObj,
+                    ] : processedSatList,
+                    TOEFLreport: !detSATEdit ? [
+                        ...processedToeflList,
+                        action.reportObj,
+                    ] : processedToeflList,
+                },
+            };
         default:
             return prevState;
     }

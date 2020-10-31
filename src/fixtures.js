@@ -110,6 +110,7 @@ export const courseInstance = [
 
 
 export const reportCardInstance0 = {
+    id: "000",
     type: "SAT",
     title: "PLACEHOLDER",
     testDate: moment().valueOf(),

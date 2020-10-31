@@ -11,62 +11,10 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import ReportForm from "./ReportForm";
-import {startAddReport} from "../../../actions/content";
+import {startAddReport, startEditReport} from "../../../actions/content";
+import makeTabLoaderStyles from "../../../styles/makeStyles/makeTabLoaderStyles";
 
-const useStyles = makeStyles({
-    addNewButtonDivider: {
-        width: "2.5rem",
-        margin: "auto",
-        border: "none",
-        height: "3px",
-        background: "#e0cfa8",
-    },
-    addNewButtonContainer: {
-        alignItems: "center",
-        background: "#f8f8f8",
-        display: "flex",
-        justifyContent: "center",
-        paddingTop: "2rem",
-        flexDirection: "column",
-        height: "100%",
-        "&:hover": {
-            transition: "ease-in-out .3s",
-            transform: "scale(1.05)",
-            cursor: "pointer",
-        }
-    },
-    btnTitle: {
-        color: "#000",
-        fontFamily: "\'Commissioner\', sans-serif",
-        fontWeight: 600,
-        fontSize: "1.1rem",
-        textAlign: "center",
-    },
-    timestamp: {
-        fontSize: 14,
-    },
-    reportCardContainer: {
-        display: "flex",
-        width: "100%",
-        flexWrap: "wrap",
-    },
-    reportCardItemContainer: {
-        margin: "1rem 2rem 0 0",
-        width: "200px",
-        height: "180px",
-        "&:hover": {
-            cursor: "pointer",
-        }
-    },
-    topLineDecoration: {
-        width: "2.5rem",
-        marginBottom: "1rem",
-        marginLeft: "0",
-        border: "none",
-        height: "3px",
-        background: "#e0cfa8",
-    },
-})
+const useStyles = makeStyles(makeTabLoaderStyles);
 
 const TabLoader = (props) => {
 
@@ -87,12 +35,18 @@ const TabLoader = (props) => {
     }
 
     const handleSubmit = (reportObj) => {
-        // Add report submit
         if (currentReport === "") {
+            // Add report submit
             props.dispatchAddReport(props.studentID, reportObj);
             setDisplayForm(false);
+        } else {
+            // Edit report submit
+            props.dispatchEditReport(props.studentID, {
+                id: currentReport.id,
+                ...reportObj
+            });
+            setDisplayForm(false);
         }
-        // Edit report submit
     }
 
     const completeList = Object.values(reportList || []).filter((el) => el.title !== "PLACEHOLDER");
@@ -105,12 +59,15 @@ const TabLoader = (props) => {
                         {/* Should iterate over the card items. with map. */}
                         <CardContent>
                             <hr className={classes.topLineDecoration}/>
-                            <Typography variant={"h6"} component={"h6"}>
-                                { el.title }
-                            </Typography>
-                            <Typography className={classes.timestamp} color="textSecondary">
-                                Saved on { moment(el.testDate).format('MMM Do YYYY') }
-                            </Typography>
+                            <a href={el.sourceLink} target={"_blank"}
+                               className={classes.reportCardItemLink}>
+                                <Typography variant={"h6"} component={"h6"}>
+                                    { el.title }
+                                </Typography>
+                                <Typography className={classes.timestamp} color="textSecondary">
+                                    Saved on { moment(el.testDate).format('MMM Do YYYY') }
+                                </Typography>
+                            </a>
                             <Button size={"small"} variant={"outlined"}
                                     onClick={() => handleFormOpen(el)} style={{ marginTop: ".5rem" }}>
                                 Edit
@@ -153,6 +110,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     dispatchAddReport: (studentID, reportObj) => dispatch(startAddReport(studentID, reportObj)),
+    dispatchEditReport: (studentID, reportObj) => dispatch(startEditReport(studentID, reportObj)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TabLoader);
