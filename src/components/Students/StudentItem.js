@@ -10,10 +10,11 @@ import Typography from "@material-ui/core/Typography";
 import themehelper from "../../themes";
 import {startSetContent} from "../../actions/content";
 import { connect } from "react-redux";
-import { withRouter, useRouteMatch } from "react-router-dom";
-
+import { withRouter} from "react-router-dom";
 import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Snackbar from "@material-ui/core/Snackbar";
+import Alert from "@material-ui/lab/Alert";
 
 
 /**
@@ -69,18 +70,32 @@ const useStyles = makeStyles((theme) => ({
 const StudentItem = (props) => {
 
     const classes = useStyles();
+
+    const currentStudent = props.students.find((el) => el.id === props.id);
     const circleCourse = <div className={clsx(classes.packageIcon, classes.pkgCourse)} />
     const circlePlan = <div className={clsx(classes.packageIcon, classes.pkgPlan)} />
     const circleApply = <div className={clsx(classes.packageIcon, classes.pkgApply)} />
     const [backdrop, setBackdrop] = useState(false);
+    const [blocked, setBlocked] = useState(false);
+
+    const blockCheckOutMessage = (
+        <Snackbar
+            anchorOrigin={{ vertical: "top", horizontal: "center" }}
+            autoHideDuration={3500} onClose={() => setBlocked(false)}
+            open={blocked}
+        >
+            <Alert severity={"warning"}>
+                {`The student's supervisor has been set to ${currentStudent.supervisor}, which does not match with your login name.`}
+            </Alert>
+        </Snackbar>
+    )
 
     const handleContent = () => {
-        const currentStudent = props.students.find((el) => el.id === props.id);
         const blockCheckOut = props.currentViewer.type === "EDITOR"
             && !!currentStudent.supervisor
             && !props.currentViewer.name.toLowerCase().includes(currentStudent.supervisor.toLowerCase());
         if (blockCheckOut) {
-            alert(`The student's supervisor has been set to ${currentStudent.supervisor}, which does not match with your login name.`);
+            setBlocked(true);
         } else {
             props.dispatchGetContent(props.id);
             setBackdrop(true);
@@ -93,6 +108,7 @@ const StudentItem = (props) => {
 
     return (
         <Card className={classes.cardRoot}>
+                { blocked && blockCheckOutMessage }
                 <ThemeProvider theme={themehelper}>
                     {/* Student Content */}
                     <CardContent>
