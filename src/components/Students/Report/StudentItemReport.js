@@ -7,6 +7,8 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import theme from "../../../themes";
+import SATtab from "./SATtab";
+import TOEFLtab from "./TOEFLtab";
 
 const useStyles = makeStyles({
     timestamp: {
@@ -53,7 +55,7 @@ const StudentItemReport = () => {
 
     const classes = useStyles();
 
-    //Opened Tab 0 for TOEFL, 1 for SAT, 2 for SAT Subject
+    //Opened Tab 0 for TOEFL, 1 for SAT (2 for SAT Subject in the future)
     const [openTab, setOpenTab] = useState(0);
 
     return (
@@ -61,11 +63,15 @@ const StudentItemReport = () => {
            <ThemeProvider theme={theme}>
                <Grid item sm={12}>
                    <ButtonGroup variant={"contained"}>
-                       <Button color={"primary"}>TOEFL</Button>
-                       <Button>SAT</Button>
+                       <Button color={!openTab && "primary"}
+                               onClick={() => setOpenTab(0)}> TOEFL </Button>
+                       <Button color={!!openTab && "primary"}
+                               onClick={() => setOpenTab(1)}> SAT </Button>
                    </ButtonGroup>
                </Grid>
                <Grid item sm={12} className={classes.reportCardContainer}>
+                   { openTab === 0 && <TOEFLtab/>  }
+                   { openTab === 1 && <SATtab/> }
                    <Card className={classes.reportCardItemContainer}>
                        {/* Should iterate over the card items. with map. */}
                        <CardContent>

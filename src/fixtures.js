@@ -26,7 +26,6 @@ export const userInstance1 = {
     password: "123abc"
 }
 
-
 // CourseInstance should have a moment() startDate
 export const courseInstance1 = {
     type: "GROUP",
@@ -76,7 +75,6 @@ export const courseInstance6 = {
     repeatBy: "weeks",
     repeatTimes: 5
 }
-
 export const courseInstance7 = {
     type: "GROUP",
     courseName: "Calligraphy Workshop",
@@ -85,7 +83,6 @@ export const courseInstance7 = {
     repeatBy: "weeks",
     repeatTimes: 8
 }
-
 export const courseInstance8 = {
     type: "GROUP",
     courseName: "Barista Internship",
@@ -110,6 +107,14 @@ export const courseInstance = [
     courseInstance5, courseInstance6,
     courseInstance7, courseInstance8,
 ]
+
+
+export const reportCardInstance0 = {
+    type: "SAT",
+    title: "MOCK EXAM PLACEHOLDER",
+    testDate: moment().valueOf(),
+    sourceLink: "https://www.ets.org/toefl",
+}
 
 
 /**
@@ -178,10 +183,8 @@ export const studentInstance1 = {
             optionals: ""
         },
         partReport: {
-            SATreport: ["https://www.youtube.com",
-                "https://www.bloomberg.com/asia",
-                "http://firebase.google.com"],
-            TOEFLreport: ["https://www.ets.org/toefl"]
+            SATreport: [],
+            TOEFLreport: [reportCardInstance0]
         }
     }
 }
@@ -248,8 +251,8 @@ export const studentInstance2 = {
             optionals: ""
         },
         partReport: {
-            SATreport: ["A list of Google Drive links"],
-            TOEFLreport: ["A list of Google Drive links"]
+            SATreport: [],
+            TOEFLreport: [reportCardInstance0]
         }
     }
 }
@@ -316,8 +319,8 @@ export const studentInstance3 = {
             optionals: ""
         },
         partReport: {
-            SATreport: ["A list of Google Drive links"],
-            TOEFLreport: ["A list of Google Drive links"]
+            SATreport: [],
+            TOEFLreport: [reportCardInstance0]
         }
     }
 }
@@ -385,8 +388,8 @@ export const studentInstance4 = {
             optionals: ""
         },
         partReport: {
-            SATreport: ["A list of Google Drive links"],
-            TOEFLreport: ["A list of Google Drive links"]
+            SATreport: [],
+            TOEFLreport: [reportCardInstance0]
         }
     }
 }
@@ -455,8 +458,8 @@ export const studentInstance5 = {
             optionals: ""
         },
         partReport: {
-            SATreport: ["A list of Google Drive links"],
-            TOEFLreport: ["A list of Google Drive links"]
+            SATreport: [],
+            TOEFLreport: [reportCardInstance0]
         }
     }
 }
@@ -525,8 +528,8 @@ export const studentInstance6 = {
             optionals: ""
         },
         partReport: {
-            SATreport: ["A list of Google Drive links"],
-            TOEFLreport: ["A list of Google Drive links"]
+            SATreport: [],
+            TOEFLreport: [reportCardInstance0]
         }
     }
 }
