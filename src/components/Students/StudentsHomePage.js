@@ -1,8 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { connect } from "react-redux";
 import getVisibleStudents from "../../selectors/getVisibleStudents";
 import Dashboard from "../defaults/Templates";
-import { Alert } from "@material-ui/lab";
 import Grid from "@material-ui/core/Grid";
 import StudentItem from "./StudentItem";
 import Query from "./Query";
