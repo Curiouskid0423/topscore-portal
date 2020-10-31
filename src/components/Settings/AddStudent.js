@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import StudentForm from "../Students/StudentForm";
 import { connect } from "react-redux";
 import {startAddStudent} from "../../actions/students";
-import {courseInstance0} from "../../fixtures";
+import {courseInstance0, reportCardInstance0} from "../../fixtures";
 
 const defaultContent = {
     content: {
@@ -33,7 +33,7 @@ const defaultContent = {
         },
         partReport: {
             SATreport: [],
-            TOEFLreport: []
+            TOEFLreport: [reportCardInstance0]
         }
     }
 }

@@ -26,7 +26,6 @@ const CompassForm = ({compass} = {}) => {
 
     const classes = useStyles();
     const [coreTab, setCoreTab] = useState(0);
-    const rowNumber = 12;
     const handleChange = (event, newValue) => setCoreTab(newValue);
 
     return (

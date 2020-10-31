@@ -45,7 +45,7 @@ const MyDocument = (props) => {
 
             {
                 sections.map((section) => (
-                    <View>
+                    <View key={section[0]}>
                         <Text style={styles.subtitle} break> {section[0]} </Text>
                         <Text style={styles.text}> {section[1]} </Text>
                     </View>
