@@ -134,8 +134,8 @@ const StudentItem = (props) => {
                             Class of {props.graduationYear}
                         </Typography>
                         {
-                            props.attendedCollege !== "" && (<Typography variant="body1" color="textSecondary" component="p">
-                                <b>{props.attendedCollege}</b>
+                            props.family.phone !== "" && (<Typography variant="body1" color="textSecondary" component="p">
+                                Parent&nbsp; <b>{props.family.phone}</b>
                             </Typography>)
                         }
                     </CardContent>

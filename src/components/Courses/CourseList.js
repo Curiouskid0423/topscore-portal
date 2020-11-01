@@ -25,6 +25,8 @@ import DialogActions from "@material-ui/core/DialogActions";
 import getVisibleCourse from "../../selectors/getVisibleCourse";
 import {setCourseQuery} from "../../actions/filters";
 import themehelper from "../../themes";
+import Snackbar from "@material-ui/core/Snackbar";
+import Alert from "@material-ui/lab/Alert";
 
 const StyledTitleCell = withStyles((theme) => ({
     head: {
@@ -91,13 +93,28 @@ const CourseList = (props) => {
     const classes = useStyles();
     const { path } = useRouteMatch();
     const [search, setSearch] = useState(props.query);
+    // State to open dialog for confirming removal.
     const [dialogOpen, setDialogChange] = useState(false);
+    // State of current remove target.
     const [removeTarget, setRemoveTarget] = useState("");
+    // state for block message if not admin.
+    const [blocked, setBlocked] = useState(false);
 
     // Upon un-mounting, clear the query string.
     useEffect(() => {
         return () => props.dispatchSearch("");
     }, []);
+
+    const blockedMessage = (
+        <Snackbar
+            anchorOrigin={{ vertical: "top", horizontal: "center" }} autoHideDuration={3500}
+            onClose={() => setBlocked(false)} open={blocked}
+        >
+            <Alert severity={"warning"}>
+                {`Dear ${props.loginType}, only ADMIN users are allowed to remove courses!`}
+            </Alert>
+        </Snackbar>
+    );
 
     const handleSearch = (e) => {
         setSearch(e.target.value);
@@ -105,8 +122,12 @@ const CourseList = (props) => {
     }
 
     const stageRemoval = (uid) => {
-        setRemoveTarget(uid);
-        setDialogChange(!dialogOpen);
+        if (props.loginType === "ADMIN") {
+            setRemoveTarget(uid);
+            setDialogChange(!dialogOpen);
+        } else {
+            setBlocked(true);
+        }
     };
 
     const clearRemoval = () => {
@@ -126,6 +147,7 @@ const CourseList = (props) => {
         <Container>
             {/* Snackbar */}
             { (props.submitStatus !== "") && <MessageSnackbar submitStatus={props.submitStatus} />}
+            { blocked && blockedMessage }
             <Grid item container md={12} className={classes.courseDirStyles}>
                 <ThemeProvider theme={themehelper}>
                     <Grid item md={7} sm={12}>
@@ -208,7 +230,8 @@ const CourseList = (props) => {
 const mapStateToProps = (state) => ({
     courseList: getVisibleCourse(state.filters.visibleCourses.query, state.courses),
     submitStatus: state.util.submitStatus || "",
-    query: state.filters.visibleCourses.query
+    query: state.filters.visibleCourses.query,
+    loginType: state.util.loginType,
 });
 
 const mapDispatchToProps = (dispatch) => ({

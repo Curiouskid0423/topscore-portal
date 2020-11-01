@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Chip from "@material-ui/core/Chip";
 import Divider from "@material-ui/core/Divider";
@@ -98,7 +97,7 @@ const UpdateAccount = (props) => {
                                         {props.loginType}&nbsp;Manual
                                     </Typography>
                                     { props.loginType === "EDITOR" && editorText }
-                                    { props.loginType === "ADMIN" || props.loginType === "DEVELOPER" && adminText }
+                                    { (props.loginType === "ADMIN" || props.loginType === "DEVELOPER") && adminText }
                                 </CardContent>
                             </Card>
                         </div>
