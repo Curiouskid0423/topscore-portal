@@ -36,13 +36,24 @@ const UserInfoForm = (props) => {
     const [userType, setUserType] = useState("EDITOR");
     const handleUserType = (e) => setUserType(e.target.value);
 
+    const [error, setError] = useState("");
+
     const [confirmPrompt, setConfirmPrompt] =  useState(false);
     const handlePromptClose = () => setConfirmPrompt(false);
-    const handlePromptOpen = () => setConfirmPrompt(true);
+    const handlePromptOpen = () => {
+        const duplicate = props.userList.filter((el) => el.email === email);
+        if (email === "") {
+            setError("Please fill in a valid email!");
+        } else if (duplicate.length !== 0) {
+            setError(`Email ${email} has been added as ${duplicate[0].type} already. No duplicates allowed!`);
+        } else { setError(""); }
+        setConfirmPrompt(true);
+    }
+
 
     const onAddUser = (e) => {
         e.preventDefault();
-        if (email !== "")  {
+        if (error === "")  {
             handlePromptClose();
             props.dispatchAddUser({
                 email, type: userType
@@ -75,8 +86,8 @@ const UserInfoForm = (props) => {
                 <DialogTitle id="alert-dialog-title">Confirm New User</DialogTitle>
                 <DialogContent>
                     {
-                        email === "" && <Alert severity={"warning"}>
-                            Please fill in a valid email!
+                        error !== "" && <Alert severity={"warning"}>
+                            {error}
                         </Alert>
                     }
                     <DialogContentText id="alert-dialog-description">
@@ -92,8 +103,12 @@ const UserInfoForm = (props) => {
     );
 }
 
+const mapStateToProps = (state) => ({
+    userList: state.auth.userDB || [],
+})
+
 const mapDispatchToProps = (dispatch) => ({
     dispatchAddUser: (userObj) => dispatch(startAddNewUser(userObj)),
 })
 
-export default connect(undefined, mapDispatchToProps)(UserInfoForm);
+export default connect(mapStateToProps, mapDispatchToProps)(UserInfoForm);
