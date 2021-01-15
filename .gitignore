@@ -1,2 +1,3 @@
-node_modules/
-public/dist/
+development/node_modules/
+development/public/dist/
+.DS_Store

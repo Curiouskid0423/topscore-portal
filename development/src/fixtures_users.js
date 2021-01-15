@@ -15,4 +15,16 @@ export const authUsers = [
         type: "EDITOR",
         email: "kevinli042389@gmail.com",
     },
+    {
+        type: "ADMIN",
+        email: "support@topscore-edu.com",
+    },
+    {
+        type: "ADMIN",
+        email: "johnnyhope@topscore-edu.com",
+    },
+    {
+        type: "EDITOR",
+        email: "julie@topscore-edu.com",
+    },
 ]
