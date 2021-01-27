@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+@import "./base/settings";
+@import "./base/base";
+@import "./components/content-container";
+@import "./components/date_block";
+@import "components/list";
+@import "components/loader";
+@import "./components/form";
+@import "./components/header";
+@import "./components/input";
+@import "./components/input-group";
+
+// All  base files must be imported to be considered by webpack.
+
+.fixDatePicker{
+  box-sizing: border-box;
+}
+
+// Airbnb DateRangePicker patch.
+.DateRangePickerInput_arrow {
+  position: relative;
+}
