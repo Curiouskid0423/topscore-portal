@@ -1,0 +1,4454 @@
+{
+  "courses_db" : {
+    "-MR4IXMgwjHYszcZHvCa" : {
+      "courseName" : "SAT Beginner Class",
+      "instructor" : "Johnny Hope",
+      "repeatBy" : "weeks",
+      "repeatTimes" : 12,
+      "startDate" : 1610701743581,
+      "type" : "GROUP"
+    },
+    "-MR4IXMl3oomC92u1Lc9" : {
+      "courseName" : "ACT Advanced Class",
+      "instructor" : "Johnny Hope",
+      "repeatBy" : "months",
+      "repeatTimes" : 10,
+      "startDate" : 1610701743582,
+      "type" : "1_ON_1"
+    },
+    "-MR4IXMl3oomC92u1LcA" : {
+      "courseName" : "ACT Advanced Technique",
+      "instructor" : "Johnny Hope",
+      "repeatBy" : "weeks",
+      "repeatTimes" : 4,
+      "startDate" : 1610701743582,
+      "type" : "1_ON_1"
+    },
+    "-MR4IXMoxbMSV-MK-j_D" : {
+      "courseName" : "ACT Beginner Class",
+      "instructor" : "Johnny Hope",
+      "repeatBy" : "weeks",
+      "repeatTimes" : 10,
+      "startDate" : 1610701743582,
+      "type" : "GROUP"
+    },
+    "-MR4IXMsru-0Crkz7g6Q" : {
+      "courseName" : "Web Dev Workshop",
+      "instructor" : "Kevin Li",
+      "repeatBy" : "",
+      "repeatTimes" : 0,
+      "startDate" : 1610701743582,
+      "type" : "GROUP"
+    },
+    "-MR4IXMu_f7rMWi9gBXO" : {
+      "courseName" : "Machine Learning Camp",
+      "instructor" : "Kevin Li",
+      "repeatBy" : "weeks",
+      "repeatTimes" : 5,
+      "startDate" : 1610701743582,
+      "type" : "GROUP"
+    },
+    "-MR4IXMwE9BILVcrbboQ" : {
+      "courseName" : "Calligraphy Workshop",
+      "instructor" : "Ricky Huang",
+      "repeatBy" : "weeks",
+      "repeatTimes" : 8,
+      "startDate" : 1610701743582,
+      "type" : "GROUP"
+    },
+    "-MR4IXMxMD-zuxHBezl2" : {
+      "courseName" : "Barista Internship",
+      "instructor" : "Lousia Coffee Inc.",
+      "repeatBy" : "days",
+      "repeatTimes" : 2,
+      "startDate" : 1610701743582,
+      "type" : "GROUP"
+    }
+  },
+  "students_db" : {
+    "MAN1017416711" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "wuc22@mca.org.tw",
+        "family" : {
+          "email" : "wupedhan@yahoo.com.tw",
+          "parent" : "N/A",
+          "phone" : "0933-106-883",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Charles",
+        "graduationYear" : 2022,
+        "highSchool" : "MCA",
+        "lastName" : "吳孟宸",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220402"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN1158591132" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "angelhu0713@gmail.com",
+          "parent" : "胡悅之",
+          "phone" : "0936-828-066",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Steven",
+        "graduationYear" : 2022,
+        "highSchool" : "ICA",
+        "lastName" : "賴裕升",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0976-282-275",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220602"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN1575407617" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "kaob@mca.org.tw",
+        "family" : {
+          "email" : "kitty_kao@hotmail.com",
+          "parent" : "N/A",
+          "phone" : "0963-128-747",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Benjamin",
+        "graduationYear" : 2022,
+        "highSchool" : "MCA",
+        "lastName" : "高偉哲",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220203"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN1688180719" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "ashley12320040119@gmail.com",
+        "family" : {
+          "email" : "N/A",
+          "parent" : "劉姿伶",
+          "phone" : "0912-603-666",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Ashley",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "江宜昀",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0900-601-246",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220109"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN2179842093" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "N/A",
+          "parent" : "陳珠芳",
+          "phone" : "0918-912-341",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Jasper",
+        "graduationYear" : 2022,
+        "highSchool" : "普台中學/國際部",
+        "lastName" : "張晉瑀",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220808"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN2371912370" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "hannah_yhwu@yahoo.com",
+          "parent" : "吳怡樺",
+          "phone" : "0938-830-883",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Kate",
+        "graduationYear" : 2022,
+        "highSchool" : "新竹女中",
+        "lastName" : "曾令安",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220819"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN2407773507" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "yuje614@gmail.com",
+        "family" : {
+          "email" : "tungyuh@livemail.com",
+          "parent" : "許嘉文",
+          "phone" : "0955-761-718",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Amy",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "賴渝潔",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0979-311-859",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220111"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN2773264063" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "torreslai9955@gmail.com",
+        "family" : {
+          "email" : "fiona516888@gmail.com",
+          "parent" : "陳慧慧",
+          "phone" : "0918-155-355",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Torres",
+        "graduationYear" : 2022,
+        "highSchool" : "ICA",
+        "lastName" : "賴沛亞",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0988-691-288",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220601"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN2867067592" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "31y001ms.mingdao.edu.tw@gmail.com",
+        "family" : {
+          "email" : "N/A",
+          "parent" : "徐之鳳",
+          "phone" : "0937-835-369",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Vanessa",
+        "graduationYear" : 2022,
+        "highSchool" : "台中科大專三",
+        "lastName" : "王冠穎",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0972-832-052",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220812"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN2962074861" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "cindyliu0917@gmail.com",
+        "family" : {
+          "email" : "irene362436@gmail.com",
+          "parent" : "林秋香",
+          "phone" : "0910-958-581",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Cindy",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "劉珈褆",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0966-530-917",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220806"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN3454155475" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "51y943@ms.mingdao.edu.tw",
+        "family" : {
+          "email" : "a0926150410@gmail.com",
+          "parent" : "張庭瑜",
+          "phone" : "0926-150-410",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Alice",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "陳昱喬",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0967-011-023",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220101"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN3482883256" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "51Y945@ms.mingdao.edu.tw",
+        "family" : {
+          "email" : "aa0971259996@gmail.com",
+          "parent" : "N/A",
+          "phone" : "0971-259-996",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Sofie",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "劉書含",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0966-516-708",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220105"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN3503317276" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "officialandrewchang@gmail.com",
+        "family" : {
+          "email" : "jas8110@yahoo.com.tw",
+          "parent" : "N/A",
+          "phone" : "0922-190-425",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Andrew",
+        "graduationYear" : 2022,
+        "highSchool" : "AST 轉美國寄宿中學",
+        "lastName" : "張席之",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0982-774-363",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220815"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN3582583383" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "candy6_8@yahoo.com.tw",
+          "parent" : "N/A",
+          "phone" : "0952-828-384",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Boson",
+        "graduationYear" : 2022,
+        "highSchool" : "ICA",
+        "lastName" : "張孛熙",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0936-828-384",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220607"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN3825620078" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "shuang22_student@ivycollegiate.org",
+        "family" : {
+          "email" : "1403215872@qq.com",
+          "parent" : "黃錫興",
+          "phone" : "0908-177-059",
+          "relationship" : "爸爸"
+        },
+        "firstName" : "Steven",
+        "graduationYear" : 2022,
+        "highSchool" : "ICA",
+        "lastName" : "黃達騫",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0971-251-964",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220604"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN4060478596" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "N/A",
+          "parent" : "N/A",
+          "phone" : "0927-240-515",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Iris",
+        "graduationYear" : 2022,
+        "highSchool" : "惠文高中",
+        "lastName" : "陳亭羽",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220818"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN4339386002" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "vanessa.life19741231@gmail.com",
+          "parent" : "巫靜玟",
+          "phone" : "0911-687-505",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Henry",
+        "graduationYear" : 2022,
+        "highSchool" : "立人 轉 明道應英",
+        "lastName" : "黃皓群",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220810"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN4467970294" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "henrytseng1618@gmail.com",
+        "family" : {
+          "email" : "N/A",
+          "parent" : "N/A",
+          "phone" : "0921-422-339",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Henry",
+        "graduationYear" : 2022,
+        "highSchool" : "ICA",
+        "lastName" : "曾治穎",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0905-671-881",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220609"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN4526407276" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "10350109@wagor.tc.edu.tw",
+        "family" : {
+          "email" : "wernerwen@gmail.com",
+          "parent" : "溫偉鈞",
+          "phone" : "0988-395-003",
+          "relationship" : "爸爸"
+        },
+        "firstName" : "Benson",
+        "graduationYear" : 2022,
+        "highSchool" : "衛道 轉 華中",
+        "lastName" : "溫浩誠",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0928-326-611",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220809"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN4672737108" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "hankchen930417@gmail.com",
+        "family" : {
+          "email" : "Judy782066@gmail.com",
+          "parent" : "N/A",
+          "phone" : "0936-460-279",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Hank",
+        "graduationYear" : 2022,
+        "highSchool" : "ICA",
+        "lastName" : "陳咨翰",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0988-960-045",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220605"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN4694363523" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "liz2235552@gmail.com",
+          "parent" : "莊美玲",
+          "phone" : "0958-828-790",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Rose",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "莊柔書",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220401"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN4857723518" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "cheny4@mca.org.tw",
+        "family" : {
+          "email" : "kelllychenzealong@gmail.com",
+          "parent" : "N/A",
+          "phone" : "0910-444-052",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Elyse",
+        "graduationYear" : 2022,
+        "highSchool" : "MCA",
+        "lastName" : "陳宥樺",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0984-400-099",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220204"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN5219432797" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "ling_ling168@hotmail.com",
+          "parent" : "N/A",
+          "phone" : "0960-605-855",
+          "relationship" : "N/A"
+        },
+        "firstName" : "Emily",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "Ko",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220408"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN5486335516" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "81xw05@ms.mingdao.edu.tw",
+        "family" : {
+          "email" : "angelwang0405@yahoo.com.tw",
+          "parent" : "王穎",
+          "phone" : "0988-267-100",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Jennifer",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "吳欣欣",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0966-891-186",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220113"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN5638242701" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "anniepinny@gmail.com",
+        "family" : {
+          "email" : "yafen.ma@koicafe.com",
+          "parent" : "N/A",
+          "phone" : "0928-318-916",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Amelia",
+        "graduationYear" : 2022,
+        "highSchool" : "新加坡中學",
+        "lastName" : "黃芝穎",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220801"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN5709886185" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "micky660625@gmail.com",
+          "parent" : "N/A",
+          "phone" : "0918-992-265",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Winnie",
+        "graduationYear" : 2022,
+        "highSchool" : "ICA",
+        "lastName" : "游雯齡",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0909-550-077",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220608"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN5808140738" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "gogodidi98@hotmail.com",
+          "parent" : "陳泳頤",
+          "phone" : "0975-828-391",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Dennis",
+        "graduationYear" : 2022,
+        "highSchool" : "GCP 轉 PAS",
+        "lastName" : "徐浩竣",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220102"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN5866104074" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "23billc@ast.tc.edu.tw",
+        "family" : {
+          "email" : "j0923670371@gmail.com",
+          "parent" : "李筱珍",
+          "phone" : "0923-670-391",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Bill",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "陳昌裕",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0923-670-371",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220407"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN5937872951" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "vincelin126@gmail.com",
+        "family" : {
+          "email" : "ar3827@yahoo.com.tw",
+          "parent" : "N/A",
+          "phone" : "0939-039-527",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Vince",
+        "graduationYear" : 2022,
+        "highSchool" : "ICA",
+        "lastName" : "林翰暐",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0988-425-778",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220606"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN6180152448" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "amenda52@icloud.com",
+          "parent" : "N/A",
+          "phone" : "0988-080-073",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Melody",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "N/A",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220106"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN6787774492" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "jim1008.liao@gmail.com",
+        "family" : {
+          "email" : "tangfeeling@gmail.com",
+          "parent" : "溫慧玲",
+          "phone" : "0928-976-960",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Jim",
+        "graduationYear" : 2022,
+        "highSchool" : "立人",
+        "lastName" : "廖翊鈞 ",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0928-976-860",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220811"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN6933952521" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "aaron60421@gmail.com",
+        "family" : {
+          "email" : "annelin762429@yahoo.com.tw",
+          "parent" : "N/A",
+          "phone" : "0988-573-931",
+          "relationship" : "N/A"
+        },
+        "firstName" : "Aaron",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "莊博渝",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220803"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7073430912" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "mingyanghuang2@gmail.com",
+        "family" : {
+          "email" : "gracelin0927@yahoo.com.tw",
+          "parent" : "林代羚",
+          "phone" : "0919-012-669",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Ryan",
+        "graduationYear" : 2022,
+        "highSchool" : "葳格高中",
+        "lastName" : "黃名揚",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0978-833-637",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220807"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7137031760" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "51YG21@ms.mingdao.edu.tw",
+        "family" : {
+          "email" : "peijuwu@hotmail.com",
+          "parent" : "N/A",
+          "phone" : "0953-697755",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Ingrid",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "吳妍蓁",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0953-697-755",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220104"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7167706007" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "changb@mca.org.tw, bc040511@gmail.com",
+        "family" : {
+          "email" : "shirely383@gmail.com",
+          "parent" : "張琇晴",
+          "phone" : "0970-756-597",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Brian",
+        "graduationYear" : 2022,
+        "highSchool" : "MCA",
+        "lastName" : "張庭碩",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220205"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7219352843" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "syu@student.stlucys.com",
+        "family" : {
+          "email" : "susan.chao26@gmail.com\nxianqna@gmail.com",
+          "parent" : "趙秀珊",
+          "phone" : "0930-238-380",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Michelle",
+        "graduationYear" : 2022,
+        "highSchool" : "St. Lucy (Claremont)",
+        "lastName" : "尤紹瑄",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220805"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7252333624" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "gogodidi98@hotmail.com",
+          "parent" : "陳泳頤",
+          "phone" : "0975-828-391",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Daniel",
+        "graduationYear" : 2022,
+        "highSchool" : "GCP 轉 PAS",
+        "lastName" : "徐培竣",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220103"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7427863074" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "timchen863@gmail.com",
+        "family" : {
+          "email" : "gkevinchen0828@gmail.com",
+          "parent" : "陳宜宏",
+          "phone" : "0928-879-371",
+          "relationship" : "爸爸"
+        },
+        "firstName" : "Tim",
+        "graduationYear" : 2022,
+        "highSchool" : "ICA",
+        "lastName" : "陳信廷",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0919-359-791",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220603"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7531225175" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "leolin930104@outlook.com",
+        "family" : {
+          "email" : "N/A",
+          "parent" : "林懷德",
+          "phone" : "0936-499-223, 0983-901-666 媽媽",
+          "relationship" : "爸爸"
+        },
+        "firstName" : "Leo",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "林仲羲",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0968-286-034",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220110"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7652827826" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "gracejess62@gmail.com",
+          "parent" : "N/A",
+          "phone" : "0960-700-358",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Grace",
+        "graduationYear" : 2022,
+        "highSchool" : "MCA",
+        "lastName" : "Lai",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220804"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7805574231" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "jenny71yang@gmail.com",
+        "family" : {
+          "email" : "yangchun@ms2.hinet.net",
+          "parent" : "羅楨宜",
+          "phone" : "0933-500-339",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Jenny",
+        "graduationYear" : 2022,
+        "highSchool" : "華盛頓中學",
+        "lastName" : "楊雅晴",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0965-399-368",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220301"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7885651241" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "072292iris@gmail.com",
+        "family" : {
+          "email" : "CHEN7STAR@gmail.com",
+          "parent" : "陳怡伶",
+          "phone" : "0905-513-977",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Iris",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "張瀛云",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0965-076-299",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220403"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN7929185936" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "yehj1@mca.org.tw\njenniferyeh0906@gmail.com",
+        "family" : {
+          "email" : "uni.aurum@msa.hinet.net",
+          "parent" : "Annie Wu",
+          "phone" : "0928-409-188, 0928-826-821",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Jennifer",
+        "graduationYear" : 2022,
+        "highSchool" : "MCA",
+        "lastName" : "葉宥妤",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0928-156-048",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220201"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN8137575603" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "22sergiow@ast.tc.edu.tw",
+        "family" : {
+          "email" : "natasha886@gmail.com",
+          "parent" : "簡櫂玟",
+          "phone" : "0988-779-182",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Sergio ",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "王廷禎",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0909-357-830",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220406"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN8193919245" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "22jamesl@ast.tc.edu.tw",
+        "family" : {
+          "email" : "lilylaikuo@gmail.com",
+          "parent" : "賴郭莉莉",
+          "phone" : "0936-965-998",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "James",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "賴翰霆",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0905-570-298",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220404"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN8240719966" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "ericandgolf@yahoo.com",
+          "parent" : "陳品妤",
+          "phone" : "0919-566-102",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Josh",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "謝承霖",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0909-817-818",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220405"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN8788155481" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "shengting@msn.com",
+          "parent" : "詹勝婷",
+          "phone" : "0935-151-006",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Yu",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "王懷御",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0908-281-006",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220107"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN8832254583" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "51y942@ms.mingdao.edu.tw",
+        "family" : {
+          "email" : "N/A",
+          "parent" : "陳慧敏",
+          "phone" : "0932-501-367",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Minnie",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "莊糖妮",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0905-133-083",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220108"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN9029636975" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "hsichun9028@gmail.com",
+        "family" : {
+          "email" : "jas8110@yahoo.com.tw",
+          "parent" : "N/A",
+          "phone" : "0922-190-425",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "George",
+        "graduationYear" : 2022,
+        "highSchool" : "MCA 轉美國寄宿中學",
+        "lastName" : "張席鈞",
+        "packageType" : {
+          "apply" : false,
+          "course" : true,
+          "planning" : true
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0982-774-368",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220816"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN9205680287" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "albertyibosu@gmail.com",
+        "family" : {
+          "email" : "yachiting@gmail.com",
+          "parent" : "N/A",
+          "phone" : "N/A",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Albert",
+        "graduationYear" : 2022,
+        "highSchool" : "加州/Burlingame High School",
+        "lastName" : "Su",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "Skype: albertyibosu@gmail.com",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220817"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN9365281709" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "N/A",
+          "parent" : "N/A",
+          "phone" : "0935-706-042",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Sharon",
+        "graduationYear" : 2022,
+        "highSchool" : "衛道中學",
+        "lastName" : "楊思嫻",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220802"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN9458457759" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "raymondc268@gmail.com",
+          "parent" : "Raymond Cheung",
+          "phone" : "0963-760-186",
+          "relationship" : "爸爸"
+        },
+        "firstName" : "Benjamin",
+        "graduationYear" : 2022,
+        "highSchool" : "AST",
+        "lastName" : "張庭瑋 Cheung",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220409"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN9575146991" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "dannychen0716@gmail.com",
+        "family" : {
+          "email" : "vivian8555@kimo.com",
+          "parent" : "劉文琴",
+          "phone" : "0932-212-010",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Danny",
+        "graduationYear" : 2022,
+        "highSchool" : "MDHS",
+        "lastName" : "陳品鈞",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0939-190-019",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220112"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN9611446242" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "lpearl@ms59.hinet.net",
+          "parent" : "賴珍珠",
+          "phone" : "0932-596-511",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Michaela",
+        "graduationYear" : 2022,
+        "highSchool" : "葳格高中",
+        "lastName" : "黃懷萱",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220814"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN9780032546" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "gracelai0745@gmail.com, lais22@mca.org.tw",
+        "family" : {
+          "email" : "gracejeff62@gmail.com",
+          "parent" : "黃瓊鶯",
+          "phone" : "0960-700-358",
+          "relationship" : "媽媽"
+        },
+        "firstName" : "Grace",
+        "graduationYear" : 2022,
+        "highSchool" : "MCA",
+        "lastName" : "賴思涵",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "0900-228-745",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220202"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    },
+    "MAN9869082456" : {
+      "contact" : {
+        "attendedCollege" : "N/A",
+        "email" : "N/A",
+        "family" : {
+          "email" : "N/A",
+          "parent" : "N/A",
+          "phone" : "0921-226-043",
+          "relationship" : "爸爸"
+        },
+        "firstName" : "Allen",
+        "graduationYear" : 2022,
+        "highSchool" : "MCA",
+        "lastName" : "Yang",
+        "packageType" : {
+          "apply" : false,
+          "course" : false,
+          "planning" : false
+        },
+        "personOfRecommendation" : "",
+        "phone" : "N/A",
+        "preTestResult" : {
+          "date" : 1609430400000,
+          "essay" : "",
+          "math" : "",
+          "reading" : "",
+          "writing" : ""
+        },
+        "recordOfFirstAppt" : "",
+        "specialId" : {
+          "isBlackList" : false,
+          "isVIP" : false
+        },
+        "studentID" : "220206"
+      },
+      "content" : {
+        "partCompass" : {
+          "achievement" : "(Default Message) Part 6.5: Achievements Placeholder",
+          "activities" : "(Default Message) Part 6: Activities Placeholder",
+          "engagement" : "(Default Message) Part 4: Engagement Placeholder",
+          "goalSetting" : "(Default Message) Part 3: Goals Placeholder",
+          "gradesAndTests" : "(Default Message) Part 5: Grades and Tests Placeholder",
+          "improvement" : "(Default Message) Part 2: Improve Placeholder",
+          "summary" : "(Default Message) Part 1: Summary Placeholder",
+          "toDoList" : "(Default Message) Part 7: To Do List Placeholder"
+        },
+        "partCore" : {
+          "pastCourseList" : [ {
+            "courseName" : "INIT_COURSE",
+            "instructor" : "Developer",
+            "repeatBy" : "days",
+            "repeatTimes" : 1,
+            "startDate" : 1609430400000,
+            "type" : "INIT"
+          } ]
+        },
+        "partMentor" : {
+          "collegeList" : "",
+          "optionals" : "",
+          "testInfo" : ""
+        },
+        "partOverview" : {
+          "atAGlance" : {
+            "notice" : "Notes about students, family info, sibling info...etc."
+          }
+        },
+        "partReport" : {
+          "TOEFLreport" : [ {
+            "id" : "000",
+            "sourceLink" : "https://www.ets.org/toefl",
+            "testDate" : 1609430400000,
+            "title" : "PLACEHOLDER",
+            "type" : "SAT"
+          } ]
+        }
+      },
+      "supervisor" : ""
+    }
+  },
+  "users_db" : [ {
+    "email" : "yutengli@berkeley.edu",
+    "type" : "DEVELOPER"
+  }, {
+    "email" : "kevinli042389@gmail.com",
+    "type" : "EDITOR"
+  }, {
+    "email" : "support@topscore-edu.com",
+    "type" : "ADMIN"
+  }, {
+    "email" : "johnnyhope@topscore-edu.com",
+    "type" : "ADMIN"
+  }, {
+    "email" : "julie@topscore-edu.com",
+    "type" : "EDITOR"
+  } ]
+}
