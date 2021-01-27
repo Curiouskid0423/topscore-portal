@@ -9,26 +9,27 @@ export const pdfModalStyles = {
         paddingHorizontal: 35,
     },
     title: {
-        fontSize: 24,
+        fontSize: 22,
         textAlign: 'center',
-        fontFamily: 'Oswald',
-        marginBottom: 10,
+        fontFamily: 'Taipei Sans TC',
+        marginBottom: 15,
     },
     author: {
         fontSize: 12,
         textAlign: 'center',
-        marginBottom: 20,
+        marginBottom: 10,
+        fontFamily: 'Taipei Sans TC',
     },
     subtitle: {
-        fontSize: 18,
+        fontSize: 16,
         margin: 12,
-        fontFamily: 'Oswald'
+        fontFamily: 'Taipei Sans TC'
     },
     text: {
-        margin: 12,
-        fontSize: 14,
+        margin: 15,
+        fontSize: 10,
         textAlign: 'justify',
-        fontFamily: 'Times-Roman'
+        fontFamily: 'Taipei Sans TC'
     },
     imageBanner: {
         display: 'block',

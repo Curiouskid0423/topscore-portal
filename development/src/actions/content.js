@@ -56,15 +56,15 @@ export const startUpdateCompass = (compassObj, id, command) => {
                 switch (command) {
                     case "summary":
                         dispatch(updateSummary(compassObj)); break;
-                    case "improve":
+                    case "improvement":
                         dispatch(updateImprove(compassObj)); break;
                     case "activities":
                         dispatch(updateActivities(compassObj)); break;
-                    case "achieve":
+                    case "achievement":
                         dispatch(updateAchieve(compassObj)); break;
                     case "toDoList":
                         dispatch(updateToDo(compassObj)); break;
-                    case "goal":
+                    case "goalSetting":
                         dispatch(updateGoal(compassObj)); break;
                     case "gradesAndTests":
                         dispatch(updateGradeTest(compassObj)); break;

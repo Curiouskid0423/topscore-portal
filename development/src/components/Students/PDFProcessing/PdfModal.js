@@ -4,8 +4,8 @@ import moment from "moment";
 import {pdfModalStyles} from "../../../styles/makeStyles/makePdfModalStyles";
 
 Font.register({
-    family: 'Oswald',
-    src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf'
+    family: "Taipei Sans TC",
+    src: '../../fonts/TaipeiSansTC-Regular.ttf',
 });
 
 const styles = StyleSheet.create(pdfModalStyles);
@@ -29,7 +29,7 @@ const MyDocument = (props) => {
     const today = moment(new Date()).format("MM/DD/YYYY");
 
     return (<Document>
-        <Page size="A4" style={styles.body} title={"Mentor Report"}>
+        <Page size="A4" style={styles.body} title={"MENTOR REPORT"}>
             <Text style={styles.header} fixed>
                 TopScore Education Inc. Report created on {today}.
             </Text>

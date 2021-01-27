@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`the behavior of Header Component should shallow render a Header. 1`] = `undefined`;
+
 exports[`the behavior of Templates Component should shallow render a Templates. 1`] = `
 <header
   className="header"
